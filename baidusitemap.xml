@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+  <url>
+    <loc>http://cvblogs.cn/2017/08/04/new/</loc>
+    <lastmod>2017-08-04T10:42:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>文章测试2</title>
+        <pubTime>2017-08-04T10:42:53.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://cvblogs.cn/2017/08/04/hello-world/</loc>
+    <lastmod>2017-08-04T10:35:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>文章测试</title>
+        <pubTime>2017-08-04T10:35:35.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://cvblogs.cn/2017/08/04/MyBlogTest/</loc>
+    <lastmod>2017-08-04T10:33:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>MyBlogTest</title>
+        <pubTime>2017-08-04T06:47:22.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
