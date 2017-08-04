@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cvblogs.cn/tags/index.html</loc>
+    
+    <lastmod>2017-08-04T17:26:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://cvblogs.cn/2017/08/04/new/</loc>
     
     <lastmod>2017-08-04T10:42:53.000Z</lastmod>
