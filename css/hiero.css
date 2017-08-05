@@ -1151,10 +1151,12 @@ body.search .page .entry-footer {
 	color: #ff2828;
 	}
 .site-info {
-	float: left;
+	margin:0 auto;
+	text-align:center;
 	}
 .site-credit {
-	float: right;
+	margin:0 auto;
+	text-align:center;
 	}
 
 /* RESPONSIVE SUPPORT
