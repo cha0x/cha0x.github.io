@@ -4,9 +4,9 @@
   <subtitle>更新计算机视觉相关的资源以及个人学习记录</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://cvblogs.cn/"/>
+  <link href="http://www.cvblogs.cn/"/>
   <updated>2017-08-04T10:42:53.000Z</updated>
-  <id>http://cvblogs.cn/</id>
+  <id>http://www.cvblogs.cn/</id>
   
   <author>
     <name>Zhong Qin</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>文章测试2</title>
-    <link href="http://cvblogs.cn/2017/new/"/>
-    <id>http://cvblogs.cn/2017/new/</id>
+    <link href="http://www.cvblogs.cn/2017/new/"/>
+    <id>http://www.cvblogs.cn/2017/new/</id>
     <published>2017-08-04T10:42:53.000Z</published>
     <updated>2017-08-04T10:42:53.000Z</updated>
     
@@ -37,8 +37,8 @@
   
   <entry>
     <title>文章测试</title>
-    <link href="http://cvblogs.cn/2017/hello-world/"/>
-    <id>http://cvblogs.cn/2017/hello-world/</id>
+    <link href="http://www.cvblogs.cn/2017/hello-world/"/>
+    <id>http://www.cvblogs.cn/2017/hello-world/</id>
     <published>2017-08-04T10:35:35.000Z</published>
     <updated>2017-08-04T10:35:35.000Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>MyBlogTest</title>
-    <link href="http://cvblogs.cn/2017/MyBlogTest/"/>
-    <id>http://cvblogs.cn/2017/MyBlogTest/</id>
+    <link href="http://www.cvblogs.cn/2017/MyBlogTest/"/>
+    <id>http://www.cvblogs.cn/2017/MyBlogTest/</id>
     <published>2017-08-04T06:47:22.000Z</published>
     <updated>2017-08-04T10:33:14.000Z</updated>
     
