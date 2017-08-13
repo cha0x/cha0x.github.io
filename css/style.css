@@ -276,6 +276,8 @@ body {
     float: right;
   }
 }
+.article-date,
+.article-views,
 .archive-year,
 .archive-tag,
 .archive-category,
@@ -431,11 +433,35 @@ body {
   clear: both;
 }
 .article-date {
-  color: #999;
   text-align: center;
   font-weight: normal;
 }
+.article-date:before {
+  font-family: "FontAwesome";
+  content: "\f073";
+}
+@media screen and (max-width: 479px) {
+  .article-date:before {
+    display: none;
+  }
+}
 .article-date:hover {
+  color: #ff2828;
+}
+.article-views {
+  text-align: center;
+  font-weight: normal;
+}
+.article-views:before {
+  font-family: "FontAwesome";
+  content: "\f06e";
+}
+@media screen and (max-width: 479px) {
+  .article-views:before {
+    display: none;
+  }
+}
+.article-views:hover {
   color: #ff2828;
 }
 .article-category {
@@ -647,6 +673,7 @@ a.article-title:hover {
   margin-top: 0;
 }
 .article-more-link {
+  padding: 0 0 20px 20px;
   text-align: center;
 }
 .article-more-link a {

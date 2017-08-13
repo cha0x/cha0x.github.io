@@ -1,1 +1,2 @@
-http://www.cvblogs.cn/2017/hello-world/
+http://www.cvblogs.cn/2017/08/11/image-processing-operation1/
+http://www.cvblogs.cn/2017/08/05/hello-world/

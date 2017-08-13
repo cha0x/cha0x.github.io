@@ -2,30 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.cvblogs.cn/2017/hello-world/</loc>
+    <loc>http://www.cvblogs.cn/about/index.html</loc>
     
-    <lastmod>2017-08-05T11:13:56.000Z</lastmod>
+    <lastmod>2017-08-13T19:11:55.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cvblogs.cn/about/index.html</loc>
+    <loc>http://www.cvblogs.cn/2017/08/05/hello-world/</loc>
     
-    <lastmod>2017-08-04T17:35:11.000Z</lastmod>
+    <lastmod>2017-08-13T19:08:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cvblogs.cn/about/index/amazingdots.html</loc>
+    
+    <lastmod>2017-08-13T18:52:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cvblogs.cn/2017/08/11/image-processing-operation1/</loc>
+    
+    <lastmod>2017-08-13T11:29:27.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.cvblogs.cn/categories/index.html</loc>
     
-    <lastmod>2017-08-04T17:31:59.000Z</lastmod>
+    <lastmod>2017-08-13T09:20:30.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.cvblogs.cn/tags/index.html</loc>
     
-    <lastmod>2017-08-04T17:26:21.000Z</lastmod>
+    <lastmod>2017-08-13T09:18:58.000Z</lastmod>
     
   </url>
   

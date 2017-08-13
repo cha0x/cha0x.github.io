@@ -3,15 +3,16 @@
 
 
     
+    
   <url>
-    <loc>http://www.cvblogs.cn/2017/hello-world/</loc>
-    <lastmod>2017-08-05T11:13:56.000Z</lastmod>
+    <loc>http://www.cvblogs.cn/2017/08/05/hello-world/</loc>
+    <lastmod>2017-08-13T19:08:00.000Z</lastmod>
     <data>
         <display>
-        <title>web test</title>
+        <title>开发测试</title>
         <pubTime>2017-08-05T11:11:50.000Z</pubTime>
         
-        <tag>test</tag>
+        <tag>测试</tag>
          
          
            
@@ -23,6 +24,26 @@
     </url>
 
     
+    
+  <url>
+    <loc>http://www.cvblogs.cn/2017/08/11/image-processing-operation1/</loc>
+    <lastmod>2017-08-13T11:29:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>图像处理基础-滤波(filtering)</title>
+        <pubTime>2017-08-11T11:39:53.000Z</pubTime>
+        
+        <tag>数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
     
 </urlset>
