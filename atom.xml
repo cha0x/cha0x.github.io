@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cvblogs.cn/"/>
-  <updated>2017-08-13T11:29:27.000Z</updated>
+  <updated>2017-09-01T11:08:23.000Z</updated>
   <id>http://www.cvblogs.cn/</id>
   
   <author>
@@ -16,15 +16,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>UCF计算机视觉课程总结1</title>
+    <link href="http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/"/>
+    <id>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</id>
+    <published>2017-09-01T09:20:40.000Z</published>
+    <updated>2017-09-01T11:08:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;从八月开始，断断续续学习这门课程。<br>从一开始Coursera上乔治亚理工的CV课和CP课继而到UCF的CV课。<br>算是入门了这门课程，为以后的研究工作打下了一些基础。<br>虽然，我的数学基础在很大程度上限制着我的吸收消化。<br>但是，始终相信，有志者事竟成这个道理。<br><br>&emsp;&emsp;课程资源地址：<a href="http://crcv.ucf.edu/courses/CAP5415/Fall2012/" target="_blank" rel="external">UCF-CAP 5415 - Computer Vision</a><br>学习过程中，可以参照课程日程表安排学习时间。适当的加强强度。(由于时间问题，本人只完成了小部分实验…最好还是要做做实验的。)<br><br>&emsp;&emsp;虽然在onenote上针对每节课都已经做了笔记，但是发现，自己只是将教授PPT中的内容摘抄了出来。<br>这里借助博客<u>简单梳理一下这门课中学习到的内容</u>(事实上，其中的每一课都值得另起一篇去详细介绍)，<br>顺便提升自己的写作能力总结能力。<br><br>&emsp;&emsp;我发现，本文的长度大大超过了预期。因此，基于2-8准则计划每篇此类总结文章以两课为一篇文章去总结内容。</p>
+<h3 id="课程内容"><a href="#课程内容" class="headerlink" title="课程内容"></a>课程内容</h3><p>&emsp;&emsp;整门课内容设计较为合理，<br>作为重实现轻理论(少数学细节推导，乔治亚理工的课程较侧重于数学细节)大军中的一员，<br>接受度良好。在课程主页上还有参考资料(免费，开放下载)以及CV领域的顶刊顶会的官网链接等信息。</p>
+<h4 id="Lecture1-CVIntroduction"><a href="#Lecture1-CVIntroduction" class="headerlink" title="Lecture1 CVIntroduction"></a>Lecture1 CVIntroduction</h4><p>&emsp;&emsp;第一课是关于计算机视觉中基础知识的介绍以及整个课程会接触到的内容的学习。了解计算机视觉所研究的是从二维图像中得到三维世界的语意信息。<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/1%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E9%A2%86%E5%9F%9F.png" alt="The Ability of Computer to See"><br><br>&emsp;&emsp;在这个过程中，常常将图像当作一个函数$f(x,y)$,它是一个离散的关于像素点的函数。<br>常用一个矩阵表示一张图像，其元素是0(黑)～255(白)的灰度值。<br>分辨率则是由图像的像素长宽确定<br>(屏幕的分辨率通常是固定的，但是可以向下调整，分辨率越高图像越细腻)。<br>还介绍了图片的格式(不同的格式只是压缩编码的方式不同)。也介绍了视频的基本属性。<br>依照人眼的构造，视频帧数每秒30帧就可以达到流畅的基本要求。<br><br>&emsp;&emsp;现今的射影设备都是基于孔洞模型(Pin Hole)进行射影变换。<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/2Pin%20Hole%20Model.png" alt="Pin Hole Model"><br><br>&emsp;&emsp;三维空间中的点$(x,y,z)$通过镜片投影到图像平面上的点$(x,y)$<br><br>&emsp;&emsp;由以上这个模型，我们就很容易想到：应该如何通过二维图像恢复被摄物体<br>在三维世界中的几何信息呢？<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/3%E4%BB%8E%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%83%8F%E6%81%A2%E5%A4%8D%E4%B8%89%E7%BB%B4%E4%BF%A1%E6%81%AF.png" alt="三维重构理论"><br><br>&emsp;&emsp;这里不再细展开。以及，CV的应用有哪些：<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/4CV%20Applicatioin.png" alt="CV Application"><br><br>&emsp;&emsp;作为基础知识的简单入门，第一节课还是很不错的。至少罗列的那些应用光是看那些演示视频，想到自己也有机会去实现。光想想就能振奋人心。</p>
+<h4 id="Lecture2-Filtering"><a href="#Lecture2-Filtering" class="headerlink" title="Lecture2 Filtering"></a>Lecture2 Filtering</h4><p>&emsp;&emsp;第二节课是CV领域最最基础的一个概念–滤波(Filtering)。我的<a href="">第一篇博文</a><br>整理的就是关于滤波操作的知识(虽然大部分是copy的别人的总结…)。<br><br>&emsp;&emsp;首先，当你拿到一张图像，一定要区分清楚它究竟是:1.二值的(Binary)、2.灰度的(Gray Scale)还是3.彩色的(Color)。<br><br>&emsp;&emsp;1.二值图像矩阵元素要么是0要么是1<br><br>&emsp;&emsp;2.灰度图像，Scale范围通常(0~255)<br><br>&emsp;&emsp;3.彩色图像较为复杂，通常在RGB空间下分为3个通道(R-Red、G-Green、B-Blue)<br><br>&emsp;&emsp;因为这些值元素的存在，引入一个图像直方图去直观描述它的比重信息。<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/5%E7%9B%B4%E6%96%B9%E5%9B%BE.png" alt="直方图"><br><br>&emsp;&emsp;由于各种内外界不稳定因素的干扰，图像并不总是”干净”的,<br>总是有这样那样的噪声(通常高频信息是噪声-变化明显，变现的特征就是高频信息)。<br>噪声叠加原图像得到被污染后的图像。(高斯噪声即噪声的分布符合高斯分布！)<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/6%E5%99%AA%E5%A3%B0%E6%9D%A5%E6%BA%90.png" alt="噪声来源"><br><br>&emsp;&emsp;接着为引入滤波的概念，介绍了基本的数学运算：<br>求导(Derivative，包括连续的和离散的即查分：向前、向后、中心，<br>接着从一维引申到二维（图像是一个二维矩阵），<br>接着提到了相关(Correlation)以及卷积(Convolution))以及求均值(Average/Mean)。<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/7%E4%BA%8C%E7%BB%B4%E6%B1%82%E5%AF%BC%28%E6%A2%AF%E5%BA%A6%29.png" alt="求导(梯度)"><br>并且，还提到了掩膜(Mask)的概念。<br><br>&emsp;&emsp;高斯分布的重要意义：<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/8%E9%AB%98%E6%96%AF%E6%A8%A1%E5%9E%8B%E5%B1%9E%E6%80%A7.png" alt="高斯属性"><br><br>&emsp;&emsp;由于之前的文章已经梳理过，这里不再赘述。第二节结束。目前，我们已经了解了一些基本知识和基本运算(Matlab由库函数实现，推荐使用。)</p>
+<h4 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h4><p>&emsp;&emsp;写博客真是一项锻炼能力的活，花了一个半小时才写完两节课的简单梳理总结。这进度我也是醉了！看来，以后应该利用碎片化的闲暇时间一点点完成。否则太占用学习时间了！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;从八月开始，断断续续学习这门课程。&lt;br&gt;从一开始Coursera上乔治亚理工的CV课和CP课继而到UCF的CV课。
+    
+    </summary>
+    
+      <category term="计算机视觉" scheme="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+      <category term="课程知识总结" scheme="http://www.cvblogs.cn/tags/%E8%AF%BE%E7%A8%8B%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>图像处理基础-滤波(filtering)</title>
     <link href="http://www.cvblogs.cn/2017/08/11/image-processing-operation1/"/>
     <id>http://www.cvblogs.cn/2017/08/11/image-processing-operation1/</id>
     <published>2017-08-11T11:39:53.000Z</published>
-    <updated>2017-08-13T11:29:27.000Z</updated>
+    <updated>2017-09-01T09:11:25.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;本文介绍图像处理基础知识滤波(filtering)相关知识。在<a href="https://www.wikiwand.com/zh/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86" target="_blank" rel="external">图像处理</a>中，你经常能够看到它的身影。对于学习图像处理，理解滤波背后的数学知识非常重要。</p>
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;本文介绍图像处理基础知识滤波(filtering)相关知识。在<a href="https://www.wikiwand.com/zh/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86" target="_blank" rel="external">图像处理</a>中，你经常能够看到它的身影。对于学习图像处理，理解滤波背后的数学知识非常重要。</p>
 <p>&emsp;&emsp;滤波分为<u>基于空间域滤波</u>(spatial filtering)与<u>基于频率域滤波</u>(frequency filtering)。二者的目的都是为了改善图像质量。篇幅有限，此篇文章先介绍空间滤波。</p>
-<h1 id="空间滤波-Spatial-Filtering"><a href="#空间滤波-Spatial-Filtering" class="headerlink" title="空间滤波(Spatial Filtering)"></a>空间滤波(Spatial Filtering)</h1><p>&emsp;&emsp;空间滤波操作有时候也被叫做<font color="#0099ff">卷积滤波</font>，或者干脆叫卷积(convolution)(离散的卷积，不是微积分里连续的卷积);常常需要用一个<font color="#0099ff">滤波器</font>(filter)做空间滤波操作;滤波器也有很多名字:<font color="#0099ff">卷积模版(template)</font>、<font color="#0099ff">卷积核(kernel)</font>、<font color="#0099ff">掩模(mask)</font>、<font color="#0099ff">窗口(window)</font>等。</p>
+<h3 id="空间滤波-Spatial-Filtering"><a href="#空间滤波-Spatial-Filtering" class="headerlink" title="空间滤波(Spatial Filtering)"></a>空间滤波(Spatial Filtering)</h3><p>&emsp;&emsp;空间滤波操作有时候也被叫做<font color="#0099ff">卷积滤波</font>，或者干脆叫卷积(convolution)(离散的卷积，不是微积分里连续的卷积);常常需要用一个<font color="#0099ff">滤波器</font>(filter)做空间滤波操作;滤波器也有很多名字:<font color="#0099ff">卷积模版(template)</font>、<font color="#0099ff">卷积核(kernel)</font>、<font color="#0099ff">掩模(mask)</font>、<font color="#0099ff">窗口(window)</font>等。</p>
 <p>&emsp;&emsp;空间滤波可以分为<font color="#0099ff">线性滤波(linear filter)</font>和<font color="#0099ff">非线性滤波(non-linear filter)</font>。非线性滤波常见的有中值滤波、最大值滤波等，相当于自定义一个函数，在数学上由于不满足线性变换因此叫做非线性滤波。这里不细研究它。</p>
 <p>&emsp;&emsp;<font color="#0099ff">线性滤波</font>通常是：将模版覆盖区域内的元素，以模版中对应位置元素为权值，进行累加。与卷积操作类似的，还有一种数学操作叫做协相关(cross-correlatioin)，<u>它们都可以看作是基于矩阵内积的操作</u>。具有<font color="#0099ff">平移不变性(shift-invariant)</font>。</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/cross-correlation%E6%96%87%E5%AD%97%E8%A7%A3%E9%87%8A.png" alt="Cross-Correlation"></p>
@@ -35,10 +62,10 @@
 <p>3）如果滤波器矩阵所有元素之和大于1，那么滤波后的图像就会比原图像更亮，反之，如果小于1，那么得到的图像就会变暗。如果和为0，图像不会变黑，但也会非常暗。</p>
 <p>4）对于滤波后的结构，可能会出现负数或者大于255的数值。对这种情况，我们将他们直接截断到0和255之间即可。对于负数，也可以取绝对值。</p>
 </blockquote>
-<h1 id="卷积核-Convolution-Kernel"><a href="#卷积核-Convolution-Kernel" class="headerlink" title="卷积核(Convolution Kernel)"></a>卷积核(Convolution Kernel)</h1><p>&emsp;&emsp;定义不同的卷积核与原图像做卷积操作，可以产生不同的效果。滤波与模糊的概念区分。模糊是人为感受到的现象，通过滤波操作可以呈现。</p>
-<h2 id="什么都不做"><a href="#什么都不做" class="headerlink" title="什么都不做"></a>什么都不做</h2><p>&emsp;&emsp;滤波器矩阵所有元素之和为1，保证滤波前后图像的亮度保持不变。这个滤波器啥也没有做，得到的图像和原图是一样的。因为只有中心点的值是1。邻域点的权值都是0，对滤波后的取值没有任何影响。</p>
+<h3 id="卷积核-Convolution-Kernel"><a href="#卷积核-Convolution-Kernel" class="headerlink" title="卷积核(Convolution Kernel)"></a>卷积核(Convolution Kernel)</h3><p>&emsp;&emsp;定义不同的卷积核与原图像做卷积操作，可以产生不同的效果。滤波与模糊的概念区分。模糊是人为感受到的现象，通过滤波操作可以呈现。</p>
+<h4 id="什么都不做"><a href="#什么都不做" class="headerlink" title="什么都不做"></a>什么都不做</h4><p>&emsp;&emsp;滤波器矩阵所有元素之和为1，保证滤波前后图像的亮度保持不变。这个滤波器啥也没有做，得到的图像和原图是一样的。因为只有中心点的值是1。邻域点的权值都是0，对滤波后的取值没有任何影响。</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.50.25.png" alt=""></p>
-<h2 id="图像锐化滤波器-Sharpness-Filter"><a href="#图像锐化滤波器-Sharpness-Filter" class="headerlink" title="图像锐化滤波器(Sharpness Filter)"></a>图像锐化滤波器(Sharpness Filter)</h2><p>&emsp;&emsp;图像的锐化和边缘检测很像，首先找到边缘，然后把边缘加到原来的图像上面，这样就强化了图像的边缘，使图像看起来更加锐利了。这两者操作统一起来就是锐化滤波器了，<u>也就是在边缘检测滤波器的基础上，再在中心的位置加1，这样滤波后的图像就会和原始的图像具有同样的亮度了，但是会更加锐利。</u></p>
+<h4 id="图像锐化滤波器-Sharpness-Filter"><a href="#图像锐化滤波器-Sharpness-Filter" class="headerlink" title="图像锐化滤波器(Sharpness Filter)"></a>图像锐化滤波器(Sharpness Filter)</h4><p>&emsp;&emsp;图像的锐化和边缘检测很像，首先找到边缘，然后把边缘加到原来的图像上面，这样就强化了图像的边缘，使图像看起来更加锐利了。这两者操作统一起来就是锐化滤波器了，<u>也就是在边缘检测滤波器的基础上，再在中心的位置加1，这样滤波后的图像就会和原始的图像具有同样的亮度了，但是会更加锐利。</u></p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.50.44.png" alt=""></p>
 <p>&emsp;&emsp;我们把核加大，就可以得到更加精细的锐化效果</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.50.52.png" alt=""></p>
@@ -47,7 +74,7 @@
 <p>&emsp;&emsp;主要是<u>强调图像的细节</u>。最简单的3x3的锐化滤波器如下：</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.53.58.png" alt=""></p>
 <p>&emsp;&emsp;实际上是计算当前点和周围点的差别，然后将这个差别加到原来的位置上。另外，<u>中间点的权值要比所有的权值和大于1，意味着这个像素要保持原来的值。</u></p>
-<h2 id="边缘检测-Edge-Detection"><a href="#边缘检测-Edge-Detection" class="headerlink" title="边缘检测(Edge Detection)"></a>边缘检测(Edge Detection)</h2><p>&emsp;&emsp;我们要找水平的边缘：<u>需要注意的是，这里矩阵的元素和是0，所以滤波后的图像会很暗</u>，只有边缘的地方是有亮度的。</p>
+<h4 id="边缘检测-Edge-Detection"><a href="#边缘检测-Edge-Detection" class="headerlink" title="边缘检测(Edge Detection)"></a>边缘检测(Edge Detection)</h4><p>&emsp;&emsp;我们要找水平的边缘：<u>需要注意的是，这里矩阵的元素和是0，所以滤波后的图像会很暗</u>，只有边缘的地方是有亮度的。</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.59.54.png" alt=""></p>
 <p>&emsp;&emsp;相当于做差分(differencing)，求导的离散版本，有向前差分(forward differencing)，向后差分(backward differencing)，中心差分(central differencing)。</p>
 <p>&emsp;&emsp;下面的滤波器可以找到垂直方向的边缘，这里像素上和下的像素值都使用</p>
@@ -58,21 +85,21 @@
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.17.38.png" alt=""></p>
 <p>&emsp;&emsp;为了检测边缘，我们需要在图像对应的方向计算梯度。用下面的卷积核来卷积图像，就可以了。但在实际中，这种简单的方法<u>会把噪声也放大</u>了。另外，需要注意的是，<u>矩阵所有的值加起来要是0</u>。</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.21.07.png" alt=""></p>
-<h2 id="浮雕-Embossing-Filter"><a href="#浮雕-Embossing-Filter" class="headerlink" title="浮雕(Embossing Filter)"></a>浮雕(Embossing Filter)</h2><p>&emsp;&emsp;浮雕滤波器可以给图像一种3D阴影的效果。只要将中心一边的像素减去另一边的像素就可以了。这时候，像素值有可能是负数，我们将负数当成阴影，将正数当成光，然后我们<u>对结果图像加上128的偏移</u>。这时候，图像大部分就变成灰色了。</p>
+<h4 id="浮雕-Embossing-Filter"><a href="#浮雕-Embossing-Filter" class="headerlink" title="浮雕(Embossing Filter)"></a>浮雕(Embossing Filter)</h4><p>&emsp;&emsp;浮雕滤波器可以给图像一种3D阴影的效果。只要将中心一边的像素减去另一边的像素就可以了。这时候，像素值有可能是负数，我们将负数当成阴影，将正数当成光，然后我们<u>对结果图像加上128的偏移</u>。这时候，图像大部分就变成灰色了。</p>
 <p>&emsp;&emsp;下面是45度的浮雕滤波器</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.25.28.png" alt=""></p>
 <p>&emsp;&emsp;只要加大滤波器，就可以得到更加夸张的效果了</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.27.12.png" alt=""></p>
-<h2 id="均值模糊-Box-Filter-Averaging"><a href="#均值模糊-Box-Filter-Averaging" class="headerlink" title="均值模糊(Box Filter/Averaging)"></a>均值模糊(Box Filter/Averaging)</h2><p>&emsp;&emsp;我们可以将当前像素和它的四邻域的像素一起取平均，然后再除以5，或者直接在滤波器的5个地方取0.2的值即可，如下图</p>
+<h4 id="均值模糊-Box-Filter-Averaging"><a href="#均值模糊-Box-Filter-Averaging" class="headerlink" title="均值模糊(Box Filter/Averaging)"></a>均值模糊(Box Filter/Averaging)</h4><p>&emsp;&emsp;我们可以将当前像素和它的四邻域的像素一起取平均，然后再除以5，或者直接在滤波器的5个地方取0.2的值即可，如下图</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.29.23.png" alt=""></p>
 <p>&emsp;&emsp;可以看到，这个模糊还是比较温柔的，我们可以把滤波器变大，这样就会变得粗暴了：<u>注意要将和再除以13.</u></p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.33.28.png" alt=""></p>
 <p>&emsp;&emsp;如果你想要更模糊的效果，加大滤波器的大小即可。或者对图像应用<u>多次模糊</u>也可以。</p>
-<h2 id="高斯模糊-Gaussian-Filter"><a href="#高斯模糊-Gaussian-Filter" class="headerlink" title="高斯模糊(Gaussian Filter)"></a>高斯模糊(Gaussian Filter)</h2><p>&emsp;&emsp;<u>均值模糊很简单，但不是很平滑。高斯模糊就有这个优点，所以被广泛用在图像降噪上。特别是在边缘检测之前，都会用来移除细节。高斯滤波器是一个低通滤波器。</u></p>
-<h2 id="运动模糊-Motion-Blur"><a href="#运动模糊-Motion-Blur" class="headerlink" title="运动模糊(Motion Blur)"></a>运动模糊(Motion Blur)</h2><p>&emsp;&emsp;运动模糊可以通过只在一个方向模糊达到，例如下面9x9的运动模糊滤波器。注意，<u>求和结果要除以9。</u></p>
+<h4 id="高斯模糊-Gaussian-Filter"><a href="#高斯模糊-Gaussian-Filter" class="headerlink" title="高斯模糊(Gaussian Filter)"></a>高斯模糊(Gaussian Filter)</h4><p>&emsp;&emsp;<u>均值模糊很简单，但不是很平滑。高斯模糊就有这个优点，所以被广泛用在图像降噪上。特别是在边缘检测之前，都会用来移除细节。高斯滤波器是一个低通滤波器。</u></p>
+<h4 id="运动模糊-Motion-Blur"><a href="#运动模糊-Motion-Blur" class="headerlink" title="运动模糊(Motion Blur)"></a>运动模糊(Motion Blur)</h4><p>&emsp;&emsp;运动模糊可以通过只在一个方向模糊达到，例如下面9x9的运动模糊滤波器。注意，<u>求和结果要除以9。</u></p>
 <p>&emsp;&emsp;这个效果就好像，摄像机是从左上角移动的右下角。</p>
 <p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.41.32.png" alt=""></p>
-<h1 id="自己手写的卷积函数"><a href="#自己手写的卷积函数" class="headerlink" title="自己手写的卷积函数"></a>自己手写的卷积函数</h1><p>虽然Matlab已经封装了一个函数con2()作卷积操作，但是还是要自己手写一下加深理解。下面是<a href="http://crcv.ucf.edu/courses/CAP5415/Fall2012/" target="_blank" rel="external">UCF计算机视觉网课</a>的作业。4层循环。因为<u>边缘效应</u>通常情况下需要补0。还是Matlab新手，代码一点都不elegant，没有借鉴意义。</p>
+<h3 id="自己手写的卷积函数"><a href="#自己手写的卷积函数" class="headerlink" title="自己手写的卷积函数"></a>自己手写的卷积函数</h3><p>虽然Matlab已经封装了一个函数con2()作卷积操作，但是还是要自己手写一下加深理解。下面是<a href="http://crcv.ucf.edu/courses/CAP5415/Fall2012/" target="_blank" rel="external">UCF计算机视觉网课</a>的作业。4层循环。因为<u>边缘效应</u>通常情况下需要补0。还是Matlab新手，代码一点都不elegant，没有借鉴意义。</p>
 <pre><code>function [] = pa1()
 m_img = imread(&apos;PA1/balloon.jpg&apos;);
 m_kernel = rand(5,5);
@@ -90,7 +117,7 @@ for i = r2+1:r1
     end;
 end
 imshow(outQ);wait(0);
-</code></pre><h1 id="Matlab中用imfilter-实现线性空间滤波"><a href="#Matlab中用imfilter-实现线性空间滤波" class="headerlink" title="Matlab中用imfilter()实现线性空间滤波"></a>Matlab中用imfilter()实现线性空间滤波</h1><p>&emsp;&emsp;最常用的是这句：</p>
+</code></pre><h3 id="Matlab中用imfilter-实现线性空间滤波"><a href="#Matlab中用imfilter-实现线性空间滤波" class="headerlink" title="Matlab中用imfilter()实现线性空间滤波"></a>Matlab中用imfilter()实现线性空间滤波</h3><p>&emsp;&emsp;最常用的是这句：</p>
 <pre><code>imfilter(f, w, &apos;replicate&apos;) %相关滤波，默认边界外围填充0，造成黑边，使用&apos;replicate&apos;复制边缘像素，消除边缘效应，输出大小与输入图像f相同.
 </code></pre><p>&emsp;&emsp;imfilter()默认是相关算子，在做真正的卷积之前可以先将核旋转180°(除非你指定了滤波模式为’conv’)，rotated_filter=flipud(fliplr(filter))</p>
 <pre><code>imfilter(f, w, filtering_mode, boundary_options, size_options)
@@ -107,7 +134,7 @@ boundary_options:边界选项
 size_options:大小选项
     &apos;same&apos;:输出大小与输入图像f大小相同。[默认值]
     &apos;full&apos;:输出与扩展（填充）后的图像大小相同。
-</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+</code></pre><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
 <li><p>规范用语，在<font color="#0099ff">滑窗操作</font>、<font color="#0099ff">计算图像梯度</font>等场合，不要使用“卷积”，而要使用“滤波”或者“协相关”。因为，我们通常讲的卷积，在这几个操作中其实是协相关，那就不要用卷积这个词以<u>避免引起混淆</u>。</p>
 </li>
 <li><p>不同的滤波器产生的效果不同，滤波器的定义有讲究。经常会看到一些人名命名的算子。比如用作边缘检测，拉普拉斯(Laplacian)算子、Canny算子。观察它们的算子内容，结合卷积核的定义规则。你会发现其实就那么回事。不要被复杂的学术名词给弄懵逼了。</p>
@@ -117,7 +144,7 @@ size_options:大小选项
 <li><p>这是我的第一篇博文，本来是想好好写的，发现写博文真的是一项技术活。话到嘴边，憋不出一个字。</p>
 </li>
 </ol>
-<h1 id="参考引用"><a href="#参考引用" class="headerlink" title="参考引用"></a>参考引用</h1><ol>
+<h3 id="参考引用"><a href="#参考引用" class="headerlink" title="参考引用"></a>参考引用</h3><ol>
 <li><p><a href="file:///Users/Zoking/Downloads/%E5%9B%BE%E5%83%8F%E5%8D%B7%E7%A7%AF/%E5%9B%BE%E5%83%8F%E5%8D%B7%E7%A7%AF%E4%B8%8E%E6%BB%A4%E6%B3%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%20-%20zouxy09%E7%9A%84%E4%B8%93%E6%A0%8F%20-%20CSDN%E5%8D%9A%E5%AE%A2.htm" target="_blank" rel="external">图像卷积与滤波的一些知识点</a></p>
 </li>
 <li><p><a href="http://www.cnblogs.com/zjutzz/p/5661543.html" target="_blank" rel="external">图像卷积、相关以及在MATLAB中的操作</a></p>
@@ -127,7 +154,7 @@ size_options:大小选项
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;本文介绍图像处理基础知识滤波(filtering)相关知识。在&lt;a href=&quot;https://www.wikiwa
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;本文介绍图像处理基础知识滤波(filtering)相关知识。在&lt;a href=&quot;https://www.wikiwa
     
     </summary>
     
