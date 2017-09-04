@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>ucf-cv课程总结:边缘检测 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="课程知识总结" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言&amp;emsp;&amp;emsp;这篇博文是本人学习UCF计算机视觉公开课的课程知识梳理系列文章的第二篇。本篇博文主要介绍边缘检测章节的内容。">
+<meta name="keywords" content="课程知识总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UCF-CV课程总结:边缘检测">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary1/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;这篇博文是本人学习UCF计算机视觉公开课的课程知识梳理系列文章的第二篇。本篇博文主要介绍边缘检测章节的内容。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/%E4%BA%8C%E9%98%B6%E5%AF%BC%E6%95%B0">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%88%86%E7%B1%BB.png">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/Prewitt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/Sobel%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E7%AC%A6%E5%8F%B7%E5%92%8C%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB.png">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/LoG%20Operator">
+<meta property="og:image" content="http://ou5rpeic9.bkt.clouddn.com/Canny%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%AD%A5%E9%AA%A4.png">
+<meta property="og:updated_time" content="2017-09-04T11:45:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UCF-CV课程总结:边缘检测">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;这篇博文是本人学习UCF计算机视觉公开课的课程知识梳理系列文章的第二篇。本篇博文主要介绍边缘检测章节的内容。">
+<meta name="twitter:image" content="http://ou5rpeic9.bkt.clouddn.com/%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-UCF-CVClass-Summary1" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      UCF-CV课程总结:边缘检测
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/09/01/UCF-CVClass-Summary1/" class="article-date">
+	  <time datetime="2017-09-01T14:33:56.000Z" itemprop="datePublished">2017-09-01</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/计算机视觉/">计算机视觉</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/课程知识总结/">课程知识总结</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;这篇博文是本人学习UCF计算机视觉公开课的课程知识梳理系列文章的第二篇。本篇博文主要介绍<u>边缘检测</u>章节的内容。</p>
+<a id="more"></a>
+<h3 id="课程内容"><a href="#课程内容" class="headerlink" title="课程内容"></a>课程内容</h3><h4 id="相关先导知识"><a href="#相关先导知识" class="headerlink" title="相关先导知识"></a>相关先导知识</h4><p>&emsp;&emsp;边缘一般是指图像在某一局部强度剧烈变化的区域。强度变化一般有两种情况(横轴表示空间变化，纵轴表示灰度变化，虚线表示边缘)：<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0" alt="阶跃变化：向亮渐变的过程">&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/%E4%BA%8C%E9%98%B6%E5%AF%BC%E6%95%B0" alt="屋顶变化：由暗到亮再变暗的过程"><br><br>&emsp;&emsp;边缘检测的任务：找到具有阶跃变化或者屋顶变化的像素点的集合。<br><br>&emsp;&emsp;最直观的想法就是<b>求微分</b>。</p>
+<ul>
+<li>对于第一种情况：一阶微分的峰值为边缘点，二阶微分的零点为边缘点。</li>
+<li>对于第二种情况：一阶微分的零点为边缘点，二阶微分的峰值为边缘点。</li>
+</ul>
+<p><br>&emsp;&emsp;一般可将边缘分为水平边缘、垂直边缘和对角线边缘。<br><br>&emsp;&emsp;由于边缘检测的算法主要是<b>基于图像强度</b>(采用差分的方法来进行计算)的一阶和二阶导数。<br><br>&emsp;&emsp;但导数通常对噪声敏感，因此必须采用滤波器来改善与噪声有关的边缘检测器的性能。常见的滤波方法主要有<b>高斯滤波</b>，即采用离散化的高斯函数产生一组<b>归一化</b>的高斯核。</p>
+<h4 id="一般边缘检测过程"><a href="#一般边缘检测过程" class="headerlink" title="一般边缘检测过程"></a>一般边缘检测过程</h4><p>&emsp;&emsp;1. 滤波：改善与噪声有关的边缘检测器的性能<br><br>&emsp;&emsp;2. 增强：将图像灰度点邻域强度值有显著变化的点凸显出来(可通过计算梯度幅值来确定)<br><br>&emsp;&emsp;3. 检测：常用的方法是通过阈值化方法来检测</p>
+<h4 id="边缘检测器介绍-Edge-Detector"><a href="#边缘检测器介绍-Edge-Detector" class="headerlink" title="边缘检测器介绍(Edge Detector)"></a>边缘检测器介绍(Edge Detector)</h4><p>&emsp;&emsp;课程中讲述到的检测器包括：<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%88%86%E7%B1%BB.png" alt="边缘检测器分类"></p>
+<h5 id="Prewitt-and-Sobel-Edge-Detector"><a href="#Prewitt-and-Sobel-Edge-Detector" class="headerlink" title="Prewitt and Sobel Edge Detector"></a>Prewitt and Sobel Edge Detector</h5><p>&emsp;&emsp;属于离散微分算子 (discrete differentiation operator)。利用差分求出$x,y$方向上的梯度，求解梯度的大小，阈值化梯度的大小找到边缘。</p>
+<h6 id="Prewitt算子"><a href="#Prewitt算子" class="headerlink" title="Prewitt算子"></a>Prewitt算子</h6><p>&emsp;&emsp;结合了差分运算与邻域平均的方法。其卷积模板如下：<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/Prewitt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="Prewitt Operator"></p>
+<h6 id="Sobel算子"><a href="#Sobel算子" class="headerlink" title="Sobel算子"></a>Sobel算子</h6><p>&emsp;&emsp;与prewitt算子类似，但考虑到了相邻不同像素点的影响程度是不同的，所以采用加权平均。<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/Sobel%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="Sobel Operator"></p>
+<h5 id="Marr-Hildreth-Edge-Detector-LoG"><a href="#Marr-Hildreth-Edge-Detector-LoG" class="headerlink" title="Marr Hildreth Edge Detector-LoG"></a>Marr Hildreth Edge Detector-LoG</h5><p>&emsp;&emsp;基本步骤：</p>
+<ol>
+<li>用高斯器滤波原图像去除噪声</li>
+<li>拉普拉斯滤波后的图像(求$x,y$二阶导)</li>
+<li>找到零点(边缘点)，重复步骤2直到全部找到</li>
+</ol>
+<p><br><img src="http://ou5rpeic9.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E7%AC%A6%E5%8F%B7%E5%92%8C%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB.png" alt="求梯度与拉普拉斯符号的区别"><br><br>&emsp;&emsp;laplacian算子是一些使用二阶微分的算子，实际上就是梯度的散度(可以利用DoG近似求解LoG降低算法时间复杂度的数量级?可以增强对比度！)<br><br>LoG计算：不同计算方法，时间复杂度不同</p>
+<ol>
+<li>一个2D laplacian算子(n{2})</li>
+<li>四个1D的算子组合而成(4n)</li>
+</ol>
+<p><br><img src="http://ou5rpeic9.bkt.clouddn.com/LoG%20Operator" alt="LoG算子"><br><br>&emsp;&emsp;由于 Laplacian使用了图像梯度，它内部的代码其实是调用了 Sobel 算子的</p>
+<h5 id="Canny"><a href="#Canny" class="headerlink" title="Canny"></a>Canny</h5><p>&emsp;&emsp;是一种求最优边缘检测的一套方法。是一种<b>先平滑再求导</b>的方法。<br><br>&emsp;&emsp;最优边缘检测的三个主要评价标准：</p>
+<ol>
+<li><b>低错误率</b>: 标识出尽可能多的实际边缘，同时尽可能的减少噪声产生的误报。</li>
+<li><b>高定位性</b>: 标识出的边缘要与图像中的实际边缘尽可能接近。</li>
+<li><b>最小响应</b>: 图像中的边缘只能标识一次，并且可能存在的图像噪声不应标识为边缘。</li>
+</ol>
+<p><br><img src="http://ou5rpeic9.bkt.clouddn.com/Canny%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%AD%A5%E9%AA%A4.png" alt="Canny算法求解步骤"><br><br>&emsp;&emsp;特别注意第4步！排除非边缘像素， 仅仅保留了一些细线条(候选边缘).</p>
+<h4 id="程序实现"><a href="#程序实现" class="headerlink" title="程序实现"></a>程序实现</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">i</span> = imread(<span class="string">'lena.png'</span>);<span class="comment">%读入原图像</span></div><div class="line">A = fspecial(<span class="string">'gaussian'</span>);<span class="comment">%高斯滤波器</span></div><div class="line"><span class="built_in">i</span> = filter2(A, <span class="built_in">i</span>) / <span class="number">255</span>;<span class="comment">%高斯滤波并归一化(/255)</span></div><div class="line">figure;</div><div class="line">imshow(<span class="built_in">i</span>);<span class="comment">%显示图像</span></div><div class="line">imwrite(<span class="built_in">i</span>,<span class="string">'lena_0.jpg'</span>);<span class="comment">%保存图像</span></div><div class="line"><span class="comment">%prewitt方法</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'prewitt'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_1.jpg'</span>);</div><div class="line"><span class="comment">%sobel方法</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'sobel'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_2.jpg'</span>);</div><div class="line"><span class="comment">%marr hildreth方法(LoG)</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'log'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_3.jpg'</span>);</div><div class="line"><span class="comment">%canny方法</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'canny'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_4.jpg'</span>);</div></pre></td></tr></table></figure>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ol>
+<li><a href="http://blog.csdn.net/xiahn1a/article/details/42141429" target="_blank" rel="external">边缘检测算法</a></li>
+<li><a href="">【OpenCV入门教程之十二】OpenCV边缘检测：Canny算子,Sobel算子,Laplace算子,Scharr滤波器合辑</a></li>
+</ol>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p><br>&emsp;&emsp;一如既往，写文章对于我真的是一件万分困难的事情，基本上只能达到通顺的要求。翻来覆去也就只能用那几个markdown语法。排版也不甚美观。但我相信，坚持下去，总有一天，我能写出自己的内容。</p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/01/UCF-CVClass-Summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">UCF-CV课程总结:概述、滤波及Matlab使用</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#课程内容"><span class="nav-number">2.</span> <span class="nav-text">课程内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相关先导知识"><span class="nav-number">2.1.</span> <span class="nav-text">相关先导知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一般边缘检测过程"><span class="nav-number">2.2.</span> <span class="nav-text">一般边缘检测过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边缘检测器介绍-Edge-Detector"><span class="nav-number">2.3.</span> <span class="nav-text">边缘检测器介绍(Edge Detector)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Prewitt-and-Sobel-Edge-Detector"><span class="nav-number">2.3.1.</span> <span class="nav-text">Prewitt and Sobel Edge Detector</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Prewitt算子"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">Prewitt算子</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Sobel算子"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">Sobel算子</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Marr-Hildreth-Edge-Detector-LoG"><span class="nav-number">2.3.2.</span> <span class="nav-text">Marr Hildreth Edge Detector-LoG</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Canny"><span class="nav-number">2.3.3.</span> <span class="nav-text">Canny</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序实现"><span class="nav-number">2.4.</span> <span class="nav-text">程序实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">4.</span> <span class="nav-text">结束语</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
