@@ -4,19 +4,19 @@
 
     
   <url>
-    <loc>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary1/</loc>
-    <lastmod>2017-09-04T11:45:17.000Z</lastmod>
+    <loc>http://www.cvblogs.cn/2017/09/09/maths-in-CV/</loc>
+    <lastmod>2017-09-09T16:21:15.000Z</lastmod>
     <data>
         <display>
-        <title>UCF-CV课程总结:边缘检测</title>
-        <pubTime>2017-09-01T14:33:56.000Z</pubTime>
+        <title>读书笔记:吴福朝《计算机视觉中的数学方法》</title>
+        <pubTime>2017-09-09T13:39:26.000Z</pubTime>
         
-        <tag>课程知识总结</tag>
+        <tag>数学基础</tag>
          
          
            
              
-              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+              <breadCrumb title="图像处理" url="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
           
         </display>
     </data>
@@ -24,19 +24,39 @@
 
     
   <url>
-    <loc>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</loc>
-    <lastmod>2017-09-01T14:42:48.000Z</lastmod>
+    <loc>http://www.cvblogs.cn/2017/09/09/software-engineering-exp1/</loc>
+    <lastmod>2017-09-09T16:20:10.000Z</lastmod>
     <data>
         <display>
-        <title>UCF-CV课程总结:概述、滤波及Matlab使用</title>
-        <pubTime>2017-09-01T09:20:40.000Z</pubTime>
+        <title>孟宁《软件工程C实战》实验报告1</title>
+        <pubTime>2017-09-09T15:52:16.000Z</pubTime>
         
-        <tag>课程知识总结</tag>
+        <tag>实验报告</tag>
          
          
            
              
-              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+              <breadCrumb title="软件工程" url="http://www.cvblogs.cn/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cvblogs.cn/2017/09/05/machine-learning-basic1/</loc>
+    <lastmod>2017-09-09T16:16:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习相关基础名词：有监督、半监督、无监督</title>
+        <pubTime>2017-09-05T15:06:27.000Z</pubTime>
+        
+        <tag>基础概念</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://www.cvblogs.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
           
         </display>
     </data>
@@ -45,18 +65,58 @@
     
   <url>
     <loc>http://www.cvblogs.cn/2017/08/11/image-processing-operation1/</loc>
-    <lastmod>2017-09-01T09:11:25.000Z</lastmod>
+    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     <data>
         <display>
         <title>图像处理基础-滤波(filtering)</title>
         <pubTime>2017-08-11T11:39:53.000Z</pubTime>
         
-        <tag>数学</tag>
+        <tag>数学基础</tag>
          
          
            
              
               <breadCrumb title="图像处理" url="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</loc>
+    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>UCF-CV课程总结:概述、滤波及Matlab使用</title>
+        <pubTime>2017-09-01T09:20:40.000Z</pubTime>
+        
+        <tag>课程总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cvblogs.cn/2017/09/04/UCF-CVClass-Summary1/</loc>
+    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>UCF-CV课程总结:边缘检测</title>
+        <pubTime>2017-09-04T11:50:56.000Z</pubTime>
+        
+        <tag>课程总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
           
         </display>
     </data>
