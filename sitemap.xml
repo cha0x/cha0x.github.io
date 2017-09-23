@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cvblogs.cn/2017/09/24/software-engineering-exp2/</loc>
+    
+    <lastmod>2017-09-23T16:59:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cvblogs.cn/2017/09/20/summer-summary/</loc>
     
     <lastmod>2017-09-19T17:11:25.000Z</lastmod>
@@ -30,7 +37,7 @@
   </url>
   
   <url>
-    <loc>http://www.cvblogs.cn/2017/08/11/image-processing-operation1/</loc>
+    <loc>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</loc>
     
     <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     
@@ -44,7 +51,7 @@
   </url>
   
   <url>
-    <loc>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</loc>
+    <loc>http://www.cvblogs.cn/2017/08/11/image-processing-operation1/</loc>
     
     <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     
