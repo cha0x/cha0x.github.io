@@ -435,7 +435,7 @@ object {
 		display: block;
 		cursor: pointer;
 		text-align: center;
-        margin: 9px 0 0 0;
+        margin: 5px 0 0 0;
         height: 41px;
 		}
 	#main-navigation:target > .nav-open {
@@ -448,7 +448,7 @@ object {
 	#main-navigation > .sf-menu {
 		position: relative;
 		text-align: left;
-        width: 100px;
+        width: 60px;
 		}
 	#main-navigation > .sf-menu > ul {
 		position: absolute;
@@ -1213,6 +1213,12 @@ body.search .page .entry-footer {
 		}
 	}
 @media screen and (max-width: 758px) {
+	.site-header .widget {
+		float: right;
+		clear: right;
+		margin: 10px 0;
+		text-align: right;
+	}
 	.site-header .widget-area {
 		display: none;
 		}
@@ -1243,6 +1249,15 @@ body.search .page .entry-footer {
 		}
 	}
 @media screen and (max-width: 480px) {
+	.container {
+		width: 98.5%;
+	}
+	.site-header .widget {
+		float: right;
+		clear: right;
+		margin: 2px 0;
+		text-align: right;
+	}
 	.site-footer {
 		text-align: center;
 		}
@@ -1252,4 +1267,10 @@ body.search .page .entry-footer {
 		}
 	}
 @media screen and (max-width: 320px) {
+	.site-header .widget {
+		float: right;
+		clear: right;
+		margin: 2px 0;
+		text-align: right;
+	}
 	}
