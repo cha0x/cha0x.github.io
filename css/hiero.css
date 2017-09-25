@@ -448,7 +448,7 @@ object {
 	#main-navigation > .sf-menu {
 		position: relative;
 		text-align: left;
-        width: 60px;
+        width: 80px;
 		}
 	#main-navigation > .sf-menu > ul {
 		position: absolute;
@@ -1250,7 +1250,7 @@ body.search .page .entry-footer {
 	}
 @media screen and (max-width: 480px) {
 	.container {
-		width: 98.5%;
+		width: 97%;
 	}
 	.site-header .widget {
 		float: right;
