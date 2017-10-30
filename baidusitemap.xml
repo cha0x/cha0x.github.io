@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://www.cvblogs.cn/2017/10/31/media-image-intro/</loc>
+    <lastmod>2017-10-30T16:42:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>医学影像技术概述:X-ray、CT、MRI</title>
+        <pubTime>2017-10-30T16:36:18.000Z</pubTime>
+        
+        <tag>课程总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="医学影像计算" url="http://www.cvblogs.cn/categories/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F%E8%AE%A1%E7%AE%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cvblogs.cn/2017/09/20/summer-summary/</loc>
+    <lastmod>2017-10-30T16:41:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>假期工作总结</title>
+        <pubTime>2017-09-19T17:11:25.000Z</pubTime>
+        
+        <tag>学习总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习周报" url="http://www.cvblogs.cn/categories/%E5%AD%A6%E4%B9%A0%E5%91%A8%E6%8A%A5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cvblogs.cn/2017/09/26/deep-learning-ian-goodfellow-chap6-bp/</loc>
     <lastmod>2017-10-01T07:54:09.000Z</lastmod>
     <data>
@@ -57,26 +97,6 @@
            
              
               <breadCrumb title="软件工程" url="http://www.cvblogs.cn/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cvblogs.cn/2017/09/20/summer-summary/</loc>
-    <lastmod>2017-09-19T17:11:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>假期工作总结</title>
-        <pubTime>2017-09-19T17:11:25.000Z</pubTime>
-        
-        <tag>学习总结</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习周报" url="http://www.cvblogs.cn/categories/%E5%AD%A6%E4%B9%A0%E5%91%A8%E6%8A%A5/"/>
           
         </display>
     </data>
@@ -144,6 +164,26 @@
 
     
   <url>
+    <loc>http://www.cvblogs.cn/2017/09/04/UCF-CVClass-Summary1/</loc>
+    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>UCF-CV课程总结:边缘检测</title>
+        <pubTime>2017-09-04T11:50:56.000Z</pubTime>
+        
+        <tag>课程总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</loc>
     <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     <data>
@@ -177,26 +217,6 @@
            
              
               <breadCrumb title="图像处理" url="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cvblogs.cn/2017/09/04/UCF-CVClass-Summary1/</loc>
-    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>UCF-CV课程总结:边缘检测</title>
-        <pubTime>2017-09-04T11:50:56.000Z</pubTime>
-        
-        <tag>课程总结</tag>
-         
-         
-           
-             
-              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
           
         </display>
     </data>
