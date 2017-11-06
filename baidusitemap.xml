@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.cvblogs.cn/2017/11/07/XMind-Pro-8-Update5-%E4%B8%8B%E8%BD%BD%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97-%E4%BB%A5Mac%E4%B8%BA%E4%BE%8B/</loc>
+    <lastmod>2017-11-06T21:21:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>XMind Pro 8 Update5 下载破解安装指南 - 以Mac为例</title>
+        <pubTime>2017-11-06T21:17:30.000Z</pubTime>
+        
+        <tag>测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="网页开发" url="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cvblogs.cn/2017/10/31/media-image-intro/</loc>
     <lastmod>2017-10-30T16:42:42.000Z</lastmod>
     <data>
@@ -164,26 +184,6 @@
 
     
   <url>
-    <loc>http://www.cvblogs.cn/2017/09/04/UCF-CVClass-Summary1/</loc>
-    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>UCF-CV课程总结:边缘检测</title>
-        <pubTime>2017-09-04T11:50:56.000Z</pubTime>
-        
-        <tag>课程总结</tag>
-         
-         
-           
-             
-              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</loc>
     <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     <data>
@@ -217,6 +217,26 @@
            
              
               <breadCrumb title="图像处理" url="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cvblogs.cn/2017/09/04/UCF-CVClass-Summary1/</loc>
+    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>UCF-CV课程总结:边缘检测</title>
+        <pubTime>2017-09-04T11:50:56.000Z</pubTime>
+        
+        <tag>课程总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
           
         </display>
     </data>
