@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>linux之shell命令的状态码 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Linux" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言记得我们写程序时常常会return一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux之Shell命令的状态码">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/11/08/开发学习/linux_Shell命令的状态码/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言记得我们写程序时常常会return一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-10T13:00:24.106Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux之Shell命令的状态码">
+<meta name="twitter:description" content="前言记得我们写程序时常常会return一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-开发学习/linux_Shell命令的状态码" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      linux之Shell命令的状态码
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/开发学习/linux_Shell命令的状态码/" class="article-date">
+	  <time datetime="2017-11-07T17:59:10.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记得我们写程序时常常会<code>return</code>一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。<br>今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。<br><a id="more"></a><br>退出状态码是一个 0 ~ 255 之间的整数值，在命令结束运行时由命令传给shell。你可以捕捉这个值并在脚本中使用。</p>
+<h2 id="查看状态码"><a href="#查看状态码" class="headerlink" title="查看状态码"></a>查看状态码</h2><p>Linux 使用了<code>$?</code> 专属变量来保存上个执行的命令的退出状态码。你必须在要查看的命令之后马上查看或使用<code>$?</code>变量。它的值会变成shell中执行的最后一条命令的退出状态码。</p>
+<ul>
+<li>注意：<code>$?</code>是变量。所以要在控制台打印它。不能直接输入：<code>$?</code>,而是应该要使用<code>echo</code>这样的命令打印到控制台。</li>
+</ul>
+<h2 id="Linux-状态码的意义"><a href="#Linux-状态码的意义" class="headerlink" title="Linux 状态码的意义"></a>Linux 状态码的意义</h2><p>默认状态下，shell脚本会以脚本中的最后一个命令作为退出状态码。<br>所以一般情况下，在shell脚本中以 exit 命令的值来指定shell命令的退出状态码。但是退出状态码的范围是 0 ~ 255, 退出值超出这个范围将会执行取模运算。<br>例如通过exit 命令指定返回值为300，经过取模运算，那么退出状态码就为44.<br>| Code  |              Description              |<br>| :—: | :———————————–: |<br>|   0   |                命令成功结束                 |<br>|   1   |                通用未知错误                 |<br>|   2   |               误用shell命令               |<br>|  126  |                命令不可执行                 |<br>|  127  |                 没找到命令                 |<br>|  128  |                无效退出参数                 |<br>| 128+x |            Linux 信号x的严重错误             |<br>|  130  | Linux 信号2 的严重错误，即命令通过SIGINT（Ctrl＋Ｃ）终止 |<br>|  255  |                退出状态码越界                |</p>
+<h2 id="用法说明"><a href="#用法说明" class="headerlink" title="用法说明"></a>用法说明</h2><p>exit命令用于退出当前shell，在shell脚本中可以终止当前脚本执行。<br>常用参数<br>格式：exit n<br>退出。设置退出码为n。（Cause the shell to exit with a status of n.）<br>格式：exit<br>退出。退出码不变，即为最后一个命令的退出码。（If n is omitted, the exit status is that of the  last  command executed. ）</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<li><a href="http://blog.csdn.net/wlovh1989/article/details/51113488" target="_blank" rel="external">Shell中的特殊变量$?-查看上一条Shell命令的退出状态码（exit status）</a></li>
+<li><a href="http://jackwxh.blog.51cto.com/2850597/827600" target="_blank" rel="external">shell 程序 返回码 退出码</a></li>
+<li><a href="http://www.cnblogs.com/qianzhilan/p/4391210.html" target="_blank" rel="external">Linux Shell 编程常见规则及退出状态码</a></li>
+</ul>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/08/开发学习/web开发_NPM学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          web开发之NPM学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/07/开发学习/python_Python 批处理命名文件/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">python之批处理命名文件</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看状态码"><span class="nav-number">2.</span> <span class="nav-text">查看状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-状态码的意义"><span class="nav-number">3.</span> <span class="nav-text">Linux 状态码的意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法说明"><span class="nav-number">4.</span> <span class="nav-text">用法说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">5.</span> <span class="nav-text">引用</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

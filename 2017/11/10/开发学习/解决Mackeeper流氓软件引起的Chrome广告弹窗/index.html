@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>解决mackeeper流氓软件引起的chrome广告弹窗 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="测试" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了YouTube一个推荐高效率App的视频中的软件之后，Chrome总是在我使用过程中弹窗MacKeeper的病毒广告。（主要下载了视频中推荐的几个软件：Hidden Me以及另外一个忘记了叫什么的管理Display的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，">
+<meta name="keywords" content="测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决Mackeeper流氓软件引起的Chrome广告弹窗">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/11/10/开发学习/解决Mackeeper流氓软件引起的Chrome广告弹窗/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了YouTube一个推荐高效率App的视频中的软件之后，Chrome总是在我使用过程中弹窗MacKeeper的病毒广告。（主要下载了视频中推荐的几个软件：Hidden Me以及另外一个忘记了叫什么的管理Display的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-10T12:13:35.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="解决Mackeeper流氓软件引起的Chrome广告弹窗">
+<meta name="twitter:description" content="前言昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了YouTube一个推荐高效率App的视频中的软件之后，Chrome总是在我使用过程中弹窗MacKeeper的病毒广告。（主要下载了视频中推荐的几个软件：Hidden Me以及另外一个忘记了叫什么的管理Display的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-开发学习/解决Mackeeper流氓软件引起的Chrome广告弹窗" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      解决Mackeeper流氓软件引起的Chrome广告弹窗
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/10/开发学习/解决Mackeeper流氓软件引起的Chrome广告弹窗/" class="article-date">
+	  <time datetime="2017-11-10T09:27:26.000Z" itemprop="datePublished">2017-11-10</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了<code>YouTube</code>一个推荐高效率<code>App</code>的视频中的软件之后，<code>Chrome</code>总是在我使用过程中弹窗<code>MacKeeper</code>的病毒广告。（主要下载了视频中推荐的几个软件：<code>Hidden Me</code>以及另外一个忘记了叫什么的管理<code>Display</code>的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，于是乎。就上网查了一下。发现果然是中了套路，貌似还有点深。于是乎，就将自己解决的过程记录一下。并且调整了我解决问题的过程。我认为最关键的步骤被提前了。我始终认为是那几个步骤奏效的。<br><a id="more"></a></p>
+<h2 id="更新方法"><a href="#更新方法" class="headerlink" title="更新方法"></a>更新方法</h2><p>发现下面的内容并不能根本解决问题，最后禁用了几个插件才解决了。以及删除了<code>/Library/</code>下的一些内容。</p>
+<h2 id="删除最近下载的软件"><a href="#删除最近下载的软件" class="headerlink" title="删除最近下载的软件"></a>删除最近下载的软件</h2><p>不管问题是不是它引起的。反正我已经不打算用了。猎奇心理害死人啊。也有说是<code>Lantern</code>的问题。反正我也关了….</p>
+<h2 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h2><p>命令行打开启动项所在的两个目录：<code>open /Library/LaunchDaemons</code>以及<code>open /Library/LaunchAgents</code>删除掉近期的项目。我记得我主要是删除了一个<code>com.pandasmite.plist</code>的文件。起初用文本编辑器打开时，觉得还挺正常的。记得用一个字段是设置了一个<code>3600</code>。现在怀疑是脚本开启的间隔…（我也不想复现了…）。<br>我是在执行了这些之后才不再弹窗的。<br>顺便，你还可以删除其他一些你不想看到的开机自启动项目。比在<code>用户和群组</code>中管理自启动项目要方便一些。有的时候一些自启动项目并不在那里！</p>
+<h2 id="应用商店下载EasyFind"><a href="#应用商店下载EasyFind" class="headerlink" title="应用商店下载EasyFind"></a>应用商店下载EasyFind</h2><p>这是知乎上推荐的一个全盘搜索的软件，搜<code>MacKeeper</code>，不用区分大小写。果然找到两个，删除掉。顺便清空垃圾箱。</p>
+<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><p>感觉解决这个问题，我电脑重启了四五次。感觉把这么久以来所有的重启次数都用完了！中间以为自己成功却没有的感觉真的是让人崩溃：）流氓软件真的可怕。</p>
+<h2 id="结束语：一些思考"><a href="#结束语：一些思考" class="headerlink" title="结束语：一些思考"></a>结束语：一些思考</h2><p>有说其利用的是<code>DNS劫持</code>。比较同意这个观点。它发起的第一个请求的网址似乎是一个<code>app.yyys.com</code>之类的，然后会定向到另一个网站，最后再定向到广告页面。<br>其实说是<code>lantern</code>搞得鬼，我觉得也有可能。但是我之前用似乎都是好好的。反正现在已经不用烦恼了。<br>话说，<code>Mac</code>系统不需要担心病毒却要担心流氓软件。好多人都是安装<code>XPlayer</code>的时候中招。幸亏我当时是安装的<code>Moivst</code>。</p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/10/开发学习/错误修改profile文件引起的重复登录问题解决方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          错误修改profile文件引起的重复登录问题解决方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/10/开发学习/linux之环境变量/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">linux之环境变量</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新方法"><span class="nav-number">2.</span> <span class="nav-text">更新方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除最近下载的软件"><span class="nav-number">3.</span> <span class="nav-text">删除最近下载的软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除启动项"><span class="nav-number">4.</span> <span class="nav-text">删除启动项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用商店下载EasyFind"><span class="nav-number">5.</span> <span class="nav-text">应用商店下载EasyFind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启"><span class="nav-number">6.</span> <span class="nav-text">重启</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束语：一些思考"><span class="nav-number">7.</span> <span class="nav-text">结束语：一些思考</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

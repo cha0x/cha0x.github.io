@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>读书笔记:吴福朝《计算机视觉中的数学方法》 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="数学基础" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言&amp;emsp;&amp;emsp;已经看完这本书的前两篇的内容，第三篇是关于”模型估计”的。本书在网上直接搜索书名即可找到公开的资源以供下载。本文也在文末提供了免费的资源下载链接。">
+<meta name="keywords" content="数学基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读书笔记:吴福朝《计算机视觉中的数学方法》">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/09/09/理论学习/maths-in-CV/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;已经看完这本书的前两篇的内容，第三篇是关于”模型估计”的。本书在网上直接搜索书名即可找到公开的资源以供下载。本文也在文末提供了免费的资源下载链接。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-09T16:21:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="读书笔记:吴福朝《计算机视觉中的数学方法》">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;已经看完这本书的前两篇的内容，第三篇是关于”模型估计”的。本书在网上直接搜索书名即可找到公开的资源以供下载。本文也在文末提供了免费的资源下载链接。">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-理论学习/maths-in-CV" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      读书笔记:吴福朝《计算机视觉中的数学方法》
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/09/09/理论学习/maths-in-CV/" class="article-date">
+	  <time datetime="2017-09-09T13:39:26.000Z" itemprop="datePublished">2017-09-09</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/图像处理/">图像处理</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学基础/">数学基础</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;已经看完这本书的前两篇的内容，第三篇是关于”模型估计”的。本书在网上直接搜索书名即可找到公开的资源以供下载。本文也在文末提供了免费的资源下载链接。</p>
+<a id="more"></a>
+<h3 id="内容有感"><a href="#内容有感" class="headerlink" title="内容有感"></a>内容有感</h3><p><br>&emsp;&emsp;老实说，我是绝望的。数学基础实在太差了。过程中，一度放弃，靠着毅力以及skip reading才翻完前两篇的内容。笔记做了20几页。在FoxitReader上，这本书也被我圈圈画画的不成样子。可是不知道怎么回事，感觉自己真的是学不透它的概念啊…</p>
+<h4 id="《射影几何》篇"><a href="#《射影几何》篇" class="headerlink" title="《射影几何》篇"></a>《射影几何》篇</h4><p><br>&emsp;&emsp;本篇的内容可以说是做计算机视觉最基础的理论了，必须掌握的内容。期间，提到一个<b>自标定理论</b>，遥遥记得自己当初选择这个专业就是想做一款假延时的拍照应用，这么多年过去了，我一直以为自己要实现的就是摄像机的标定(至少基础算法应该要是这个)，可是读了此章内容才发现并不是这么回事。还记得读到:</p>
+<blockquote>
+<p>“所谓自标定，是指仅从埸景的多幅图像来确定摄像机内参数，这种方法不需精密加工的标定块。”</p>
+</blockquote>
+<p><br>的时候，我整个人都是崩溃的。期间又想到自己毕设究竟想做什么，是做一个服务东大课堂的应用还是实现自己一直想实现的这个idea(虽然能想见后者的困难度：好似一个连自己都不懂需求是什么的产品经理告诉手下的码农，我的需求可能是这个云云。不幸的是，我自己恰恰又是那个苦逼的实现者…)<br><br>&emsp;&emsp;本篇的内容，在阅读过程中，也发现了，自己在学习UCF课程的时候，压根其实就没有听懂人家背后的数学知识。读本篇内容时常让我有种：哦，原来教授的意思是这个不是那个啊…后期还需要反复咀嚼一二。</p>
+<h4 id="《矩阵张量》篇"><a href="#《矩阵张量》篇" class="headerlink" title="《矩阵张量》篇"></a>《矩阵张量》篇</h4><p><br>&emsp;&emsp;吴教授的书的章节命名很对一个强迫症患者的口味。本篇的内容前半部分讲矩阵，后半部分讲张量。前半部分的矩阵中所说的各种矩阵分解的方法，其中的奇异值分解(因为数学不好，总觉得这些专有名词很吓人，阅读之下，发现也就那么回事。)不过，我知道要做到真正的理解和消化为我所用还是需要仔细的品味阅读的。至于后半部分所提到的张量则是让我大开眼界！虽然没有佐证，但我猜：Google的Tensorflow估计就是基于这个Tensor(张量)而来！How amazing!有种感觉，又距离想要知道的内容更近一步了！= =</p>
+<h3 id="资源链接"><a href="#资源链接" class="headerlink" title="资源链接"></a>资源链接</h3><p><a href="http://download.csdn.net/download/wxqfree/1430305" target="_blank" rel="external">计算机视觉中的数学方法(吴福朝)</a></p>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;这本书的确值得一读，但我想，如果在我大三甚者更早之前能够接触到了解到这本书，我的理解能有我现在多吗？就好像我之前的每次尝试，似乎总是失败的收尾。就好像即使某种意义上，我完成了UCF的CV网课，但我依旧对自己是否真正掌握这些知识心虚不已…但是，可以肯定的是，这本书在以后读来(预计下个月重读)，将又会有很多的收获。期待下回能够补充更读到的属于自己的更专业的关于本书的解读！</p>
+<blockquote>
+<p>&emsp;&emsp;革命尚未成功，同志还需努力。</p>
+</blockquote>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/09/09/理论学习/software-engineering-exp1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          孟宁《软件工程C实战》实验报告1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/05/理论学习/machine-learning-basic1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">机器学习相关基础名词：有监督、半监督、无监督</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容有感"><span class="nav-number">2.</span> <span class="nav-text">内容有感</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#《射影几何》篇"><span class="nav-number">2.1.</span> <span class="nav-text">《射影几何》篇</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#《矩阵张量》篇"><span class="nav-number">2.2.</span> <span class="nav-text">《矩阵张量》篇</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源链接"><span class="nav-number">3.</span> <span class="nav-text">资源链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">4.</span> <span class="nav-text">结束语</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

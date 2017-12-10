@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cvblogs.cn/"/>
-  <updated>2017-11-06T21:21:21.000Z</updated>
+  <updated>2017-12-10T12:48:24.408Z</updated>
   <id>http://www.cvblogs.cn/</id>
   
   <author>
@@ -16,372 +16,121 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>XMind Pro 8 Update5 下载破解安装指南 - 以Mac为例</title>
-    <link href="http://www.cvblogs.cn/2017/11/07/XMind-Pro-8-Update5-%E4%B8%8B%E8%BD%BD%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97-%E4%BB%A5Mac%E4%B8%BA%E4%BE%8B/"/>
-    <id>http://www.cvblogs.cn/2017/11/07/XMind-Pro-8-Update5-下载破解安装指南-以Mac为例/</id>
-    <published>2017-11-06T21:17:30.000Z</published>
-    <updated>2017-11-06T21:21:21.000Z</updated>
+    <title>翻译：理解深度学习中的卷积操作</title>
+    <link href="http://www.cvblogs.cn/2017/12/10/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%8D%B7%E7%A7%AF%E6%93%8D%E4%BD%9C/"/>
+    <id>http://www.cvblogs.cn/2017/12/10/理论学习/理解深度学习中的卷积操作/</id>
+    <published>2017-12-09T17:18:18.000Z</published>
+    <updated>2017-12-10T12:48:24.408Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;当前时间：2017年11月7日，此方法适用所有终端平台[Mac Win Linux]，只不过略有不同(例如一些文件的位置，但是还是能够在网上找到的)，由于笔者手头需要安装在Mac下，因此以Mac为例子讲解。<br><img src="http://ovnuv29fq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-07%2003.48.30.png" alt="镇楼"></p>
-<!-- moew -->
-<h2 id="官网下载安装包"><a href="#官网下载安装包" class="headerlink" title="官网下载安装包"></a>官网下载安装包</h2><ul>
-<li><a href="http://www.xmind.net/" target="_blank" rel="external">xmind官方地址</a>：可能会比较慢</li>
-<li><a href="http://pan.baidu.com/s/1bzjqJs" target="_blank" rel="external">百度网盘地址</a>：可能会很快失效</li>
-<li><strong>国内网站的版本是不行</strong>的(即xmind.cn以及你所搜到的最多的makeding上的)，已经被国内的二道贩子公司修改过了，所以是一定不可能破解的，要去英文官网下载。才能用补丁破解。</li>
-</ul>
-<h2 id="补丁下载破解"><a href="#补丁下载破解" class="headerlink" title="补丁下载破解"></a>补丁下载破解</h2><ol>
-<li><a href="http://pan.baidu.com/s/1jIcO2mq" target="_blank" rel="external">点击下载XMindCrack.jar</a>：可能会很快实效</li>
-<li>移动XMindCrack.jar到xmind安装目录文件夹下<br>a.  Finder–&gt;应用程序–&gt;XMind–&gt;右键–&gt;包内容–&gt;Contents–&gt;Eclipse<br>b.  <img src="http://ovnuv29fq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-07%2004.25.05.png" alt="如果一切顺利"></li>
-<li>在XMind.ini 文末追加 -javaagent:/Applications/XMind.app/Contents/Eclipse/XMindCrack.jar<br>a. 注意此处最好添加绝对路径，并且一定不要安装在随手会被删除的地方:)<strong></strong></li>
-<li>修改计算机的hosts文件,防止需要重复注册（即防止“流氓验证”）<br>a. 打开Spotlight搜索：/private/etc/<br>b. 选择在Finder中打开<br>c. <img src="http://ovnuv29fq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-07%2004.19.15.png" alt="如果一切顺利"><br>d. 下拉找到hosts,拷贝到其他地方用文本编辑器打开，对照着文件前面的格式，末尾追加:127.0.0.1         www.xmind.net</li>
-<li>断网(其实已经不需要了，但是最好还是断网)</li>
-<li>打开软件，邮箱任意即可，填写序列号<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">XAka34A2rVRYJ4XBIU35UZMUEEF64CMMIYZCK2FZZUQNODEKUHGJLFMSLIQMQUCUBXRENLK6NZL37JXP4PZXQFILMQ2RG5R7G4QNDO3PSOEUBOCDRYSSXZGRARV6MGA33TN2AMUBHEL4FXMWYTTJDEINJXUAV4BAYKBDCZQWVF3LWYXSDCXY546U3NBGOI3ZPAP2SO3CSQFNB7VVIY123456789012345</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>&emsp;&emsp;这是我安装的最坎坷的一个软件（为此，我居然花了将近七个小时从10:00pm–05:00am），只能说XMind.cn实在是在防盗版这块做的很强大…以及他们的营销…<br>&emsp;&emsp;分享给有需要的人。<br>&emsp;&emsp;另外，如果你觉得这篇文章确实帮助到了你。可以通过下面的微信支付给我打赏:)谢谢。<br><img src="http://ovnuv29fq.bkt.clouddn.com/Photo_1107_1a.png?imageView/3/w/200/h/200" alt="微信支付"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;emsp;&amp;emsp;当前时间：2017年11月7日，此方法适用所有终端平台[Mac Win Linux]，只不过略有不同(例如一些文件的
-    
-    </summary>
-    
-      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="测试" scheme="http://www.cvblogs.cn/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>医学影像技术概述:X-ray、CT、MRI</title>
-    <link href="http://www.cvblogs.cn/2017/10/31/media-image-intro/"/>
-    <id>http://www.cvblogs.cn/2017/10/31/media-image-intro/</id>
-    <published>2017-10-30T16:36:18.000Z</published>
-    <updated>2017-10-30T16:42:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;近年来，医学影像分析(Medical Image Analysis)作为一个新兴的交叉学科，结合医学影像以及计算机视觉和机器学习技术在学术界和工业界都得到了广泛的关注。对于以后要从事该领域的研究来说，形成对医学影像的结构性认识是非常有必要的。本节内容结合<a href="https://www.bilibili.com/video/av12288227/" target="_blank" rel="external">2004年中国医科大学-医学影像网络课程</a>中前几讲关于目前常用的医学影像技术的原理等内容，做一个简单的梳理和介绍。</p>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>此文为译文，目的是让自己更好的理解卷积操作。原文地址：<a href="http://timdettmers.com/2015/03/26/convolution-deep-learning/" target="_blank" rel="external">Understanding Convolution in Deep Learning</a></p>
+<p>非常fascinating的是作者关于卷积在卷积网络中的应用。之前从来没有想过，为啥卷积网络就卷积了呢？（不过似乎我一直也都是停留在对全连接网络的学习上= =）</p>
 <a id="more"></a>
-<h1 id="常用医学影像技术及成像特点"><a href="#常用医学影像技术及成像特点" class="headerlink" title="常用医学影像技术及成像特点"></a>常用医学影像技术及成像特点</h1><p>&emsp;&emsp;目前常用的医学影像技术主要有三类：</p>
-<ol>
-<li>X射线成像(X-ray)：经济简便、应用广泛。常用作胸部病变的基本检查方法</li>
-<li>CT(电子计算机断层扫描:Computed Tomography)：易于发现病变、显示病变特征。增强扫描以了解病变的血供情况。</li>
-<li>US(超声成像:UltraSound)</li>
-<li>MRI(磁共振:Magnetic Resonance Image)：多用于纵膈和肺门病变的诊断<h2 id="X射线成像"><a href="#X射线成像" class="headerlink" title="X射线成像"></a>X射线成像</h2>&emsp;&emsp;本小节简单分析了一下过去普通X线成像以及现在常用的数字X线成像技术。<h3 id="产生以及成像特点"><a href="#产生以及成像特点" class="headerlink" title="产生以及成像特点"></a>产生以及成像特点</h3>&emsp;&emsp;X线是在真空管内通过高速行进的电子流轰击钨靶时产生。与X线成像相关的四个特性：</li>
-<li>穿透性：X线成像的基础（吸收与衰减，穿透与管电压，厚度与密度）</li>
-<li>荧光效应：透视的基础</li>
-<li>摄影效应：通过胶片感光剩余的X线形成潜影后经由显定影液处理后产生黑、白图像。</li>
-<li>电离效应(生物效应)：是其被用作癌症放疗的基础</li>
-</ol>
-<p>&emsp;&emsp;X线图像特点为灰阶图像(白:高密度，灰:软组织，黑:低密度)，反映人体组织结构的解刨及病理状态。缺点是影像重叠、放大、失真。</p>
-<h3 id="X线检查技术"><a href="#X线检查技术" class="headerlink" title="X线检查技术"></a>X线检查技术</h3><ol>
-<li>普通检查:荧光检查、X线摄影</li>
-<li>特殊检查:软线摄影、放大摄影、荧光摄影、记波摄影</li>
-<li>造影检查:需要打造影剂，通常对人体有一定损害。造影剂按阴阳性分为两大类。</li>
-</ol>
-<h3 id="数字X线成像"><a href="#数字X线成像" class="headerlink" title="数字X线成像"></a>数字X线成像</h3><p>&emsp;&emsp;将普通X线摄影装置同计算机结合，使得X线信息由模拟信息转换为数字信息。现在大部分采用的X线成像方式均是数字式。通过数字X线成像技术，得到的数字信号可以通过调节窗宽窗位观察不同组织的情况。还可以对图像的局部进行放大分析。<br>&emsp;&emsp;它的优点就是数字化。也是目前医学影像计算这个新兴学科发展的基础。</p>
-<h2 id="CT成像"><a href="#CT成像" class="headerlink" title="CT成像"></a>CT成像</h2><p>&emsp;&emsp;需要注意的是，CT也是属于放射性质的医学检查。不同的是其是对人体的断面(通常是轴位，也就是横切面)进行扫描得到。因此，当我们拿到一张CT片子的时候需要建立一种立体的感觉。</p>
-<h3 id="常见概念"><a href="#常见概念" class="headerlink" title="常见概念"></a>常见概念</h3><p>&emsp;&emsp;三个重要的概念：体素、矩阵和像素。常用的空间分辨率为:512x512。另外需要注意的是其密度分辨率常用灰阶表示。</p>
-<h3 id="常用临床CT检查技术"><a href="#常用临床CT检查技术" class="headerlink" title="常用临床CT检查技术"></a>常用临床CT检查技术</h3><ol>
-<li>平扫</li>
-<li>静脉增强造影</li>
-<li>动态增强扫描</li>
-<li>三维重建</li>
-<li>造影CT</li>
-<li>CT血管造影(CTA)</li>
-<li>CT透视</li>
-</ol>
-<h2 id="MRI磁共振"><a href="#MRI磁共振" class="headerlink" title="MRI磁共振"></a>MRI磁共振</h2><p>&emsp;&emsp;与前两者的成像原理有很大的不同。也叫核磁共振nMRI，通常省略了nuclear的n。</p>
-<h3 id="基本内容"><a href="#基本内容" class="headerlink" title="基本内容"></a>基本内容</h3><p>&emsp;&emsp;利用原子核在磁场内所产生的信号经过重建形成影像的一种技术(因此不可以在做核磁共振的时候体内藏有金属物质或者让金属物质靠近磁场)。对神经系统和软组织有很好的显示能力。利用的是不同组织的T1时间和T2时间不同(特点：反映组织间的信号强度，灰阶成像)。不同的扫描序列和成像参数如下：</p>
-<ol>
-<li>T1加权像:反映组织间T1的差别，有利于观察解刨结构。</li>
-<li>T2加权像:反映组织间T2的差别，显示病变组织好。</li>
-<li>质子加权像</li>
-<li>自旋回波(SE)</li>
-<li>梯度回波(GE)</li>
-<li>平面回波</li>
-</ol>
-<h3 id="磁共振检查技术"><a href="#磁共振检查技术" class="headerlink" title="磁共振检查技术"></a>磁共振检查技术</h3><p>&emsp;&emsp;根据调节参数，主要有以下几种基于MR的检查技术。值得关注的是进来针对神经影像中的fMRI的研究。</p>
-<ol>
-<li>平扫(T1WI、T2WI、PDWI)</li>
-<li>增强(T1WI)</li>
-<li>动态增强(Dynamic MR)</li>
-<li>磁共振血管造影(MRA)</li>
-<li>脂肪抑制成像(STIR)</li>
-<li>水抑制成像(FLAIR)</li>
-<li>水成像(MRCP、MRU、MRM)</li>
-<li>灌注成像(Perfusion)</li>
-<li>弥散成像(Diffusion)</li>
-<li>功能成像(function MR)</li>
-</ol>
-<h1 id="医学影像计算MIC的兴起"><a href="#医学影像计算MIC的兴起" class="headerlink" title="医学影像计算MIC的兴起"></a>医学影像计算MIC的兴起</h1><p>&emsp;&emsp;前面介绍了几种常用的医学影像计算。通过它们能够获取到关于人体组织的影像。可以借助这些影像技术，医生通过分析病人影像，在不解刨正常人体的情况下，得出更科学的医学论断。然而医学影像的特殊性(同病异影、异病同影)造成人工分析时，由于个人的经验不足等问题导致其常常出现误诊、漏诊的情况。<br>&emsp;&emsp;随着人工智能的发展，我们考虑是否可以借助计算机视觉的技术和机器学习的技术来通过计算机计算达到辅助诊断的目的。以提高影像诊断的正确率。而也正是因为医学影像同病异影、异病同影的特殊性，所以就要求我们在数据处理时还要结合临床表现的数据进行多模态的分析。同时，对于在辅助诊断过程中，提出多个疾病的概率占比也是非常有必要的。这些也是目前MIC中的热点研究方向。</p>
-<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>&emsp;&emsp;在学习了这几讲内容之后，对之后所要从事的内容有了更深入的了解，也激起了我对医学影像计算研究的热情。好几次产生这样一种心情：如果要写很酷的应用的话，不过几年，新旧技术更迭就会被人们遗忘，或者不过几年现在可以被称为酷的东西也只不过是一个小烟花，可能只有一瞬的灿烂，但是却无法产生任何影响。但是，如果是做医学方向的新兴研究，至少所做的内容说不好会对人类的健康有所帮助？<br>&emsp;&emsp;记得以前在某博上看到一个硕士前辈说过为什么当初执意读研执意读计算机视觉方向时提到过(原话忘了，但是大意如下)：“参与学术研究是我们作为人类参与人类进度最简单的方法，至少希望通过自己的一点点努力，能够对后来人有一点点的帮助也是有意义的。”<br>&emsp;&emsp;不忘初心，方得始终。希望也能够通过自己的努力，对后来人有一点点的帮助。对人类的进步有一点点帮助。</p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><ol>
-<li><a href="https://www.bilibili.com/video/av12288227/" target="_blank" rel="external">中国医科大学-医学影像网络公开课</a></li>
-</ol>
+<h1 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h1><p>如今，卷积可能是深度学习中最重要的一个概念。卷积操作及卷积网络使深度学习在机器学习任务中表现靠前。但是，什么使得卷积操作如此强大呢？在这篇文章中我会解释卷积操作以及关联它的相关概念帮助你更完全的理解卷积。</p>
+<p>虽然已有大量介绍卷积相关的深度学习的博文，但是我发现他们大都因为介绍了过多的不必要的数学细节反而导致令人费解。这篇博文虽然也会介绍一些数学细节，但是我会通过图片的形式展现关键的数学表达式，使其更直观易懂。第一部分是介绍一些通泛的卷积概念以及卷积网络。第二部分则是为深度学习研究人员和专家能够加强理解而准备的一些更高级的概念。</p>
+<h1 id="什么是卷积？"><a href="#什么是卷积？" class="headerlink" title="什么是卷积？"></a>什么是卷积？</h1><p>整篇文章都是建立在去解答这个问题上，因此首先了解大致的方向是很有帮助的。那么，单纯的卷积说的是什么呢？</p>
+<p>你可以想象卷积是混淆信息的方式。想象两个装满信息的桶被按照某种指定的规则被倒入一个桶里进行混合。每一个桶里的内容，都有它自己的关于如何混合其他桶中信息的指导方式。因此，卷积是一个按照指定步骤执行的混合信息的操作。</p>
+<p>事实上，卷积和其他数学运算一样也可以被数学定义。尽管卷积操作本身十分的复杂，但是对于复杂的等式，它又可以简化表示。因此，为了简化表达，卷积操作被大量用在了物理学以及工程学上。在第二部分，经过一小段数学证明后。我们会关联和整合科学和深度学习的创意，得到更深层次的关于卷积的理解。但是，我们现在先暂时关注卷积在实际中的应用。</p>
+<h1 id="我们如何对图片做卷积操作？"><a href="#我们如何对图片做卷积操作？" class="headerlink" title="我们如何对图片做卷积操作？"></a>我们如何对图片做卷积操作？</h1><p>当我们对图片做卷积时，我们是对两个维度做了卷积（即图片的宽和高方向）。我们混合两个桶中的内容：第一个桶是输入的图片（可以看作是三个像素矩阵组成，因为图像是由RGB三通道组成的；每个像素矩阵中元素的值：0～255）。第二个桶中是卷积核，一个独立的由浮点数组成的矩阵。（可以将它的大小以及模式看作是一个如何混合两个桶中信息的指导方式）。输出的结果在深度学习中被叫做特征图像(feature map)。每个通道都会产生一个特征图像。<br><img src="https://i1.wp.com/timdettmers.com/wp-content/uploads/2015/03/convolution.png" alt="用一个边缘算子与图像做卷积操作的过程"></p>
+<p>现在，我们演示卷积是如何混合两份信息。一种方法是利用输入图像采样一个小块做卷积操作–我们用100X100的图像，以及3X3的核。因此，我们可以同时采样3X3个像素点（和核做点乘）。最终得到的是一个中心值。当采样完一个地方（3X3）就向一个方向移动一个像素点。循环往复。当所有的像素都被计算后操作才停止。下面的动图展示了卷积操作的一个过程。<br><img src="https://i2.wp.com/timdettmers.com/wp-content/uploads/2015/03/aa-convolution-02.gif" alt="目标图片一个像素点的计算过程"><br>如你所见，为了保证与原图像有同样的密度一致性，这里通常还有一个正则化的过程。</p>
+<h1 id="为什么作用在图片的卷积操作在机器学习中如此有效？"><a href="#为什么作用在图片的卷积操作在机器学习中如此有效？" class="headerlink" title="为什么作用在图片的卷积操作在机器学习中如此有效？"></a>为什么作用在图片的卷积操作在机器学习中如此有效？</h1><p>在一张图像中有大量的我们不需要的冗余信息。一个很好的例子就是<code>Burda Bootcamp</code>（这是原文作者一个在快速原型生成的马拉松式的学生实验项目中的项目=  =）在一个项目，作者想要搭建一个用于时尚图片搜索深度自编码器：你上传一张关于时尚单品的照片，自编码器会找出与图中的单品包含的相关风格的图片。</p>
+<p>现在，如果你想鉴别不同风格的衣服，衣服的颜色不会有什么帮助，类似的还有衣服的商标等。关键的要素是衣服的形状。通常，女士衬衫的形状是异于短袖，夹克或毛衣的。因此，我们需要过滤图像中不必要的信息。通过卷积操作我们可以很容易完成这个需求。</p>
+<p>作者的同事Jannek Thomas用Sobel算子（它的定义与前面的那个那个边缘算子差不多）预处理了数据，得到了重要的边缘信息。这也是为什么卷积操作也叫做滤波。边缘信息的提取对于形状信息的获得非常有帮助。<br><img src="https://i1.wp.com/timdettmers.com/wp-content/uploads/2015/03/autoencoder_fashion_features_and_results.png" alt="上面是提取完边缘信息后的图像"></p>
+<p>更深入的：很多的核产生很多的特征图像（map）。例如：锐化图像的，模糊图像的。</p>
+<p>通过这个过程–输入图像，转化输入，得到转化后的图像将其引入算法中。被成为特征提取工程。特征工程非常困难，拥有的学习资料也非常有限。因此，很少有人能够熟练运用它。有效的特征提取在不同的任务中区别很大。因此，不存在通用的特征。同时，对于时间序列数据，特征几乎收效甚微。识别特征的有效性需要大量的经验。</p>
+<p>因此，特征工程非常困难，你必须从零开始一点点去试探。但是，当我们关注图像本身，有什么方法可以自动的找到特征提取的核的吗？</p>
+<h1 id="引入卷积网络"><a href="#引入卷积网络" class="headerlink" title="引入卷积网络"></a>引入卷积网络</h1><p>卷积网络就是干这个的。较于固定我们的核，我们指定一组参数然后让网络训练我们的核。当我们训练我们的卷积网络时，核会随着过程学习，过滤得到更有用的信息。这个过程是全自动的，也被叫做特征学习。特征学习自动得到一个任务的特征。我们所需要做的就是训练我们的网络，去找到一个与新的任务相关的filter。这就是为什么卷积网络如此强大的原因–不再为特征的提取而烦恼。</p>
+<blockquote>
+<p>数据编程的概念</p>
+</blockquote>
+<p>通常我们在一个卷积网络中，不会只学习一个核。我们同时学到一个组织（hierarchy）的多个核。例如：一个32X16X16的核应用在一张256X256的图像上会产生32个241X241的特征图像。（这是标准大小，实现的不同大小特跟着改变；image size - kernel size +1）。因此我们自动学习得到的32个新特征拥有与我们的任务相关的所有信息。这些特征又为接下来的核计算提供了输入。一旦我们学习完所有的核，我们就将其传入给一个全连接的网络（简单的网络，用作图像的分类。）。这就是卷积网络所有的应该知道的概念（池化的过程也很重要，但是它的内容也够写一篇博文了）。</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>放弃了，第二部分还是自己看吧= =翻译的效率实在太低了。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;近年来，医学影像分析(Medical Image Analysis)作为一个新兴的交叉学科，结合医学影像以及计算机视觉和机器学习技术在学术界和工业界都得到了广泛的关注。对于以后要从事该领域的研究来说，形成对医学影像的结构性认识是非常有必要的。本节内容结合&lt;a href=&quot;https://www.bilibili.com/video/av12288227/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;2004年中国医科大学-医学影像网络课程&lt;/a&gt;中前几讲关于目前常用的医学影像技术的原理等内容，做一个简单的梳理和介绍。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="医学影像计算" scheme="http://www.cvblogs.cn/categories/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F%E8%AE%A1%E7%AE%97/"/>
-    
-    
-      <category term="课程总结" scheme="http://www.cvblogs.cn/tags/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读书笔记:Ian Goodfellow《深度学习》第六章</title>
-    <link href="http://www.cvblogs.cn/2017/09/26/deep-learning-ian-goodfellow-chap6-bp/"/>
-    <id>http://www.cvblogs.cn/2017/09/26/deep-learning-ian-goodfellow-chap6-bp/</id>
-    <published>2017-09-26T13:10:04.000Z</published>
-    <updated>2017-10-01T07:54:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;今天看Ian Goodfellow的《深度学习》第六章，讲到神经网络的概念。其从前馈神经网络讲到基于微分的链式法则。然后讲到基于反向传播的神经网络的数学基础。老实说，看完之后，虽然笔记记了三、四页。但是还是很懵逼。在李飞飞的CS231n课程中也提到了关于反向神经网络是如何得出的。但是始终没能做到完全吸收理解。总觉得其理论支撑非常虚。<br>&emsp;&emsp;记得看Andrew采访Hilton的时候，也谈到了反向传播(Error <font color="red">B</font>ack <font color="red">P</font>ropagation)这个概念。这里暂时不追溯历史了。简单总结一下自己接下来学习到的关于反向传播的内容。可能有些地方理解不到位。后面也在慢慢修正自己的理解。</p>
-<a id="more"></a>
-<h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>&emsp;&emsp;在分析算法之前，先来梳理一下几个算法中的基础概念。</p>
-<h4 id="神经元"><a href="#神经元" class="headerlink" title="神经元"></a>神经元</h4><p>&emsp;&emsp;神经网络中的结点被称为神经元。他们之间通常通过带权重的边进行有向连接。</p>
-<h4 id="输入层、隐藏层、输出层"><a href="#输入层、隐藏层、输出层" class="headerlink" title="输入层、隐藏层、输出层"></a>输入层、隐藏层、输出层</h4><p>&emsp;&emsp;由输入结点组成的层称为输入层。由输出结点组成的层称为输出层。中间的结点组成的各层统称为隐藏层(其对外界不可见，似乎被隐藏了起来)。</p>
-<h4 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h4><p>&emsp;&emsp;通常选用sigmoid函数，又称Logistic函数作为激活函数。关于sigmoid函数的性质，这篇<a href="http://www.cnblogs.com/startover/p/3143763.html" target="_blank" rel="external">博客</a>总结的不错。<br><br>&emsp;&emsp;其主要作用是，提供网络的非线性建模能力。否则你的网络中的结点之间都是线性关系，不论设置多少隐藏层学习的效果都是一样的。<br><br>&emsp;&emsp;关于激活函数的讨论有很多。这篇<a href="http://blog.csdn.net/u014595019/article/details/52562159" target="_blank" rel="external">文章</a>总结的很不错。其中还提到了一个代价函数的概念。</p>
-<h4 id="损失函数或叫代价函数"><a href="#损失函数或叫代价函数" class="headerlink" title="损失函数或叫代价函数"></a>损失函数或叫代价函数</h4><p>&emsp;&emsp;BP算法中，提到了一个关于<font color="red">残差</font>的概念。发现很多地方都利用残差对算法进行优化。也有将其称为敏感度；残差可以看做是对偏置参数b的导数，偏置变化多少，残差就变化多少，残差就是偏置的变化率。当误差大的时候，权重更新就快，当误差小的时候，权重的更新就慢。</p>
-<h4 id="正向传播、反向传播"><a href="#正向传播、反向传播" class="headerlink" title="正向传播、反向传播"></a>正向传播、反向传播</h4><p>&emsp;&emsp;正向传播时，输入样本从输入层进入网络，经隐层逐层传递至输出层，如果输出层的实际输出与期望输出(导师信号)不同，则转至误差反向传播；如果输出层的实际输出与期望输出(导师信号)相同，结束学习算法。<br><br>&emsp;&emsp;反向传播时，将输出误差(期望输出与实际输出之差)按原通路反传计算，通过隐层反向，直至输入层，在反传过程中将误差分摊给各层的各个单元，获得各层各单元的误差信号，并将其作为<font color="red">修正</font>各单元权值的根据。这一计算过程使用梯度下降法完成，在不停地调整各层神经元的权值和阈值后，<font color="red">使误差信号减小到最低限度</font>。</p>
-<h3 id="算法缺陷"><a href="#算法缺陷" class="headerlink" title="算法缺陷"></a>算法缺陷</h3><ol>
-<li>局部极小值</li>
-<li>权值过多</li>
-<li>算法终止策略</li>
-<li>过拟合</li>
-</ol>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ol>
-<li><a href="http://www.cnblogs.com/liuwu265/p/4696388.html" target="_blank" rel="external">多层神经网络BP算法 原理及推导</a></li>
-<li><a href="http://blog.csdn.net/lu597203933/article/details/46575803" target="_blank" rel="external">BP算法与公式推导</a></li>
-<li><a href="http://www.jianshu.com/p/c5cda5a52ee4" target="_blank" rel="external">神经网络——BP算法</a></li>
-<li><a href="http://www.cnblogs.com/daniel-D/archive/2013/06/03/3116278.html" target="_blank" rel="external">BP 算法之一种直观的解释</a></li>
-<li><a href="https://baike.baidu.com/item/BP%E7%AE%97%E6%B3%95/1252294?fr=aladdin" target="_blank" rel="external">BP算法_百度百科</a></li>
-</ol>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;阅读文章过程中，看到有说神经网络还有很多分支，如深度神经网络，脉冲神经网络等，并说脉冲神经网络被称为第三代神经网络。这里实在是不知道，留作以后再了解。<br><br>&emsp;&emsp;感觉可以这么理解，如果不引入反向传播，在正向传播中，你也可以得到一个答案。但是这个答案有可能不是最好的。因此，你可以利用这个结果误差进行反向指导。而反向指导所利用的一个重要的数学基础知识就是基于函数微分的链式规则(chain rule)。通过这个误差不断的修正权重矩阵的各个权重以及每层设置的偏置。<br><br>&emsp;&emsp;最后发现自己看书实在是囫囵吞枣，作者的千分之一都没能领悟啊。后续再添加程序实现以及相关数学推导。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;今天看Ian Goodfellow的《深度学习》第六章，讲到神经网络的概念。其从前馈神经网络讲到基于微分的链式法则。然后讲到基于反向传播的神经网络的数学基础。老实说，看完之后，虽然笔记记了三、四页。但是还是很懵逼。在李飞飞的CS231n课程中也提到了关于反向神经网络是如何得出的。但是始终没能做到完全吸收理解。总觉得其理论支撑非常虚。&lt;br&gt;&amp;emsp;&amp;emsp;记得看Andrew采访Hilton的时候，也谈到了反向传播(Error &lt;font color=&quot;red&quot;&gt;B&lt;/font&gt;ack &lt;font color=&quot;red&quot;&gt;P&lt;/font&gt;ropagation)这个概念。这里暂时不追溯历史了。简单总结一下自己接下来学习到的关于反向传播的内容。可能有些地方理解不到位。后面也在慢慢修正自己的理解。&lt;/p&gt;
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;此文为译文，目的是让自己更好的理解卷积操作。原文地址：&lt;a href=&quot;http://timdettmers.com/2015/03/26/convolution-deep-learning/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Understanding Convolution in Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;非常fascinating的是作者关于卷积在卷积网络中的应用。之前从来没有想过，为啥卷积网络就卷积了呢？（不过似乎我一直也都是停留在对全连接网络的学习上= =）&lt;/p&gt;
     
     </summary>
     
       <category term="深度学习" scheme="http://www.cvblogs.cn/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="学习总结" scheme="http://www.cvblogs.cn/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数学基础：矩阵范数及latex公式编辑</title>
-    <link href="http://www.cvblogs.cn/2017/09/25/basic-math/"/>
-    <id>http://www.cvblogs.cn/2017/09/25/basic-math/</id>
-    <published>2017-09-25T08:22:10.000Z</published>
-    <updated>2017-09-25T12:21:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;在学习过程中，发现似乎在最优化问题上常常通过范数进行计算。于是，这里简单梳理一下关于范数的基础知识。范数是数学中的一个基本概念(经常能看到它的身影，只不过它利用$\parallel \cdot \parallel $符号进行表示，使我们不易认出它。举个例子：我们常使用的，<font color="red">一维世界</font>中，衡量两点间的距离就是使用的1范数)，范数属于线性代数、泛函分析中的内容。掌握范数的基础知识对于以后的研究工作很有必要。<br><br>&emsp;&emsp;其常常被用来度量某个向量空间（或矩阵）中的每个向量的长度或大小。这里，我们将只讨论矩阵范数相关的内容。</p>
-<a id="more"></a>
-<h3 id="范数的基本性质"><a href="#范数的基本性质" class="headerlink" title="范数的基本性质"></a>范数的基本性质</h3><p>&emsp;&emsp;任何范数都必须满足以下三个性质:</p>
-<ol>
-<li>非负性</li>
-<li>齐次性</li>
-<li>三角不等式<br>&emsp;&emsp;矩阵范数还需满足相容性：$\parallel {XY} \parallel $$\leq $$\parallel X \parallel $$\parallel Y \parallel$。因此也称其为相容范数。<br></li>
-</ol>
-<h3 id="常用的三种-p-范数推导出的矩阵范数"><a href="#常用的三种-p-范数推导出的矩阵范数" class="headerlink" title="常用的三种$p$范数推导出的矩阵范数"></a>常用的三种$p$范数推导出的矩阵范数</h3><h4 id="1-范数"><a href="#1-范数" class="headerlink" title="1-范数"></a>1-范数</h4><p>&emsp;&emsp;也叫列和范数，A每一列元素绝对值之和的最大值。<br><br><img src="http://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_1=&space;\max&space;\left&space;\{&space;\sum&space;\left&space;\|&space;a_{i1}&space;\right&space;\|,\sum&space;\left&space;\|&space;a_{i2}&space;\right&space;\|,\ldots,\sum&space;\left&space;\|&space;a_{in}&space;\right&space;\|&space;\right&space;\}" title="\left \| A \right \|_1= \max \left \{ \sum \left \| a_{i1} \right \|,\sum \left \| a_{i2} \right \|,\ldots,\sum \left \| a_{in} \right \| \right \}"><br>&emsp;&emsp;其中，<img src="http://latex.codecogs.com/gif.latex?\sum&space;\left&space;\|&space;a_{i1}&space;\right&space;\|=\left&space;|&space;a_{11}&space;\right&space;|&plus;\left&space;|&space;a_{21}&space;\right&space;|&plus;\ldots&plus;\left&space;|&space;a_{m1}&space;\right&space;|" title="\sum \left \| a_{i1} \right \|=\left | a_{11} \right |+\left | a_{21} \right |+\ldots+\left | a_{m1} \right |">&emsp;&emsp;其余类似.</p>
-<h4 id="2-范数"><a href="#2-范数" class="headerlink" title="2-范数"></a>2-范数</h4><p>&emsp;&emsp;谱范数，即$A^H$ * $A$特征值$\lambda_i$中最大者$\lambda_1$的平方根，其中$A^H$为$A$的转置共轭矩阵.<br></p>
-<p><img src="http://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_2&space;=&space;\left&space;(&space;\max&space;\left&space;\{&space;\lambda_i\left&space;(&space;A^{H}*A&space;\right&space;)\right&space;\}\right&space;)^\frac{1}{2}" title="\left \| A \right \|_2 = \left ( \max \left \{ \lambda_i\left ( A^{H}*A \right )\right \}\right )^\frac{1}{2}"></p>
-<h4 id="∞-范数："><a href="#∞-范数：" class="headerlink" title="∞-范数："></a>∞-范数：</h4><p>&emsp;&emsp;（行和范数，A每一行元素绝对值之和的最大值）<br></p>
-<p><img src="http://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_\infty&space;=&space;\max&space;\left&space;(&space;\sum&space;\left&space;|&space;a_{1j}&space;\right&space;|&space;,\sum&space;\left&space;|&space;a_{2j}&space;\right&space;|,\ldots,\sum&space;\left&space;|&space;a_{mj}&space;\right&space;|&space;\right&space;)" title="\left \| A \right \|_\infty = \max \left ( \sum \left | a_{1j} \right | ,\sum \left | a_{2j} \right |,\ldots,\sum \left | a_{mj} \right | \right )"><br>(其中$\sum \parallel a_{1j} \parallel $ 为第一行元素绝对值的和，其余类似);</p>
-<h4 id="其它的p-范数"><a href="#其它的p-范数" class="headerlink" title="其它的p-范数"></a>其它的p-范数</h4><p>&emsp;&emsp;没有很简单的表达式。对于$p$-范数而言，可以证明:<img src="http://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_p&space;=&space;\left&space;\|&space;A^H&space;\right&space;\|_q" title="\left \| A \right \|_p = \left \| A^H \right \|_q"><br>&emsp;&emsp;其中p和q是共轭指标。简单的情形可以直接验证：<br><img src="http://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_1&space;=&space;\left&space;\|&space;A^H&space;\right&space;\|_{\infty}" title="\left \| A \right \|_1 = \left \| A^H \right \|_{\infty}"><br>&emsp;&emsp;一般情形则需要利用:<br><img src="http://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_p&space;=&space;\max&space;\left&space;\{&space;y^H*A*x:\left&space;\|&space;x&space;\right&space;\|_p&space;=&space;\left&space;\|&space;y&space;\right&space;\|_q&space;=&space;1&space;\right&space;\}" title="\left \| A \right \|_p = \max \left \{ y^H*A*x:\left \| x \right \|_p = \left \| y \right \|_q = 1 \right \}"></p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ol>
-<li><a href="https://baike.baidu.com/item/%E8%8C%83%E6%95%B0/10856788?fr=aladdin" target="_blank" rel="external">百度百科</a></li>
-<li><a href="http://blog.csdn.net/whqet/article/details/44277965" target="_blank" rel="external">CSDN Markdown简明教程3-表格和公式</a></li>
-<li><a href="http://blog.csdn.net/sanqima/article/details/51275104?ref=myread" target="_blank" rel="external">机器学习中常见的字母解析及MarkDown代码</a></li>
-</ol>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;才发现不总结真的不行，又把之前学过的知识忘记了。总之，在图像处理中，矩阵范数这个概念真的非常重要。<br>&emsp;&emsp;另外针对markdown中数学公式的书写真的是一大硬伤。需要花时间好好学习一下$latex$的语法。才发现百度百科里的公式都不是正规的$latex$书写的。<br>&emsp;&emsp;从四点开始写总结，八点才写完…$latex$公式真可怕。生产力杀手啊…最后还是靠的<a href="http://www.codecogs.com/latex/eqneditor.php" target="_blank" rel="external">在线编辑器</a>…</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;在学习过程中，发现似乎在最优化问题上常常通过范数进行计算。于是，这里简单梳理一下关于范数的基础知识。范数是数学中的一个基本概念(经常能看到它的身影，只不过它利用$\parallel \cdot \parallel $符号进行表示，使我们不易认出它。举个例子：我们常使用的，&lt;font color=&quot;red&quot;&gt;一维世界&lt;/font&gt;中，衡量两点间的距离就是使用的1范数)，范数属于线性代数、泛函分析中的内容。掌握范数的基础知识对于以后的研究工作很有必要。&lt;br&gt;&lt;br&gt;&amp;emsp;&amp;emsp;其常常被用来度量某个向量空间（或矩阵）中的每个向量的长度或大小。这里，我们将只讨论矩阵范数相关的内容。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="图像处理" scheme="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-    
       <category term="数学基础" scheme="http://www.cvblogs.cn/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title>孟宁《软件工程C实战》实验报告2</title>
-    <link href="http://www.cvblogs.cn/2017/09/24/software-engineering-exp2/"/>
-    <id>http://www.cvblogs.cn/2017/09/24/software-engineering-exp2/</id>
-    <published>2017-09-23T16:45:35.000Z</published>
-    <updated>2017-09-23T16:59:44.000Z</updated>
+    <title>linux之ssh命令</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/linux_ssh%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/linux_ssh命令/</id>
+    <published>2017-12-08T12:12:12.000Z</published>
+    <updated>2017-12-10T12:46:47.343Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;本篇博文是孟宁老师的<a href="https://mooc.study.163.com/course/USTC-1000002006#/info" target="_blank" rel="external">Mooc网课</a>的实验报告内容。实验主要是关于字符串的处理，需要对字符串函数熟悉，可以减少自己造轮子。<u>非常有意义的实验！</u></p>
-<a id="more"></a>
-<h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><p>&emsp;&emsp;设计实现一个迷你命令行解析小程序。<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/2017-09-23%2023-47-38%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="实验效果"></p>
-<h3 id="实验代码"><a href="#实验代码" class="headerlink" title="实验代码"></a>实验代码</h3><p>&emsp;&emsp;重新看自己的代码，发现写的还是很糟糕的。例如，函数没有采用驼峰式等。等到下回有机会改进把。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*************************************************************************</span></div><div class="line"><span class="comment">    &gt; File Name: MiniCmd.c</span></div><div class="line"><span class="comment">    &gt; Author: Qin Zhong</span></div><div class="line"><span class="comment">    &gt; Mail: zhongqin0820@163.com</span></div><div class="line"><span class="comment">    &gt; Created Time: 2017年09月16日 星期六 16时01分33秒</span></div><div class="line"><span class="comment"> ************************************************************************/</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 128</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintHelp</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"help cmd list\n"</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"------------------------------------------------------\n"</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"help for help list\n"</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"quit for exit this program\n\n"</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ErrorCmdPrint</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"error cmd\n\n"</span>);</div><div class="line">    PrintHelp();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">char</span> cmd[MAXN];</div><div class="line">    <span class="built_in">memset</span>(cmd,<span class="number">0</span>,<span class="keyword">sizeof</span>(<span class="keyword">char</span>)*MAXN);</div><div class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        gets(cmd);</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">strcmp</span>(cmd,<span class="string">"help"</span>) == <span class="number">0</span>)</div><div class="line">        &#123;</div><div class="line">        	PrintHelp();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(cmd,<span class="string">"quit"</span>) == <span class="number">0</span>)</div><div class="line">        &#123;</div><div class="line">        	<span class="built_in">printf</span>(<span class="string">"bye~\n"</span>);</div><div class="line">        	<span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(cmd,<span class="string">"clear"</span>) == <span class="number">0</span>)</div><div class="line">        &#123;</div><div class="line">            system(<span class="string">"cls"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strstr</span>(cmd,<span class="string">"hello"</span>) != <span class="literal">NULL</span>)</div><div class="line">        &#123;</div><div class="line">        	<span class="built_in">printf</span>(<span class="string">"你好,%s\n"</span>,cmd);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(cmd,<span class="string">"null"</span>) == <span class="number">0</span>)</div><div class="line">        &#123;</div><div class="line">        	<span class="built_in">printf</span>(<span class="string">"null\n"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strstr</span>(cmd,<span class="string">"whois"</span>) != <span class="literal">NULL</span>)</div><div class="line">        &#123;</div><div class="line">        	<span class="built_in">printf</span>(<span class="string">"me\n"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">        &#123;</div><div class="line">            ErrorCmdPrint();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="课程链接"><a href="#课程链接" class="headerlink" title="课程链接"></a>课程链接</h3><p><a href="https://mooc.study.163.com/course/USTC-1000002006#/info" target="_blank" rel="external">软件工程（C编码实践篇）</a></p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;其实上周就开始做了，但是还是太懒了..最近又忙，看了第三课老师的讲解，发现自己还是想简单了。另外，代码到底用tab还是空格对于程序美观真的很重要..</p>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天需要使用ssh的时候发现居然不好使了，原来是自己在电脑上用了lantern之后，ip被改了，不在一个局域网内，无法访问非公网ip。（主要是根本ping不同目的主机= =）<br>于是打算借着机会好好的梳理一下ssh命令。</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/pipisorry/article/details/52269785" target="_blank" rel="external">ssh用法及命令</a><br><a id="more"></a></p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>为什么这篇文章的结束语这么靠前，是因为，我在看完大段的内容之后依旧无法弄清楚。如果我要将远端的8000端口映射到本地的8888端口我该用什么命令。感觉这样子陈列知识点真的很糟糕。还是应该以具体的应用来说比较好。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh -L 8888:localhost:8000 remote<span class="comment">#remote是远端主机名</span></div><div class="line">ssh -p 8888 localhost<span class="comment">#此时ssh登陆本机8888端口就相当于登陆了remote了，稍后可以一试：）</span></div></pre></td></tr></table></figure></p>
+<h1 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH"></a>什么是SSH</h1><p>首先，需要明确的是：SSH是一种网络协议，用于计算机之间的加密登录。目前已经成为Linux系统的标准配置。</p>
+<p>SSH只是一种协议，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。这里只讨论SSH在Linux Shell中的用法。如果要在Windows系统中使用SSH，会用到另一种软件PuTTY。</p>
+<blockquote>
+<p>注解：SSH只是一种协议，而我们所用的SSH命令则是基于该工具封装的一种命令行工具（linux shell）。<br>PuTTY是一个实现这些协议的图形化工具（它支持的协议不止有SSH）</p>
+</blockquote>
+<h1 id="SSH原理"><a href="#SSH原理" class="headerlink" title="SSH原理"></a>SSH原理</h1><p>SSH之所以能够保证安全，原因在于它采用了公钥加密。整个过程是这样的：<br>（1）远程主机收到用户的登录请求，把自己的公钥发给用户。<br>（2）用户使用这个公钥，将登录密码加密后，发送回来。<br>（3）远程主机用自己的私钥，解密登录密码，如果密码正确，就同意用户登录。</p>
+<blockquote>
+<p>不像https协议，SSH协议的公钥是没有证书中心（CA）公证的，也就是说，都是自己签发的。</p>
+</blockquote>
+<h2 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h2><p>可以设想，如果攻击者插在用户与远程主机之间（比如在公共的wifi区域），用伪造的公钥，获取用户的登录密码。再用这个密码登录远程主机，那么SSH的安全机制就荡然无存了。这种风险就是著名的”中间人攻击”（Man-in-the-middle attack）</p>
+<h1 id="SSH基本用法"><a href="#SSH基本用法" class="headerlink" title="SSH基本用法"></a>SSH基本用法</h1><h2 id="SSH远程登录"><a href="#SSH远程登录" class="headerlink" title="SSH远程登录"></a>SSH远程登录</h2><p>口令登录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#假定你要以用户名user，登录远程主机host，只要一条简单命令就可以了。</span></div><div class="line">$ ssh user@host  如：ssh pika@192.168.0.111</div><div class="line"><span class="comment">#如果本地用户名与远程用户名一致，登录时可以省略用户名。</span></div><div class="line">$ ssh host</div><div class="line"><span class="comment">#SSH的默认端口是22，也就是说，你的登录请求会送进远程主机的22端口。使用p参数，可以修改这个端口</span></div><div class="line">$ ssh -p 2222 user@host</div></pre></td></tr></table></figure></p>
+<h2 id="公钥登录"><a href="#公钥登录" class="headerlink" title="公钥登录"></a>公钥登录</h2><p>所谓”公钥登录”，原理很简单，就是用户将自己的公钥储存在远程主机上。登录的时候，远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录shell，不再要求密码。<br><strong>这种方法要求用户必须提供自己的公钥。如果没有现成的，可以直接用ssh-keygen生成一个</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen</div><div class="line"><span class="comment"># 运行结束以后，在$HOME/.ssh/目录下，会新生成两个文件：id_rsa.pub和id_rsa。前者是你的公钥，后者是你的私钥。</span></div><div class="line"></div><div class="line"><span class="comment"># 这时再输入下面的命令，将公钥传送到远程主机host上面：</span></div><div class="line">$ ssh-copy-id user@host</div></pre></td></tr></table></figure></p>
+<h2 id="使用ssh在远程后台不中断地跑程序"><a href="#使用ssh在远程后台不中断地跑程序" class="headerlink" title="使用ssh在远程后台不中断地跑程序"></a>使用ssh在远程后台不中断地跑程序</h2><p>使用nohup命令让程序在关闭窗口（切换SSH连接）的时候程序还能继续在后台运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nohup python3 a.py &amp;</div></pre></td></tr></table></figure></p>
+<h1 id="SSH远程操作"><a href="#SSH远程操作" class="headerlink" title="SSH远程操作"></a>SSH远程操作</h1><h2 id="SSH数据传输"><a href="#SSH数据传输" class="headerlink" title="SSH数据传输"></a>SSH数据传输</h2><p>SSH不仅可以用于远程主机登录，还可以直接在远程主机上执行操作。<br>SSH可以在用户和远程主机之间，建立命令和数据的传输通道，因此很多事情都可以通过SSH来完成。</p>
+<h2 id="scp-跨机远程拷贝"><a href="#scp-跨机远程拷贝" class="headerlink" title="scp 跨机远程拷贝"></a>scp 跨机远程拷贝</h2><p>scp是secure copy的简写，用于在Linux下进行远程拷贝文件的命令，和它类似的命令有cp，不过cp只是在本机进行拷贝不能跨服务器，而且scp传输是加密的。可能会稍微影响一下速度。<br><strong>两台主机之间复制文件必需得同时有两台主机的复制执行帐号和操作权限</strong>。</p>
+<blockquote>
+<p>注解：建议使用scp进行远程copy</p>
+</blockquote>
+<h2 id="绑定本地端口"><a href="#绑定本地端口" class="headerlink" title="绑定本地端口"></a>绑定本地端口</h2><p>可以让那些不加密的网络连接，全部改走SSH连接，从而提高安全性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#假定我们要让8080端口的数据，都通过SSH传向远程主机，命令就这样写：</span></div><div class="line">$ ssh -D 8080 user@host</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>SSH会建立一个socket，去监听本地的8080端口。一旦有数据传向那个端口，就自动把它转移到SSH连接上面，发往远程主机。<br>可以想象，如果8080端口原来是一个不加密端口，现在将变成一个加密端口。</p>
+</blockquote>
+<h2 id="本地端口转发"><a href="#本地端口转发" class="headerlink" title="本地端口转发"></a>本地端口转发</h2><p>有时，绑定本地端口还不够，还必须指定数据传送的目标主机，从而形成<strong>点对点的”端口转发”</strong>。<br>为了区别后文的”远程端口转发”，我们把这种情况称为”本地端口转发”（Local forwarding）</p>
+<h2 id="远程端口转发"><a href="#远程端口转发" class="headerlink" title="远程端口转发"></a>远程端口转发</h2><p>既然”本地端口转发”是指绑定本地端口的转发，那么”远程端口转发”（remote forwarding）当然是指绑定远程端口的转发。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;本篇博文是孟宁老师的&lt;a href=&quot;https://mooc.study.163.com/course/USTC-1000002006#/info&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mooc网课&lt;/a&gt;的实验报告内容。实验主要是关于字符串的处理，需要对字符串函数熟悉，可以减少自己造轮子。&lt;u&gt;非常有意义的实验！&lt;/u&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;今天需要使用ssh的时候发现居然不好使了，原来是自己在电脑上用了lantern之后，ip被改了，不在一个局域网内，无法访问非公网ip。（主要是根本ping不同目的主机= =）&lt;br&gt;于是打算借着机会好好的梳理一下ssh命令。&lt;/p&gt;
+&lt;h1 id=&quot;参考链接&quot;&gt;&lt;a href=&quot;#参考链接&quot; class=&quot;headerlink&quot; title=&quot;参考链接&quot;&gt;&lt;/a&gt;参考链接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/pipisorry/article/details/52269785&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ssh用法及命令&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
-      <category term="软件工程" scheme="http://www.cvblogs.cn/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="实验报告" scheme="http://www.cvblogs.cn/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
+      <category term="Linux" scheme="http://www.cvblogs.cn/tags/Linux/"/>
     
   </entry>
   
   <entry>
-    <title>假期工作总结</title>
-    <link href="http://www.cvblogs.cn/2017/09/20/summer-summary/"/>
-    <id>http://www.cvblogs.cn/2017/09/20/summer-summary/</id>
-    <published>2017-09-19T17:11:25.000Z</published>
-    <updated>2017-10-30T16:41:31.000Z</updated>
+    <title>metadata元数据</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/metadata%E5%85%83%E6%95%B0%E6%8D%AE/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/理论学习/metadata元数据/</id>
+    <published>2017-12-08T11:00:26.000Z</published>
+    <updated>2017-12-10T12:58:44.213Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;假期主要分为两部分。7月在学校作生产实习。8月自主学习一些机器学习、计算机视觉相关的基础知识。絮絮叨叨，发现总结真的是一项耗费时间的事情。</p>
-<a id="more"></a>
-<h3 id="生产实习"><a href="#生产实习" class="headerlink" title="生产实习"></a>生产实习</h3><p>&emsp;&emsp;课程班级：机器学习班。主要内容为：</p>
+    <content type="html"><![CDATA[<h1 id="metadata-元数据"><a href="#metadata-元数据" class="headerlink" title="metadata 元数据"></a>metadata 元数据</h1><p>一直以来有一个困惑，为什么机器学习的数据集中经常会需要一个metadata的东西（也被叫做元数据）。实在是费解，于是今天忍不住百度了一下。算是解开了疑惑。<br>按照原文的意思，元数据应该被翻译做中间数据而不是元数据。这个翻译容易混淆视听。因此，元数据还有其它名称，中介数据，中继数据。<br><a id="more"></a></p>
 <blockquote>
-<ol>
-<li>python 语言的学习及相关科学计算包的基础使用</li>
-<li>机器学习部分：图像的特征提取(颜色直方图、共生矩阵、HoG、SIFT等）、监督学习算法(二分类、线性回归、逻辑回归、SVM)的API调用、无监督学习算法(K-means、神经网络的训练)</li>
-<li>图像处理部分：显著特征提取、生成掩膜进行显著抠图(这部分主要由我负责，使用的是grabcut…)</li>
-<li>最后进行图像分类challenge：我们组用的神经网络的方法</li>
-</ol>
+<p>注解：这里，我的直观感受是元数据相当于文件系统中的目录表。因为我们需要的数据太大了。如果只是一张表通过数据字典映射是表示不了的。因此将其再细分，也便于管理。（应该可以这么理解吧= =）这也就解释了为什么一些大的数据集都有一个metadata（是这样吧 = =）</p>
 </blockquote>
-<p>&emsp;&emsp;由于我上课中间出去中大夏令营一周，导致没有赶上机器学习部分的课程。</p>
-<h3 id="自主学习"><a href="#自主学习" class="headerlink" title="自主学习"></a>自主学习</h3><h4 id="理论部分"><a href="#理论部分" class="headerlink" title="理论部分"></a>理论部分</h4><p>&emsp;&emsp;这部分，自己主要一开始看的是udacity上乔治亚理工的视觉MOOC，当时数学基础还没复习。导致没看懂相关讲解的内容。现在回想起来，老师的确上的很好。能够从数学的角度去分析算法。可惜只跟到了Lesson13(印象中)。期间也看了udacity上其他的视觉或者图像处理相关的MOOC。觉得自己吸收有点困难。遂放弃。<br><br>&emsp;&emsp;转而学习了UCF的课程，老师的口音很有趣。缓缓道来的感觉。但是，精力有限，直到现在依旧没能接着做它的PA。总结也只很水的做了两篇。通过这门课程，发现，自己之前尝试学习视觉相关的知识一直很困难的主要原因：1、手头没有很好的资源以及合理的先导知识和时间分配 2、对于一些东西，感觉自己容易陷入其中。无法站在框架之上去架构自己的知识。最后导致自己只听了个炮响。又由于我们没有开设相关课程，没有考试，没有实验代码或者甚至项目留下印证。等到回过头来，发现自己什么也不会。<br><br>&emsp;&emsp;在结束生产实习后，凑巧在翻阅博客的过程中，了解到台大李宏毅老师的机器学习课程，跟着学了几课。又觉得《线性代数》非常重要，于是学习了李的另一门公开课《线性代数》。李采用中英文结合的方式授课，我感觉这种授课方式非常的好，正是我所欠缺的，借助这门课补充复习了一下一些线性代数的英文专有名词等。<br><br>&emsp;&emsp;学习这些，让我越来越觉得数学的重要性。于是找到了吴福朝老师的《计算机视觉中的数学方法》。这本书，虽然只读了前两篇的内容。但是却收获很多。<br><br>&emsp;&emsp;期间，经同学介绍，看周志华的《机器学习》。这本书，我卡在了第二章就没有接着读了。因为我当时觉得自己得先上点课有了视听基础之后，去读这本书才能事半功倍。于是，就开始看吴恩达老师的《机器学习》MOOC。<br><br>&emsp;&emsp;关于吴恩达老师的《机器学习》系列教程，我觉得上的很好。而且我觉得自己至少对一些内容有了了解。前段时间恰好他的系列教程和网易合作发布。于是就看了以下他关于《深度学习》的几课。然后，我了解到李飞飞教授和她实验室下的ImageNet以及她也在今年上的一门公开课《视觉检测中的卷积神经网络》(不知这里翻译是否有错，还请斧正)。然后现在主要就是空闲时候会安排学习这门课的内容。<br><br>&emsp;&emsp;又根据吴的访谈视频知道了Ian的《深度学习》书，看了其中的一些章节。特别是数学部分。感觉自己看完，有了更好的掌握和理解。期间也重新翻阅老师的那篇字典学习的论文，发现有了基础之后又有了新的理解。</p>
-<h4 id="实现部分"><a href="#实现部分" class="headerlink" title="实现部分"></a>实现部分</h4><p><br>&emsp;&emsp;断断续续，这段时间完成了我们大创的系统。项目发布在了GitHub。<br><br>&emsp;&emsp;其他基本上没实现出什么，有的也是调库。说实在，我很疑惑。究竟有无必要去自己手写一个SIFT之类的。<br><br>&emsp;&emsp;其他不相关的，大概是通过这段时间自己有意识的参与一些课程的实践。加强Linux环境下的工具使用。以及关于GitHub的使用。<br><br>&emsp;&emsp;一直有这样的计划，想要去掌握GPU编程。但是实践的东西真的很费时间，更何况手头也无硬件设备支持。更别提其他基础实验都无法完成，常常就导致一些计划的搁置。<br><br>&emsp;&emsp;更不相关的大概就是自己关于前端内容的一些学习。这是出于我目前的规划考虑的。我觉得自己既然选择了读专硕，在两年毕业后(实际上我觉得也就一年半有余)，如果我未能在”学术”上取得一定的成就，至少我也要有一点竞争力，感觉前端这块需要很烂大街，但是还是缺那种有架构能力的前端，希望自己到时候会是一个全栈。并且，我觉得这门技术的掌握，如果以后要做项目也是很容易的。</p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p><br>&emsp;&emsp;这段时间，感觉自己的确收获挺多。学习的效果比想象中的好一些。没有压力的学习真的是一件很舒服的事情。偶尔，也在思考自己毕设该做什么。自己研究生究竟该研究什么。记得自己之前初生牛犊不怕虎，说过希望自己能够在研究生时期有机会发顶会、顶刊。突然觉得，自己虽然会为此花费精力，但是现在觉得这是一件很困难的事情（虽然本来也不容易）。<br><br>&emsp;&emsp;感觉自己还是更倾向去做东西。之所以这么渴望去了解学习这个学科的内容，也是因为一直想要实现自己脑海中的那个idea。希望自己能够不忘初心，方得始终。</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/l294265421/article/details/50539506" target="_blank" rel="external">通过metadata认识元数据</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;假期主要分为两部分。7月在学校作生产实习。8月自主学习一些机器学习、计算机视觉相关的基础知识。絮絮叨叨，发现总结真的是一项耗费时间的事情。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="学习周报" scheme="http://www.cvblogs.cn/categories/%E5%AD%A6%E4%B9%A0%E5%91%A8%E6%8A%A5/"/>
-    
-    
-      <category term="学习总结" scheme="http://www.cvblogs.cn/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>孟宁《软件工程C实战》实验报告1</title>
-    <link href="http://www.cvblogs.cn/2017/09/09/software-engineering-exp1/"/>
-    <id>http://www.cvblogs.cn/2017/09/09/software-engineering-exp1/</id>
-    <published>2017-09-09T15:52:16.000Z</published>
-    <updated>2017-09-09T16:20:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;本篇博文是孟宁老师的<a href="https://mooc.study.163.com/course/USTC-1000002006#/info" target="_blank" rel="external">Mooc网课</a>的实验报告内容。实验主要是熟悉Linux环境下的vim编辑器以及关于git的实验，对于有相关经验的同学来说，较为简单。但是正是这样的小实验使得学习的人在实验过程中加深对相关工具的使用！<u>非常有意义的实验！</u></p>
-<a id="more"></a>
-<h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><p>&emsp;&emsp;即使从来没有使用的人，参照实验大纲，也能够很顺利的完成实验内容。(可能在配置Git的时候，会占用过多的时间！)<br><img src="http://ou5rpeic9.bkt.clouddn.com/seexp1_1.png" alt="github使用及创建编译运行部分"><br><br>&emsp;&emsp;虽然不是第一次使用GitHub，但是，依旧没能够记住<code>git push</code>命令的使用…<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/seexp1_2.png" alt="github push命令使用"><br><br>&emsp;&emsp;虽然这次的代码量真的非常有限，但是也能够学习到一些关于vim使用的技巧！<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/seexp1_3.png" alt="代码截图"></p>
-<h3 id="实验代码"><a href="#实验代码" class="headerlink" title="实验代码"></a>实验代码</h3><p>&emsp;&emsp;本次实验代码非常简单，关键应该是那些命令行的使用！<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"hello world!\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="课程链接"><a href="#课程链接" class="headerlink" title="课程链接"></a>课程链接</h3><p><a href="https://mooc.study.163.com/course/USTC-1000002006#/info" target="_blank" rel="external">软件工程（C编码实践篇）</a></p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;非常感谢孟老师能够提供这样一门课程以供我们练习。作为一名已经修读过软件工程的大四学生而言！觉得这门课程的设计非常的合理！很遗憾知道的晚了！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;本篇博文是孟宁老师的&lt;a href=&quot;https://mooc.study.163.com/course/USTC-1000002006#/info&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mooc网课&lt;/a&gt;的实验报告内容。实验主要是熟悉Linux环境下的vim编辑器以及关于git的实验，对于有相关经验的同学来说，较为简单。但是正是这样的小实验使得学习的人在实验过程中加深对相关工具的使用！&lt;u&gt;非常有意义的实验！&lt;/u&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="软件工程" scheme="http://www.cvblogs.cn/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-    
-    
-      <category term="实验报告" scheme="http://www.cvblogs.cn/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读书笔记:吴福朝《计算机视觉中的数学方法》</title>
-    <link href="http://www.cvblogs.cn/2017/09/09/maths-in-CV/"/>
-    <id>http://www.cvblogs.cn/2017/09/09/maths-in-CV/</id>
-    <published>2017-09-09T13:39:26.000Z</published>
-    <updated>2017-09-09T16:21:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;已经看完这本书的前两篇的内容，第三篇是关于”模型估计”的。本书在网上直接搜索书名即可找到公开的资源以供下载。本文也在文末提供了免费的资源下载链接。</p>
-<a id="more"></a>
-<h3 id="内容有感"><a href="#内容有感" class="headerlink" title="内容有感"></a>内容有感</h3><p><br>&emsp;&emsp;老实说，我是绝望的。数学基础实在太差了。过程中，一度放弃，靠着毅力以及skip reading才翻完前两篇的内容。笔记做了20几页。在FoxitReader上，这本书也被我圈圈画画的不成样子。可是不知道怎么回事，感觉自己真的是学不透它的概念啊…</p>
-<h4 id="《射影几何》篇"><a href="#《射影几何》篇" class="headerlink" title="《射影几何》篇"></a>《射影几何》篇</h4><p><br>&emsp;&emsp;本篇的内容可以说是做计算机视觉最基础的理论了，必须掌握的内容。期间，提到一个<b>自标定理论</b>，遥遥记得自己当初选择这个专业就是想做一款假延时的拍照应用，这么多年过去了，我一直以为自己要实现的就是摄像机的标定(至少基础算法应该要是这个)，可是读了此章内容才发现并不是这么回事。还记得读到:</p>
-<blockquote>
-<p>“所谓自标定，是指仅从埸景的多幅图像来确定摄像机内参数，这种方法不需精密加工的标定块。”</p>
-</blockquote>
-<p><br>的时候，我整个人都是崩溃的。期间又想到自己毕设究竟想做什么，是做一个服务东大课堂的应用还是实现自己一直想实现的这个idea(虽然能想见后者的困难度：好似一个连自己都不懂需求是什么的产品经理告诉手下的码农，我的需求可能是这个云云。不幸的是，我自己恰恰又是那个苦逼的实现者…)<br><br>&emsp;&emsp;本篇的内容，在阅读过程中，也发现了，自己在学习UCF课程的时候，压根其实就没有听懂人家背后的数学知识。读本篇内容时常让我有种：哦，原来教授的意思是这个不是那个啊…后期还需要反复咀嚼一二。</p>
-<h4 id="《矩阵张量》篇"><a href="#《矩阵张量》篇" class="headerlink" title="《矩阵张量》篇"></a>《矩阵张量》篇</h4><p><br>&emsp;&emsp;吴教授的书的章节命名很对一个强迫症患者的口味。本篇的内容前半部分讲矩阵，后半部分讲张量。前半部分的矩阵中所说的各种矩阵分解的方法，其中的奇异值分解(因为数学不好，总觉得这些专有名词很吓人，阅读之下，发现也就那么回事。)不过，我知道要做到真正的理解和消化为我所用还是需要仔细的品味阅读的。至于后半部分所提到的张量则是让我大开眼界！虽然没有佐证，但我猜：Google的Tensorflow估计就是基于这个Tensor(张量)而来！How amazing!有种感觉，又距离想要知道的内容更近一步了！= =</p>
-<h3 id="资源链接"><a href="#资源链接" class="headerlink" title="资源链接"></a>资源链接</h3><p><a href="http://download.csdn.net/download/wxqfree/1430305" target="_blank" rel="external">计算机视觉中的数学方法(吴福朝)</a></p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;这本书的确值得一读，但我想，如果在我大三甚者更早之前能够接触到了解到这本书，我的理解能有我现在多吗？就好像我之前的每次尝试，似乎总是失败的收尾。就好像即使某种意义上，我完成了UCF的CV网课，但我依旧对自己是否真正掌握这些知识心虚不已…但是，可以肯定的是，这本书在以后读来(预计下个月重读)，将又会有很多的收获。期待下回能够补充更读到的属于自己的更专业的关于本书的解读！</p>
-<blockquote>
-<p>&emsp;&emsp;革命尚未成功，同志还需努力。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;已经看完这本书的前两篇的内容，第三篇是关于”模型估计”的。本书在网上直接搜索书名即可找到公开的资源以供下载。本文也在文末提供了免费的资源下载链接。&lt;/p&gt;
+      &lt;h1 id=&quot;metadata-元数据&quot;&gt;&lt;a href=&quot;#metadata-元数据&quot; class=&quot;headerlink&quot; title=&quot;metadata 元数据&quot;&gt;&lt;/a&gt;metadata 元数据&lt;/h1&gt;&lt;p&gt;一直以来有一个困惑，为什么机器学习的数据集中经常会需要一个metadata的东西（也被叫做元数据）。实在是费解，于是今天忍不住百度了一下。算是解开了疑惑。&lt;br&gt;按照原文的意思，元数据应该被翻译做中间数据而不是元数据。这个翻译容易混淆视听。因此，元数据还有其它名称，中介数据，中继数据。&lt;br&gt;
     
     </summary>
     
       <category term="图像处理" scheme="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="数学基础" scheme="http://www.cvblogs.cn/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习相关基础名词：有监督、半监督、无监督</title>
-    <link href="http://www.cvblogs.cn/2017/09/05/machine-learning-basic1/"/>
-    <id>http://www.cvblogs.cn/2017/09/05/machine-learning-basic1/</id>
-    <published>2017-09-05T15:06:27.000Z</published>
-    <updated>2017-09-09T16:16:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;学习机器学习有几周了…也了解了一些基础名词，梳理以下，下回再有人逼叨逼的也不懵了。</p>
-<a id="more"></a>
-<h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><h4 id="有监督"><a href="#有监督" class="headerlink" title="有监督"></a>有监督</h4><p>&emsp;&emsp;样本带有标签的训练集合。通常特征维度为$n+1$，因为特征向量中，多出来的一维表示的是样本标签。</p>
-<h4 id="半监督"><a href="#半监督" class="headerlink" title="半监督"></a>半监督</h4><p>&emsp;&emsp;有监督与无监督的折衷，当我们在用机器学习算法学习一个函数(模型)去拟合数据集的时候，数据集大多数情况下并不理想。毕竟人工标注的成本太高，而我们的数据集通常情况下是很大的。与其毫无”目的”的学习，这时候我们让部分未标注的数据集合充作训练集合进行训练。学习得到的模型效果会更好些。</p>
-<h4 id="无监督"><a href="#无监督" class="headerlink" title="无监督"></a>无监督</h4><p>&emsp;&emsp;训练样本不带有标签的训练集合作为输入的学习算法。如：聚类问题</p>
-<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><h5 id="分类器-Classifier"><a href="#分类器-Classifier" class="headerlink" title="分类器(Classifier)"></a>分类器(Classifier)</h5><p>&emsp;&emsp;问题的输出只有一个。要么是要么不是。</p>
-<h5 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h5><p>&emsp;&emsp;分为线性回归、逻辑回归(修正线性回归带来的过拟合问题)。问题的输出是线性的，可能是可能不是。可以进行多分类。</p>
-<h5 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h5><p>&emsp;&emsp;参考神经元模型设计：输入层，隐藏层(可以有多层)，输出层。与字典学习作为机器学习的两大分支。</p>
-<h5 id="字典学习"><a href="#字典学习" class="headerlink" title="字典学习"></a>字典学习</h5><p>&emsp;&emsp;将训练集合的特征提取，集合成一个码本进行表示。与神经网络同属于复杂模型学习方法。</p>
-<h6 id="稀疏表示"><a href="#稀疏表示" class="headerlink" title="稀疏表示"></a>稀疏表示</h6><p>&emsp;&emsp;通常情况下，我们的特征的维数很大。这就带来一个问题：计算量的提高。为了平衡算法的时间效率。需要将特征降维后，稀疏表示。如KSVD算法就是将特征矩阵进行奇异值分解得到降维后的特征矩阵进行表示。</p>
-<h3 id="推荐学习材料"><a href="#推荐学习材料" class="headerlink" title="推荐学习材料"></a>推荐学习材料</h3><ol>
-<li><a href="">周志华《机器学习》</a></li>
-<li><a href="">斯坦福大学吴恩达《机器学习入门》</a></li>
-<li><a href="">台湾大学李宏毅《机器学习入门》</a></li>
-</ol>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;看着这些概念解释，在想还是写代码比较好些…太水了…说了一堆废话。图个心安。推荐的材料太懒了，链接暂时不放了。自己一搜就有，实在找不到底下评论吧。总结来说，还是自己实践太少。即使大四琐事还是一堆(可能和自己太懒以及太笨有关系。羡慕那些脑瓜好使的人。以及动手能力很强的人。)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;学习机器学习有几周了…也了解了一些基础名词，梳理以下，下回再有人逼叨逼的也不懵了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="机器学习" scheme="http://www.cvblogs.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
       <category term="基础概念" scheme="http://www.cvblogs.cn/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
@@ -389,200 +138,260 @@
   </entry>
   
   <entry>
-    <title>UCF-CV课程总结:边缘检测</title>
-    <link href="http://www.cvblogs.cn/2017/09/04/UCF-CVClass-Summary1/"/>
-    <id>http://www.cvblogs.cn/2017/09/04/UCF-CVClass-Summary1/</id>
-    <published>2017-09-04T11:50:56.000Z</published>
-    <updated>2017-09-05T15:48:24.000Z</updated>
+    <title>Django之表单</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/django_%E8%A1%A8%E5%8D%95/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/django_表单/</id>
+    <published>2017-12-08T10:15:18.000Z</published>
+    <updated>2017-12-10T13:31:29.114Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;这篇博文是本人学习UCF计算机视觉公开课的课程知识梳理系列文章的第二篇。本篇博文主要介绍<u>边缘检测</u>章节的内容。</p>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>HTML表单是网站交互性的经典方式。有必要区别与表格Table。这两个，本质上有很大的差别。</p>
 <a id="more"></a>
-<h3 id="课程内容"><a href="#课程内容" class="headerlink" title="课程内容"></a>课程内容</h3><h4 id="相关先导知识"><a href="#相关先导知识" class="headerlink" title="相关先导知识"></a>相关先导知识</h4><p>&emsp;&emsp;边缘一般是指图像在某一局部强度剧烈变化的区域。强度变化一般有两种情况(横轴表示空间变化，纵轴表示灰度变化，虚线表示边缘)：<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0" alt="阶跃变化：向亮渐变的过程">&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/%E4%BA%8C%E9%98%B6%E5%AF%BC%E6%95%B0" alt="屋顶变化：由暗到亮再变暗的过程"><br><br>&emsp;&emsp;边缘检测的任务：找到具有阶跃变化或者屋顶变化的像素点的集合。<br><br>&emsp;&emsp;最直观的想法就是<b>求微分</b>。</p>
-<ul>
-<li>对于第一种情况：一阶微分的峰值为边缘点，二阶微分的零点为边缘点。</li>
-<li>对于第二种情况：一阶微分的零点为边缘点，二阶微分的峰值为边缘点。</li>
-</ul>
-<p><br>&emsp;&emsp;一般可将边缘分为水平边缘、垂直边缘和对角线边缘。<br><br>&emsp;&emsp;由于边缘检测的算法主要是<b>基于图像强度</b>(采用差分的方法来进行计算)的一阶和二阶导数。<br><br>&emsp;&emsp;但导数通常对噪声敏感，因此必须采用滤波器来改善与噪声有关的边缘检测器的性能。常见的滤波方法主要有<b>高斯滤波</b>，即采用离散化的高斯函数产生一组<b>归一化</b>的高斯核。</p>
-<h4 id="一般边缘检测过程"><a href="#一般边缘检测过程" class="headerlink" title="一般边缘检测过程"></a>一般边缘检测过程</h4><p>&emsp;&emsp;1. 滤波：改善与噪声有关的边缘检测器的性能<br><br>&emsp;&emsp;2. 增强：将图像灰度点邻域强度值有显著变化的点凸显出来(可通过计算梯度幅值来确定)<br><br>&emsp;&emsp;3. 检测：常用的方法是通过阈值化方法来检测</p>
-<h4 id="边缘检测器介绍-Edge-Detector"><a href="#边缘检测器介绍-Edge-Detector" class="headerlink" title="边缘检测器介绍(Edge Detector)"></a>边缘检测器介绍(Edge Detector)</h4><p>&emsp;&emsp;课程中讲述到的检测器包括：<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%88%86%E7%B1%BB.png" alt="边缘检测器分类"></p>
-<h5 id="Prewitt-and-Sobel-Edge-Detector"><a href="#Prewitt-and-Sobel-Edge-Detector" class="headerlink" title="Prewitt and Sobel Edge Detector"></a>Prewitt and Sobel Edge Detector</h5><p>&emsp;&emsp;属于离散微分算子 (discrete differentiation operator)。利用差分求出$x,y$方向上的梯度，求解梯度的大小，阈值化梯度的大小找到边缘。</p>
-<h6 id="Prewitt算子"><a href="#Prewitt算子" class="headerlink" title="Prewitt算子"></a>Prewitt算子</h6><p>&emsp;&emsp;结合了差分运算与邻域平均的方法。其卷积模板如下：<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/Prewitt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="Prewitt Operator"></p>
-<h6 id="Sobel算子"><a href="#Sobel算子" class="headerlink" title="Sobel算子"></a>Sobel算子</h6><p>&emsp;&emsp;与prewitt算子类似，但考虑到了相邻不同像素点的影响程度是不同的，所以采用加权平均。<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/Sobel%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="Sobel Operator"></p>
-<h5 id="Marr-Hildreth-Edge-Detector-LoG"><a href="#Marr-Hildreth-Edge-Detector-LoG" class="headerlink" title="Marr Hildreth Edge Detector-LoG"></a>Marr Hildreth Edge Detector-LoG</h5><p>&emsp;&emsp;基本步骤：</p>
-<ol>
-<li>用高斯器滤波原图像去除噪声</li>
-<li>拉普拉斯滤波后的图像(求$x,y$二阶导)</li>
-<li>找到零点(边缘点)，重复步骤2直到全部找到</li>
-</ol>
-<p><br><img src="http://ou5rpeic9.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E7%AC%A6%E5%8F%B7%E5%92%8C%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB.png" alt="求梯度与拉普拉斯符号的区别"><br><br>&emsp;&emsp;laplacian算子是一些使用二阶微分的算子，实际上就是梯度的散度(可以利用DoG近似求解LoG降低算法时间复杂度的数量级?可以增强对比度！)<br><br>LoG计算：不同计算方法，时间复杂度不同</p>
-<ol>
-<li>一个2D laplacian算子(n{2})</li>
-<li>四个1D的算子组合而成(4n)</li>
-</ol>
-<p><br><img src="http://ou5rpeic9.bkt.clouddn.com/LoG%20Operator" alt="LoG算子"><br><br>&emsp;&emsp;由于 Laplacian使用了图像梯度，它内部的代码其实是调用了 Sobel 算子的</p>
-<h5 id="Canny"><a href="#Canny" class="headerlink" title="Canny"></a>Canny</h5><p>&emsp;&emsp;是一种求最优边缘检测的一套方法。是一种<b>先平滑再求导</b>的方法。<br><br>&emsp;&emsp;最优边缘检测的三个主要评价标准：</p>
-<ol>
-<li><b>低错误率</b>: 标识出尽可能多的实际边缘，同时尽可能的减少噪声产生的误报。</li>
-<li><b>高定位性</b>: 标识出的边缘要与图像中的实际边缘尽可能接近。</li>
-<li><b>最小响应</b>: 图像中的边缘只能标识一次，并且可能存在的图像噪声不应标识为边缘。</li>
-</ol>
-<p><br><img src="http://ou5rpeic9.bkt.clouddn.com/Canny%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%AD%A5%E9%AA%A4.png" alt="Canny算法求解步骤"><br><br>&emsp;&emsp;特别注意第4步！排除非边缘像素， 仅仅保留了一些细线条(候选边缘).</p>
-<h4 id="程序实现"><a href="#程序实现" class="headerlink" title="程序实现"></a>程序实现</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">i</span> = imread(<span class="string">'lena.png'</span>);<span class="comment">%读入原图像</span></div><div class="line">A = fspecial(<span class="string">'gaussian'</span>);<span class="comment">%高斯滤波器</span></div><div class="line"><span class="built_in">i</span> = filter2(A, <span class="built_in">i</span>) / <span class="number">255</span>;<span class="comment">%高斯滤波并归一化(/255)</span></div><div class="line">figure;</div><div class="line">imshow(<span class="built_in">i</span>);<span class="comment">%显示图像</span></div><div class="line">imwrite(<span class="built_in">i</span>,<span class="string">'lena_0.jpg'</span>);<span class="comment">%保存图像</span></div><div class="line"><span class="comment">%prewitt方法</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'prewitt'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_1.jpg'</span>);</div><div class="line"><span class="comment">%sobel方法</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'sobel'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_2.jpg'</span>);</div><div class="line"><span class="comment">%marr hildreth方法(LoG)</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'log'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_3.jpg'</span>);</div><div class="line"><span class="comment">%canny方法</span></div><div class="line">a = edge(<span class="built_in">i</span>, <span class="string">'canny'</span>);</div><div class="line">figure;</div><div class="line">imshow(a);</div><div class="line">imwrite(a,<span class="string">'lena_4.jpg'</span>);</div></pre></td></tr></table></figure>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ol>
-<li><a href="http://blog.csdn.net/xiahn1a/article/details/42141429" target="_blank" rel="external">边缘检测算法</a></li>
-<li><a href="">【OpenCV入门教程之十二】OpenCV边缘检测：Canny算子,Sobel算子,Laplace算子,Scharr滤波器合辑</a></li>
-</ol>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p><br>&emsp;&emsp;一如既往，写文章对于我真的是一件万分困难的事情，基本上只能达到通顺的要求。翻来覆去也就只能用那几个markdown语法。排版也不甚美观。但我相信，坚持下去，总有一天，我能写出自己的内容。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;这篇博文是本人学习UCF计算机视觉公开课的课程知识梳理系列文章的第二篇。本篇博文主要介绍&lt;u&gt;边缘检测&lt;/u&gt;章节的内容。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="计算机视觉" scheme="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-    
-      <category term="课程总结" scheme="http://www.cvblogs.cn/tags/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UCF-CV课程总结:概述、滤波及Matlab使用</title>
-    <link href="http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/"/>
-    <id>http://www.cvblogs.cn/2017/09/01/UCF-CVClass-Summary/</id>
-    <published>2017-09-01T09:20:40.000Z</published>
-    <updated>2017-09-05T15:48:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;从八月开始，断断续续学习这门课程。从一开始Coursera上乔治亚理工的CV课和CP课继而到UCF的CV课。算是入门了这门课程，为以后的研究工作打下了一些基础。虽然，我的数学基础在很大程度上限制着我的吸收消化。但是，始终相信，有志者事竟成这个道理。<br><br>&emsp;&emsp;课程资源地址：<a href="http://crcv.ucf.edu/courses/CAP5415/Fall2012/" target="_blank" rel="external">UCF-CAP 5415 - Computer Vision</a>学习过程中，可以参照课程日程表安排学习时间。适当的加强强度。(由于时间问题，本人只完成了小部分实验…最好还是要做做实验的。)</p>
-<a id="more"></a>
-<p><br>&emsp;&emsp;虽然在onenote上针对每节课都已经做了笔记，但是发现，自己只是将教授PPT中的内容摘抄了出来。这里借助博客<u>简单梳理一下这门课中学习到的内容</u>(事实上，其中的每一课都值得另起一篇去详细介绍)，顺便提升自己的写作能力总结能力。<br><br>&emsp;&emsp;我发现，本文的长度大大超过了预期。因此，基于”2-8准则”(实则我实在无法做到一小时完成这个工作)，计划每篇此类总结文章以两到三课为一篇文章去总结课程内容。</p>
-<h3 id="课程内容"><a href="#课程内容" class="headerlink" title="课程内容"></a>课程内容</h3><p>&emsp;&emsp;整门课内容设计较为合理，作为重实现轻理论(少数学细节推导，乔治亚理工的课程较侧重于数学细节)大军中的一员，接受度良好。在课程主页上还有参考资料(免费，开放下载)以及CV领域的顶刊顶会的官网链接等信息。</p>
-<h4 id="Lecture1-CVIntroduction"><a href="#Lecture1-CVIntroduction" class="headerlink" title="Lecture1 CVIntroduction"></a>Lecture1 CVIntroduction</h4><p>&emsp;&emsp;第一课是关于计算机视觉中基础知识的介绍以及整个课程会接触到的内容的学习。了解计算机视觉所研究的是从二维图像中得到三维世界的语意信息。<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/1%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E9%A2%86%E5%9F%9F.png" alt="The Ability of Computer to See"><br><br>&emsp;&emsp;在这个过程中，常常将图像当作一个函数$f(x,y)$,它是一个离散的关于像素点的函数。常用一个矩阵表示一张图像，其元素是0(黑)～255(白)的灰度值。分辨率则是由图像的像素长宽确定(屏幕的分辨率通常是固定的，但是可以向下调整，分辨率越高图像越细腻)。还介绍了图片的格式(不同的格式只是压缩编码的方式不同)。也介绍了视频的基本属性。依照人眼的构造，视频帧数每秒30帧就可以达到流畅的基本要求。<br><br>&emsp;&emsp;现今的射影设备都是基于孔洞模型(Pin Hole)进行射影变换。<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/2Pin%20Hole%20Model.png" alt="Pin Hole Model"><br><br>&emsp;&emsp;三维空间中的点$(x,y,z)$通过镜片投影到图像平面上的点$(x,y)$<br><br>&emsp;&emsp;由以上这个模型，我们就很容易想到：应该如何通过二维图像恢复被摄物体在三维世界中的几何信息呢？<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/3%E4%BB%8E%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%83%8F%E6%81%A2%E5%A4%8D%E4%B8%89%E7%BB%B4%E4%BF%A1%E6%81%AF.png" alt="三维重构理论"><br><br>&emsp;&emsp;这里不再细展开。以及，CV的应用有哪些：<br><br><img src="http://ou5rpeic9.bkt.clouddn.com/4CV%20Applicatioin.png" alt="CV Application"><br><br>&emsp;&emsp;作为基础知识的简单入门，第一节课还是很不错的。至少罗列的那些应用光是看那些演示视频，想到自己也有机会去实现。光想想就能振奋人心。</p>
-<h4 id="Lecture2-Filtering"><a href="#Lecture2-Filtering" class="headerlink" title="Lecture2 Filtering"></a>Lecture2 Filtering</h4><p>&emsp;&emsp;第二节课是CV领域最最基础的一个概念–滤波(Filtering)。我的<a href="https://cvblogs.cn/2017/08/11/image-processing-operation1/" target="_blank" rel="external">第一篇博文</a>整理的就是关于滤波操作的知识(虽然大部分是copy的别人的总结…)。<br><br>&emsp;&emsp;首先，当你拿到一张图像，一定要区分清楚它究竟是:1.二值的(Binary)、2.灰度的(Gray Scale)还是3.彩色的(Color)。<br><br>&emsp;&emsp;1.二值图像矩阵元素要么是0要么是1<br><br>&emsp;&emsp;2.灰度图像，Scale范围通常(0~255)<br><br>&emsp;&emsp;3.彩色图像较为复杂，通常在RGB空间下分为3个通道(R-Red、G-Green、B-Blue)<br><br>&emsp;&emsp;因为这些值元素的存在，引入一个图像直方图去直观描述它的比重信息。<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/5%E7%9B%B4%E6%96%B9%E5%9B%BE.png" alt="直方图"><br><br>&emsp;&emsp;由于各种内外界不稳定因素的干扰，图像并不总是”干净”的,总是有这样那样的噪声(通常高频信息是噪声-变化明显，变现的特征就是高频信息)。噪声叠加原图像得到被污染后的图像。(高斯噪声即噪声的分布符合高斯分布！)<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/6%E5%99%AA%E5%A3%B0%E6%9D%A5%E6%BA%90.png" alt="噪声来源"><br><br>&emsp;&emsp;接着为引入滤波的概念，介绍了基本的数学运算：求导(Derivative，包括连续的和离散的即查分：向前、向后、中心，接着从一维引申到二维（图像是一个二维矩阵），接着提到了相关(Correlation)以及卷积(Convolution))以及求均值(Average/Mean)。<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/7%E4%BA%8C%E7%BB%B4%E6%B1%82%E5%AF%BC%28%E6%A2%AF%E5%BA%A6%29.png" alt="求导(梯度)">并且，还提到了掩膜(Mask)的概念。<br><br>&emsp;&emsp;高斯分布的重要意义：<br><br>&emsp;&emsp;<img src="http://ou5rpeic9.bkt.clouddn.com/8%E9%AB%98%E6%96%AF%E6%A8%A1%E5%9E%8B%E5%B1%9E%E6%80%A7.png" alt="高斯属性"><br><br>&emsp;&emsp;由于之前的文章已经梳理过，这里不再赘述。第二节结束。目前，我们已经了解了一些基本知识和基本运算(Matlab由库函数实现，推荐使用。)</p>
-<h4 id="Matlab-Tutorial"><a href="#Matlab-Tutorial" class="headerlink" title="Matlab Tutorial"></a>Matlab Tutorial</h4><p>&emsp;&emsp;作为课程的辅助章节，本节内容介绍Matlab的基本使用，作为Matlab的简单入门还是很有必要学习的。助教教授的内容都很实用。(对于没有接触过Matlab的人来说，通过学习本节可以完成基本编程任务。推荐观看。另外，斯坦福的吴恩达教授也在其机器学习视频中教授过Matlab的简单操作使用。也可以参考学习。)</p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>&emsp;&emsp;写博客真是一项锻炼能力的活，花了一个半小时才写完两节课的简单梳理总结。这进度我也是醉了！看来，以后应该利用碎片化的闲暇时间一点点完成。否则太占用学习时间了！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;从八月开始，断断续续学习这门课程。从一开始Coursera上乔治亚理工的CV课和CP课继而到UCF的CV课。算是入门了这门课程，为以后的研究工作打下了一些基础。虽然，我的数学基础在很大程度上限制着我的吸收消化。但是，始终相信，有志者事竟成这个道理。&lt;br&gt;&lt;br&gt;&amp;emsp;&amp;emsp;课程资源地址：&lt;a href=&quot;http://crcv.ucf.edu/courses/CAP5415/Fall2012/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UCF-CAP 5415 - Computer Vision&lt;/a&gt;学习过程中，可以参照课程日程表安排学习时间。适当的加强强度。(由于时间问题，本人只完成了小部分实验…最好还是要做做实验的。)&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="计算机视觉" scheme="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-    
-      <category term="课程总结" scheme="http://www.cvblogs.cn/tags/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图像处理基础-滤波(filtering)</title>
-    <link href="http://www.cvblogs.cn/2017/08/11/image-processing-operation1/"/>
-    <id>http://www.cvblogs.cn/2017/08/11/image-processing-operation1/</id>
-    <published>2017-08-11T11:39:53.000Z</published>
-    <updated>2017-09-05T15:48:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;本文介绍图像处理基础知识滤波(filtering)相关知识。在<a href="https://www.wikiwand.com/zh/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86" target="_blank" rel="external">图像处理</a>中，你经常能够看到它的身影。对于学习图像处理，理解滤波背后的数学知识非常重要。</p>
-<p>&emsp;&emsp;滤波分为<u>基于空间域滤波</u>(spatial filtering)与<u>基于频率域滤波</u>(frequency filtering)。二者的目的都是为了改善图像质量。篇幅有限，此篇文章先介绍空间滤波。</p>
-<h3 id="空间滤波-Spatial-Filtering"><a href="#空间滤波-Spatial-Filtering" class="headerlink" title="空间滤波(Spatial Filtering)"></a>空间滤波(Spatial Filtering)</h3><p>&emsp;&emsp;空间滤波操作有时候也被叫做<font color="#0099ff">卷积滤波</font>，或者干脆叫卷积(convolution)(离散的卷积，不是微积分里连续的卷积);常常需要用一个<font color="#0099ff">滤波器</font>(filter)做空间滤波操作;滤波器也有很多名字:<font color="#0099ff">卷积模版(template)</font>、<font color="#0099ff">卷积核(kernel)</font>、<font color="#0099ff">掩模(mask)</font>、<font color="#0099ff">窗口(window)</font>等。</p>
-<p>&emsp;&emsp;空间滤波可以分为<font color="#0099ff">线性滤波(linear filter)</font>和<font color="#0099ff">非线性滤波(non-linear filter)</font>。非线性滤波常见的有中值滤波、最大值滤波等，相当于自定义一个函数，在数学上由于不满足线性变换因此叫做非线性滤波。这里不细研究它。</p>
-<p>&emsp;&emsp;<font color="#0099ff">线性滤波</font>通常是：将模版覆盖区域内的元素，以模版中对应位置元素为权值，进行累加。与卷积操作类似的，还有一种数学操作叫做协相关(cross-correlatioin)，<u>它们都可以看作是基于矩阵内积的操作</u>。具有<font color="#0099ff">平移不变性(shift-invariant)</font>。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/cross-correlation%E6%96%87%E5%AD%97%E8%A7%A3%E9%87%8A.png" alt="Cross-Correlation"></p>
-<p>&emsp;&emsp;<font color="#0099ff">二者的区别：</font><u>卷积和协相关的差别是，卷积需要先对滤波矩阵进行<font color="#0099ff">180度的翻转</font>，但如果矩阵是对称的，那么两者就没有什么差别了</u>。实际上，在信号处理领域，卷积有广泛的意义，而且有其严格的数学定义，但在这里不关注这个。2D卷积需要4个嵌套循环(4-double loop)，所以它并不快，除非我们使用很小的卷积核。这里一般使用3x3或者5x5。而且，<u>对于滤波器，也有一定的规则要求</u>：</p>
 <blockquote>
-<p>1）滤波器的大小应该是奇数，这样它才有一个中心，例如3x3，5x5或者7x7。有中心了，也有了半径的称呼，例如5x5大小的核的半径就是2。</p>
-<p>2）滤波器矩阵所有的元素之和应该要等于1，这是为了保证滤波前后图像的亮度保持不变。当然了，这不是硬性要求了。</p>
-<p>3）如果滤波器矩阵所有元素之和大于1，那么滤波后的图像就会比原图像更亮，反之，如果小于1，那么得到的图像就会变暗。如果和为0，图像不会变黑，但也会非常暗。</p>
-<p>4）对于滤波后的结构，可能会出现负数或者大于255的数值。对这种情况，我们将他们直接截断到0和255之间即可。对于负数，也可以取绝对值。</p>
+<p>注解：<br>表格Table用于展示数据<br>表单Form则用于提交数据等</p>
 </blockquote>
-<h3 id="卷积核-Convolution-Kernel"><a href="#卷积核-Convolution-Kernel" class="headerlink" title="卷积核(Convolution Kernel)"></a>卷积核(Convolution Kernel)</h3><p>&emsp;&emsp;定义不同的卷积核与原图像做卷积操作，可以产生不同的效果。滤波与模糊的概念区分。模糊是人为感受到的现象，通过滤波操作可以呈现。</p>
-<h4 id="什么都不做"><a href="#什么都不做" class="headerlink" title="什么都不做"></a>什么都不做</h4><p>&emsp;&emsp;滤波器矩阵所有元素之和为1，保证滤波前后图像的亮度保持不变。这个滤波器啥也没有做，得到的图像和原图是一样的。因为只有中心点的值是1。邻域点的权值都是0，对滤波后的取值没有任何影响。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.50.25.png" alt=""></p>
-<h4 id="图像锐化滤波器-Sharpness-Filter"><a href="#图像锐化滤波器-Sharpness-Filter" class="headerlink" title="图像锐化滤波器(Sharpness Filter)"></a>图像锐化滤波器(Sharpness Filter)</h4><p>&emsp;&emsp;图像的锐化和边缘检测很像，首先找到边缘，然后把边缘加到原来的图像上面，这样就强化了图像的边缘，使图像看起来更加锐利了。这两者操作统一起来就是锐化滤波器了，<u>也就是在边缘检测滤波器的基础上，再在中心的位置加1，这样滤波后的图像就会和原始的图像具有同样的亮度了，但是会更加锐利。</u></p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.50.44.png" alt=""></p>
-<p>&emsp;&emsp;我们把核加大，就可以得到更加精细的锐化效果</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.50.52.png" alt=""></p>
-<p>&emsp;&emsp;下面的滤波器会更强调边缘。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.56.05.png" alt=""></p>
-<p>&emsp;&emsp;主要是<u>强调图像的细节</u>。最简单的3x3的锐化滤波器如下：</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.53.58.png" alt=""></p>
-<p>&emsp;&emsp;实际上是计算当前点和周围点的差别，然后将这个差别加到原来的位置上。另外，<u>中间点的权值要比所有的权值和大于1，意味着这个像素要保持原来的值。</u></p>
-<h4 id="边缘检测-Edge-Detection"><a href="#边缘检测-Edge-Detection" class="headerlink" title="边缘检测(Edge Detection)"></a>边缘检测(Edge Detection)</h4><p>&emsp;&emsp;我们要找水平的边缘：<u>需要注意的是，这里矩阵的元素和是0，所以滤波后的图像会很暗</u>，只有边缘的地方是有亮度的。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2014.59.54.png" alt=""></p>
-<p>&emsp;&emsp;相当于做差分(differencing)，求导的离散版本，有向前差分(forward differencing)，向后差分(backward differencing)，中心差分(central differencing)。</p>
-<p>&emsp;&emsp;下面的滤波器可以找到垂直方向的边缘，这里像素上和下的像素值都使用</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.08.09.png" alt=""></p>
-<p>&emsp;&emsp;再下面这个滤波器可以找到45度的边缘：取-2不为了什么，只是为了让矩阵的元素和为0而已。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.10.30.png" alt=""></p>
-<p>&emsp;&emsp;那下面这个滤波器就可以检测所有方向的边缘。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.17.38.png" alt=""></p>
-<p>&emsp;&emsp;为了检测边缘，我们需要在图像对应的方向计算梯度。用下面的卷积核来卷积图像，就可以了。但在实际中，这种简单的方法<u>会把噪声也放大</u>了。另外，需要注意的是，<u>矩阵所有的值加起来要是0</u>。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.21.07.png" alt=""></p>
-<h4 id="浮雕-Embossing-Filter"><a href="#浮雕-Embossing-Filter" class="headerlink" title="浮雕(Embossing Filter)"></a>浮雕(Embossing Filter)</h4><p>&emsp;&emsp;浮雕滤波器可以给图像一种3D阴影的效果。只要将中心一边的像素减去另一边的像素就可以了。这时候，像素值有可能是负数，我们将负数当成阴影，将正数当成光，然后我们<u>对结果图像加上128的偏移</u>。这时候，图像大部分就变成灰色了。</p>
-<p>&emsp;&emsp;下面是45度的浮雕滤波器</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.25.28.png" alt=""></p>
-<p>&emsp;&emsp;只要加大滤波器，就可以得到更加夸张的效果了</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.27.12.png" alt=""></p>
-<h4 id="均值模糊-Box-Filter-Averaging"><a href="#均值模糊-Box-Filter-Averaging" class="headerlink" title="均值模糊(Box Filter/Averaging)"></a>均值模糊(Box Filter/Averaging)</h4><p>&emsp;&emsp;我们可以将当前像素和它的四邻域的像素一起取平均，然后再除以5，或者直接在滤波器的5个地方取0.2的值即可，如下图</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.29.23.png" alt=""></p>
-<p>&emsp;&emsp;可以看到，这个模糊还是比较温柔的，我们可以把滤波器变大，这样就会变得粗暴了：<u>注意要将和再除以13.</u></p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.33.28.png" alt=""></p>
-<p>&emsp;&emsp;如果你想要更模糊的效果，加大滤波器的大小即可。或者对图像应用<u>多次模糊</u>也可以。</p>
-<h4 id="高斯模糊-Gaussian-Filter"><a href="#高斯模糊-Gaussian-Filter" class="headerlink" title="高斯模糊(Gaussian Filter)"></a>高斯模糊(Gaussian Filter)</h4><p>&emsp;&emsp;<u>均值模糊很简单，但不是很平滑。高斯模糊就有这个优点，所以被广泛用在图像降噪上。特别是在边缘检测之前，都会用来移除细节。高斯滤波器是一个低通滤波器。</u></p>
-<h4 id="运动模糊-Motion-Blur"><a href="#运动模糊-Motion-Blur" class="headerlink" title="运动模糊(Motion Blur)"></a>运动模糊(Motion Blur)</h4><p>&emsp;&emsp;运动模糊可以通过只在一个方向模糊达到，例如下面9x9的运动模糊滤波器。注意，<u>求和结果要除以9。</u></p>
-<p>&emsp;&emsp;这个效果就好像，摄像机是从左上角移动的右下角。</p>
-<p><img src="http://ou5rpeic9.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-08-13%2015.41.32.png" alt=""></p>
-<h3 id="自己手写的卷积函数"><a href="#自己手写的卷积函数" class="headerlink" title="自己手写的卷积函数"></a>自己手写的卷积函数</h3><p>虽然Matlab已经封装了一个函数con2()作卷积操作，但是还是要自己手写一下加深理解。下面是<a href="http://crcv.ucf.edu/courses/CAP5415/Fall2012/" target="_blank" rel="external">UCF计算机视觉网课</a>的作业。4层循环。因为<u>边缘效应</u>通常情况下需要补0。还是Matlab新手，代码一点都不elegant，没有借鉴意义。<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="params">[]</span> = <span class="title">pa1</span><span class="params">()</span></span></div><div class="line">m_img = imread(<span class="string">'PA1/balloon.jpg'</span>);</div><div class="line">m_kernel = <span class="built_in">rand</span>(<span class="number">5</span>,<span class="number">5</span>);</div><div class="line">[r1, c1, cc1] = <span class="built_in">size</span>(m_img);</div><div class="line">[r2, c2] = <span class="built_in">size</span>(m_kernel);</div><div class="line"><span class="keyword">for</span> <span class="built_in">i</span> = r2+<span class="number">1</span>:r1</div><div class="line">    <span class="keyword">for</span> <span class="built_in">j</span> = c2+<span class="number">1</span>:c1</div><div class="line">        sump = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> k = <span class="number">1</span>:r2</div><div class="line">            <span class="keyword">for</span> l = <span class="number">1</span>:c2</div><div class="line">                sump = m_img(<span class="built_in">i</span>-k, <span class="built_in">j</span>-l) * m_kernel(k,l);</div><div class="line">            <span class="keyword">end</span>;</div><div class="line">        <span class="keyword">end</span>;</div><div class="line">        outQ(<span class="built_in">i</span>,<span class="built_in">j</span>) = sump;</div><div class="line">    <span class="keyword">end</span>;</div><div class="line"><span class="keyword">end</span></div><div class="line">imshow(outQ);wait(<span class="number">0</span>);</div></pre></td></tr></table></figure></p>
-<h3 id="Matlab中用imfilter-实现线性空间滤波"><a href="#Matlab中用imfilter-实现线性空间滤波" class="headerlink" title="Matlab中用imfilter()实现线性空间滤波"></a>Matlab中用imfilter()实现线性空间滤波</h3><p>&emsp;&emsp;最常用的是这句：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">imfilter(f, w, <span class="string">'replicate'</span>) <span class="comment">%相关滤波，默认边界外围填充0，造成黑边，使用'replicate'复制边缘像素，消除边缘效应，输出大小与输入图像f相同.</span></div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;imfilter()默认是相关算子，在做真正的卷积之前可以先将核旋转180°(除非你指定了滤波模式为’conv’)，rotated_filter=flipud(fliplr(filter))<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">imfilter(f, w, filtering_mode, boundary_options, size_options)</div><div class="line">f:图像</div><div class="line">w:滤波模版</div><div class="line">filtering_mode:滤波模式</div><div class="line">    &apos;corr&apos;:相关滤波。[默认值]</div><div class="line">    &apos;conv&apos;:卷积滤波。</div><div class="line">boundary_options:边界选项</div><div class="line">    P:(没有引号)边界外围补充0。[默认值]</div><div class="line">    &apos;replicate&apos;:边界外围复制边界值</div><div class="line">    &apos;symmetric&apos;:边界外围使用边界镜像</div><div class="line">    &apos;circular&apos;:图像的大小通过讲图像处理为二维周期函数的一个周期来扩展（这是什么？）</div><div class="line">size_options:大小选项</div><div class="line">    &apos;same&apos;:输出大小与输入图像f大小相同。[默认值]</div><div class="line">    &apos;full&apos;:输出与扩展（填充）后的图像大小相同。</div></pre></td></tr></table></figure></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
-<li><p>规范用语，在<font color="#0099ff">滑窗操作</font>、<font color="#0099ff">计算图像梯度</font>等场合，不要使用“卷积”，而要使用“滤波”或者“协相关”。因为，我们通常讲的卷积，在这几个操作中其实是协相关，那就不要用卷积这个词以<u>避免引起混淆</u>。</p>
-</li>
-<li><p>不同的滤波器产生的效果不同，滤波器的定义有讲究。经常会看到一些人名命名的算子。比如用作边缘检测，拉普拉斯(Laplacian)算子、Canny算子。观察它们的算子内容，结合卷积核的定义规则。你会发现其实就那么回事。不要被复杂的学术名词给弄懵逼了。</p>
-</li>
-<li><p>GPU实现代替CPU实现，CPU实现需要四重循环，时间代价太大，性能不好。GPU使用特定的数据结构直接进行计算降低时间代价。</p>
-</li>
-<li><p>这是我的第一篇博文，本来是想好好写的，发现写博文真的是一项技术活。话到嘴边，憋不出一个字。</p>
-</li>
-</ol>
-<h3 id="参考引用"><a href="#参考引用" class="headerlink" title="参考引用"></a>参考引用</h3><ol>
-<li><p><a href="http://blog.csdn.net/zouxy09/article/details/49080029" target="_blank" rel="external">图像卷积与滤波的一些知识点</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/zjutzz/p/5661543.html" target="_blank" rel="external">图像卷积、相关以及在MATLAB中的操作</a></p>
-</li>
-</ol>
+<h1 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h1><p>HTTP协议以”请求－回复”的方式工作。客户发送请求时，<strong>可以在请求中附加数据</strong>。服务器通过解析请求，就可以获得客户传来的数据，并根据URL来提供特定的服务。</p>
+<h2 id="GET-方法"><a href="#GET-方法" class="headerlink" title="GET 方法"></a>GET 方法</h2><p>创建一个 search.py 文件，用于接收用户的请求。记得一定要将自己定义的路由处理函数在<code>urls.py</code>中定义的正则路由对应起来。</p>
+<blockquote>
+<p>注解：此处将视图显示和请求处理分成两个函数处理。</p>
+</blockquote>
+<h2 id="POST-方法"><a href="#POST-方法" class="headerlink" title="POST 方法"></a>POST 方法</h2><p>提交数据时更常用POST方法。<br><strong>用一个URL和处理函数，同时显示视图和处理请求。</strong><br>注意：csrf 全称是 Cross Site Request Forgery。这是Django提供的防止伪装提交请求的功能。POST 方法提交的表格，必须有此标签。</p>
+<h1 id="Request-对象"><a href="#Request-对象" class="headerlink" title="Request 对象"></a>Request 对象</h1><p><strong>每个<code>view</code> 函数的第一个参数是一个 <code>HttpRequest</code> 对象</strong><br>注意：不能使用语句if request.POST来判断是否使用HTTP POST方法；应该使用if request.method == “POST” 。</p>
+<h1 id="QueryDict对象"><a href="#QueryDict对象" class="headerlink" title="QueryDict对象"></a>QueryDict对象</h1><p>在HttpRequest对象中, GET和POST属性是django.http.QueryDict类的实例。<br>QueryDict类似字典的自定义类，用来处理单键对应多值的情况。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;本文介绍图像处理基础知识滤波(filtering)相关知识。在&lt;a href=&quot;https://www.wikiwa
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;HTML表单是网站交互性的经典方式。有必要区别与表格Table。这两个，本质上有很大的差别。&lt;/p&gt;
     
     </summary>
     
-      <category term="图像处理" scheme="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="数学基础" scheme="http://www.cvblogs.cn/tags/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+      <category term="Django" scheme="http://www.cvblogs.cn/tags/Django/"/>
     
   </entry>
   
   <entry>
-    <title>开发测试</title>
-    <link href="http://www.cvblogs.cn/2017/08/05/hello-world/"/>
-    <id>http://www.cvblogs.cn/2017/08/05/hello-world/</id>
-    <published>2017-08-05T11:11:50.000Z</published>
-    <updated>2017-08-13T19:08:00.000Z</updated>
+    <title>Django之数据库</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/django%E4%B9%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/django之数据库/</id>
+    <published>2017-12-08T09:56:10.000Z</published>
+    <updated>2017-12-10T13:20:47.385Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="博客正在完善中"><a href="#博客正在完善中" class="headerlink" title="博客正在完善中"></a>博客正在完善中</h1><font size="7">&emsp;&emsp;稍安勿躁</font>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>关于在Django框架中如何使用数据库。</p>
+<a id="more"></a>
+<h1 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h1><h2 id="定义模型"><a href="#定义模型" class="headerlink" title="定义模型"></a>定义模型</h2><h3 id="创建-APP"><a href="#创建-APP" class="headerlink" title="创建 APP"></a>创建 APP</h3><p>Django规定，如果要使用模型，必须要创建一个app。修改对应App目录下的<code>models.py</code>文件。<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># models.py</span></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span><span class="params">(models.Model)</span>:</span></div><div class="line">    name = models.CharField(max_length=<span class="number">20</span>)</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注解：类名代表了数据库表名，继承了<code>models.Model</code>。<br>类里面的字段代表数据表中的字段(name)<br>数据类型则由CharField（相当于varchar）、DateField（相当于datetime）<br>max_length 参数限定长度。</p>
+</blockquote>
+<h3 id="在命令行中运行"><a href="#在命令行中运行" class="headerlink" title="在命令行中运行"></a>在命令行中运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">python manage.py migrate   <span class="comment"># 创建表结构</span></div><div class="line">python manage.py makemigrations TestModel  <span class="comment"># 让 Django 知道我们在我们的模型有一些变更</span></div><div class="line">python manage.py migrate TestModel   <span class="comment"># 创建表结构</span></div></pre></td></tr></table></figure>
+<p>表名组成结构为：<strong>应用名_类名</strong>（如：<code>TestModel_test</code>）。</p>
+<p><strong> 注意：尽管我们没有在models给表设置主键，但是Django会自动添加一个id作为主键。</strong></p>
+<h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><p>在 HelloWorld(所创建的App)目录中添加 testdb.py 文件（下面介绍），并修改 urls.py</p>
+<blockquote>
+<p>注解：此处只要在对应App目录下创建好操作数据库的文件，以及在urls.py中处理好对应的路由转发规则即可。并不强制要求一定是这样。但是路由的映射一定要对应上。</p>
+</blockquote>
+<h3 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h3><p>添加数据需要先创建对象，然后再执行 save 函数，相当于SQL中的<code>INSERT</code><br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"> </div><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse    <span class="comment">#因为是处理客户端http请求，因此需要引入该模块</span></div><div class="line"> </div><div class="line"><span class="keyword">from</span> TestModel.models <span class="keyword">import</span> Test    <span class="comment">#该模块中定义了我们的表结构（模型），可以理解为是一个类（自定义的数据类型）</span></div><div class="line"> </div><div class="line"><span class="comment"># 数据库操作</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">testdb</span><span class="params">(request)</span>:</span>    <span class="comment">#此处对应urls.py中的路由处理函数，一定要对应上</span></div><div class="line">    test1 = Test(name=<span class="string">'runoob'</span>)    <span class="comment">#创建了一个实例对象</span></div><div class="line">    test1.save()    <span class="comment">#将实例对象保存（可以看作是SQL中的INSERT操作）</span></div><div class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"&lt;p&gt;数据添加成功！&lt;/p&gt;"</span>)    <span class="comment">#如只是用HttpResponse则无需在参数中添加request。如果是render等则需要带上</span></div></pre></td></tr></table></figure></p>
+<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><p>通过objects这个模型管理器来进行完成对应的操作<br>all()获得所有数据行，相当于SQL中的SELECT * FROM<br>filter相当于SQL中的WHERE，可设置条件过滤结果<br>objects.get(id=1)获取单个对象<br>objects.order_by(‘name’)[0:2]限制返回的数据 相当于 SQL 中的 OFFSET 0 LIMIT 2;<br>objects.order_by(“id”)数据排序<br>上面的方法可以连锁使用</p>
+<h3 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h3><p>修改数据可以使用 save() 或 update()</p>
+<blockquote>
+<p>save()和update都得针对已经有的数据进行操作</p>
+</blockquote>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>删除数据库中的对象只需调用该对象的delete()方法即可</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>Django中的数据库操作还是挺简单的，但是封装感觉会是一个问题，单纯的利用框架提供的这个似乎解耦等不会很好，有待继续学习。</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://www.runoob.com/django/django-model.html" target="_blank" rel="external">http://www.runoob.com/django/django-model.html</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;博客正在完善中&quot;&gt;&lt;a href=&quot;#博客正在完善中&quot; class=&quot;headerlink&quot; title=&quot;博客正在完善中&quot;&gt;&lt;/a&gt;博客正在完善中&lt;/h1&gt;&lt;font size=&quot;7&quot;&gt;&amp;emsp;&amp;emsp;稍安勿躁&lt;/font&gt;
-
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;关于在Django框架中如何使用数据库。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Django" scheme="http://www.cvblogs.cn/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python之数据结构</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/python_python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/python_python数据结构/</id>
+    <published>2017-12-08T09:26:06.000Z</published>
+    <updated>2017-12-10T12:54:14.756Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python-列表-List"><a href="#Python-列表-List" class="headerlink" title="Python 列表(List)"></a>Python 列表(List)</h1><blockquote>
+<p>可以这么说是，用<code>[</code>与<code>]</code>将元素圈起来- -</p>
+</blockquote>
+<p>序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。<br>Python有6个序列的内置类型，但最常见的是列表和元组。<br>序列都可以进行的操作包括索引，切片，<strong>加</strong>，<strong>乘</strong>，<strong>检查成员</strong>。<br>Python已经内置确定序列的长度以及确定最大和最小的元素的方法。</p>
+<p>列表是最常用的Python数据类型，它可以作为<strong>一个方括号内的逗号分隔值出现</strong>。<br><a id="more"></a><br>创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。与字符串的索引一样，列表索引从0开始。列表可以进行截取、组合等。</p>
+<h2 id="删除列表元素"><a href="#删除列表元素" class="headerlink" title="删除列表元素"></a>删除列表元素</h2><p><code>del</code>语句来删除列表的的元素。</p>
+<h2 id="Python列表脚本操作符"><a href="#Python列表脚本操作符" class="headerlink" title="Python列表脚本操作符"></a>Python列表脚本操作符</h2><p>列表对 + 和 <em> 的操作符与字符串相似。+ 号用于组合列表，</em> 号用于重复列表。</p>
+<h1 id="Python-元祖-Tuple"><a href="#Python-元祖-Tuple" class="headerlink" title="Python 元祖(Tuple)"></a>Python 元祖(Tuple)</h1><p><strong>元组与列表类似，不同之处在于元组的元素不能修改。</strong><br><strong>元组使用小括号，列表使用方括号。</strong><br>元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。<br><strong>元组中只包含一个元素时，需要在元素后面添加逗号</strong><br>元组与字符串类似，下标索引从0开始，可以进行截取，组合等。<br>将列表转换为元组:<strong>tuple(seq)</strong></p>
+<h1 id="Python-字典-Dictionary"><a href="#Python-字典-Dictionary" class="headerlink" title="Python 字典(Dictionary)"></a>Python 字典(Dictionary)</h1><p>字典是另一种可变容器模型，且可存储任意类型对象。<br>字典的每个键值(key=&gt;value)对用冒号(:)分割，每个对之间用逗号(,)分割，整个字典包括在花括号({})中。键必须是唯一的，但值则不必。键必须是不可变的，如字符串，数字或元组。</p>
+<h2 id="删除字典元素"><a href="#删除字典元素" class="headerlink" title="删除字典元素"></a>删除字典元素</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">del</span> dict[<span class="string">'Name'</span>]; <span class="comment"># 删除键是'Name'的条目</span></div><div class="line">dict.clear();     <span class="comment"># 清空词典所有条目</span></div><div class="line"><span class="keyword">del</span> dict ;        <span class="comment"># 删除词典</span></div></pre></td></tr></table></figure>
+<h2 id="字典键的特性"><a href="#字典键的特性" class="headerlink" title="字典键的特性"></a>字典键的特性</h2><p>字典值可以没有限制地取任何<code>python</code>对象，既可以是标准的对象，也可以是用户定义的，但键不行。</p>
+<ol>
+<li>不允许同一个键出现两次。创建时如果同一个键被赋值两次，后一个值会被记住。</li>
+<li>键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Python-列表-List&quot;&gt;&lt;a href=&quot;#Python-列表-List&quot; class=&quot;headerlink&quot; title=&quot;Python 列表(List)&quot;&gt;&lt;/a&gt;Python 列表(List)&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;可以这么说是，用&lt;code&gt;[&lt;/code&gt;与&lt;code&gt;]&lt;/code&gt;将元素圈起来- -&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。&lt;br&gt;Python有6个序列的内置类型，但最常见的是列表和元组。&lt;br&gt;序列都可以进行的操作包括索引，切片，&lt;strong&gt;加&lt;/strong&gt;，&lt;strong&gt;乘&lt;/strong&gt;，&lt;strong&gt;检查成员&lt;/strong&gt;。&lt;br&gt;Python已经内置确定序列的长度以及确定最大和最小的元素的方法。&lt;/p&gt;
+&lt;p&gt;列表是最常用的Python数据类型，它可以作为&lt;strong&gt;一个方括号内的逗号分隔值出现&lt;/strong&gt;。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Python" scheme="http://www.cvblogs.cn/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python之读取数据的方式</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/python_python%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/python_python读取数据的方式/</id>
+    <published>2017-12-08T09:01:01.000Z</published>
+    <updated>2017-12-10T12:53:49.482Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python读取数据的方式"><a href="#Python读取数据的方式" class="headerlink" title="Python读取数据的方式"></a>Python读取数据的方式</h1><p>在文本处理的过程中，将文件加载内存中是第一步，这就涉及到<strong>怎样将文件中的某一列映射到具体的变量的过程</strong>。<br>推荐两种优雅的方式来读取数据，都是先配置字段模式，然后按照模式读取，而模式则有字典模式和列表模式两种形式；<br><a id="more"></a></p>
+<h2 id="读取文件，按照分隔符分割成字段数据列表"><a href="#读取文件，按照分隔符分割成字段数据列表" class="headerlink" title="读取文件，按照分隔符分割成字段数据列表"></a>读取文件，按照分隔符分割成字段<code>数据列表</code></h2><p>使用<code>yield</code>关键字，每次抛出单个行的分割数据，这样在调度程序中可以用<code>for fields in read_file_data(fpath)</code>的方式读取每一行。</p>
+<h3 id="使用配置好的字典模式，装配读取的数据列表"><a href="#使用配置好的字典模式，装配读取的数据列表" class="headerlink" title="使用配置好的字典模式，装配读取的数据列表"></a>使用配置好的<code>字典模式</code>，装配读取的数据列表</h3><p>这种方法配置一个{“字段名”: 字段位置}的字典作为数据模式，然后按照该模式装配读取的列表数据，最后实现用字典的方式访问数据。</p>
+<h3 id="使用配置好的列表模式，装配读取的数据列表"><a href="#使用配置好的列表模式，装配读取的数据列表" class="headerlink" title="使用配置好的列表模式，装配读取的数据列表"></a>使用配置好的<code>列表模式</code>，装配读取的数据列表</h3><p>如果需要读取文件所有列，或者前面的一些列，那么配置字典模式优点复杂，因为需要给每个字段配置索引位置，并且这些位置是从0开始完后数的，属于低级劳动，需要消灭。</p>
+<h2 id="按列表模式读"><a href="#按列表模式读" class="headerlink" title="按列表模式读"></a>按<code>列表模式</code>读</h2><p>列表模式应命运而生，先将配置好的列表模式转换成字典模式，然后按字典加载就可以实现。<br>使用的时候，可以用列表的形式配置模式，不需要配置索引更加简洁</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><blockquote>
+<p>尚未理解透彻数据处理中的<code>字典模式</code>与<code>列表模式</code>。</p>
+</blockquote>
+<h1 id="引用链接"><a href="#引用链接" class="headerlink" title="引用链接"></a>引用链接</h1><p><a href="http://www.crazyant.net/1707.html" target="_blank" rel="external">Python使用list字段模式或者dict字段模式读取文件的方法</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Python读取数据的方式&quot;&gt;&lt;a href=&quot;#Python读取数据的方式&quot; class=&quot;headerlink&quot; title=&quot;Python读取数据的方式&quot;&gt;&lt;/a&gt;Python读取数据的方式&lt;/h1&gt;&lt;p&gt;在文本处理的过程中，将文件加载内存中是第一步，这就涉及到&lt;strong&gt;怎样将文件中的某一列映射到具体的变量的过程&lt;/strong&gt;。&lt;br&gt;推荐两种优雅的方式来读取数据，都是先配置字段模式，然后按照模式读取，而模式则有字典模式和列表模式两种形式；&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Python" scheme="http://www.cvblogs.cn/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux之软链接与硬链接</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/linux_%E8%BD%AF%E9%93%BE%E6%8E%A5%E4%B8%8E%E7%A1%AC%E9%93%BE%E6%8E%A5/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/linux_软链接与硬链接/</id>
+    <published>2017-12-08T07:18:22.000Z</published>
+    <updated>2017-12-10T12:56:53.806Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h1><p>称之为符号连接（Symbolic Link）。类似于Windows的快捷方式，在符号连接中，文件实际上是一个文本文件，其中包含的有另一文件的位置信息。</p>
+<a id="more"></a>
+<blockquote>
+<p>注解：此处说的一个文本文件包含另一文件的位置信息，可以将其看作指针。因此每次打开软链接的文件都会定位到源文件目录所在的位置。</p>
+</blockquote>
+<p>软链接的缺点在于：因为链接文件包含有原文件的路径信息，所以当原文件从一个目录下移到其他目录中，再访问链接文件，系统就找不到了，而硬链接就没有这个缺陷，你想怎么移就怎么移；还有它要系统分配额外的空间用于建立新的索引节点和保存原文件的路径。</p>
+<h1 id="硬链接"><a href="#硬链接" class="headerlink" title="硬链接"></a>硬链接</h1><p>通过索引节点来进行连接。保存在磁盘分区中的文件不管是什么类型都给它分配一个编号，称为索引节点号(Inode Index)。允许一个文件拥有多个有效路径名，这样用户就可以建立硬连接到重要文件，以防止“误删”的功能。<br>只删除一个连接并不影响索引节点本身和其它的连接，只有当最后一个连接被删除后，文件的数据块及目录的连接才会被释放。</p>
+<blockquote>
+<p>注解：好比C++中，为一个内存区域创建了多个别名。</p>
+</blockquote>
+<!-- more -->
+<h2 id="硬链接文件有两个限制"><a href="#硬链接文件有两个限制" class="headerlink" title="硬链接文件有两个限制"></a>硬链接文件有两个限制</h2><ol>
+<li>不允许给目录创建硬链接；</li>
+<li>只有在同一文件系统中的文件之间才能创建链接，而且只有超级用户才有建立硬链接权限。<blockquote>
+<p>对硬链接文件进行读写和删除操作时候，结果和软链接相同。但如果我们删除硬链接文件的源文件，硬链接文件仍然存在，而且保留了愿有的内容。</p>
+</blockquote>
+</li>
+</ol>
+<p>软链接没有硬链接以上的两个限制，因而现在更为广泛使用，它具有更大的灵活性，甚至可以跨越不同机器、不同网络对文件进行链接。</p>
+<h1 id="创建命令"><a href="#创建命令" class="headerlink" title="创建命令"></a>创建命令</h1><p><code>ln -s</code>创建软链接</p>
+<p><code>ln</code>创建硬链接</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://www.cnblogs.com/kex1n/p/5193826.html" target="_blank" rel="external">linux 创建连接命令 ln -s 软链接</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;软链接&quot;&gt;&lt;a href=&quot;#软链接&quot; class=&quot;headerlink&quot; title=&quot;软链接&quot;&gt;&lt;/a&gt;软链接&lt;/h1&gt;&lt;p&gt;称之为符号连接（Symbolic Link）。类似于Windows的快捷方式，在符号连接中，文件实际上是一个文本文件，其中包含的有另一文件的位置信息。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Linux" scheme="http://www.cvblogs.cn/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python之编码规范笔记</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/python_%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/python_编码规范/</id>
+    <published>2017-12-08T05:21:01.000Z</published>
+    <updated>2017-12-10T12:50:39.518Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h1><ol>
+<li>模块：小写、可以有下划线</li>
+<li>包：小写、无下划线</li>
+<li>类：<code>CapWords</code>(驼峰式命名)</li>
+<li>函数命名：小写，可以有下划线</li>
+<li>常量命名：大写，可以有下划线</li>
+<li>类的属性：小写，前缀下划线</li>
+<li>类的方法第一个参数必须是<code>self</code>，静态方法第一个参数必须是<code>cls</code></li>
+</ol>
+<h1 id="编码建议"><a href="#编码建议" class="headerlink" title="编码建议"></a>编码建议</h1><ol>
+<li>尽可能使用<code>‘is’</code>,<code>‘is not’</code>取代<code>‘==’</code>，比如<code>if x is not None</code> 要优于<code>if x</code>。</li>
+<li>使用<code>isinstance()</code>比较对象的类型</li>
+<li>使用<code>startswith()</code> and <code>endswith()</code>代替切片进行序列前缀或后缀的检查</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;基本结构&quot;&gt;&lt;a href=&quot;#基本结构&quot; class=&quot;headerlink&quot; title=&quot;基本结构&quot;&gt;&lt;/a&gt;基本结构&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;模块：小写、可以有下划线&lt;/li&gt;
+&lt;li&gt;包：小写、无下划线&lt;/li&gt;
+&lt;li&gt;类：&lt;code&gt;CapWord
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Python" scheme="http://www.cvblogs.cn/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git利用https无法push解决方法</title>
+    <link href="http://www.cvblogs.cn/2017/12/08/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/git%E7%9A%84https%E6%97%A0%E6%B3%95push%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://www.cvblogs.cn/2017/12/08/开发学习/git的https无法push解决方法/</id>
+    <published>2017-12-08T02:22:26.000Z</published>
+    <updated>2017-12-10T12:36:18.862Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="错误信息：fatal-Unable-to-find-remote-helper-for-39-https-39"><a href="#错误信息：fatal-Unable-to-find-remote-helper-for-39-https-39" class="headerlink" title="错误信息：fatal: Unable to find remote helper for &#39;https&#39;"></a>错误信息：<code>fatal: Unable to find remote helper for &#39;https&#39;</code></h4><p>昨天想要提交代码的时候，死活无法<code>push</code>，稍晚的时候才想起来原来是自己太着急了，代码都没有<code>commit</code>，那么何谈<code>push</code>呢。</p>
+<blockquote>
+<p>切记本地与远端的区别。远端只需要将它看作是一个存储数据作备份的地方。真正的内容其实是需要在本地完成的。而<code>git</code>这个工具的本质就是，先<code>add</code>修改（如果是对已有文件作修改则只需要用<code>commit -am</code>提交修改信息。<code>git</code>会保存所有的提交版本记录。）</p>
+</blockquote>
+<p>另外，由于用<code>conda</code>进入了虚拟环境，导致<code>push</code>的时候依旧报错。报错信息是<code>fatal: Unable to find remote helper for &#39;https&#39;</code>。上网查找的时候说是我没有安装<code>curl</code>等（但是其实根据一个正常工作的<code>git config --list</code>信息对比，我的<code>git</code>及<code>curl</code>是可以正常用的）。</p>
+<blockquote>
+<p>最后，其实是因为我进入了<code>conda</code>的环境。退出来虚拟环境，就可以正常提交了。</p>
+</blockquote>
+<h4 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h4><p>还是环境变量的问题。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;错误信息：fatal-Unable-to-find-remote-helper-for-39-https-39&quot;&gt;&lt;a href=&quot;#错误信息：fatal-Unable-to-find-remote-helper-for-39-https-39&quot; class=&quot;h
     
     </summary>
     
@@ -590,6 +399,382 @@
     
     
       <category term="测试" scheme="http://www.cvblogs.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django之基础概念学习</title>
+    <link href="http://www.cvblogs.cn/2017/12/07/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/django_%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.cvblogs.cn/2017/12/07/开发学习/django_基础概念学习/</id>
+    <published>2017-12-07T04:47:10.000Z</published>
+    <updated>2017-12-10T13:31:29.108Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近需要学习Django框架。笔记备忘。其实学习一个框架，莫过于自己动手从零开始搭建。亲身去体会这个框架。这样学习才能事半功倍。神奇的发现hexo的文件里不可以有那个跨站点的token标签= =</p>
+<h1 id="引用链接"><a href="#引用链接" class="headerlink" title="引用链接"></a>引用链接</h1><p><a href="https://www.cnblogs.com/feixuelove1009/p/5823135.html" target="_blank" rel="external">https://www.cnblogs.com/feixuelove1009/p/5823135.html</a><br><a href="http://www.runoob.com/django/django-first-app.html" target="_blank" rel="external">http://www.runoob.com/django/django-first-app.html</a></p>
+<a id="more"></a>
+<h1 id="Web框架介绍"><a href="#Web框架介绍" class="headerlink" title="Web框架介绍"></a>Web框架介绍</h1><p><img src="http://images2015.cnblogs.com/blog/948404/201608/948404-20160830212049246-1153317231.jpg" alt="一般的web框架"><br>其它基于python的web框架，如tornado、flask、webpy都是在这个范围内进行增删裁剪的。例如tornado用的是自己的异步非阻塞“wsgi”，flask则只提供了最精简和基本的框架。Django则是直接使用了WSGI，并实现了大部分功能</p>
+<h1 id="MVC-MTV介绍"><a href="#MVC-MTV介绍" class="headerlink" title="MVC/MTV介绍"></a>MVC/MTV介绍</h1><p>模型(model)：定义数据库相关的内容，一般放在models.py文件中。<br>视图(view)：定义HTML等静态网页文件相关，也就是那些html、css、js等前端的东西。<br>控制器(controller)：定义业务逻辑相关，就是你的主要代码。<br>MTV: 有些WEB框架觉得MVC的字面意思很别扭，就给它改了一下。view不再是HTML相关，而是主业务逻辑了，相当于控制器。html被放在Templates中，称作模板，于是MVC就变成了MTV。这其实就是一个文字游戏，和MVC本质上是一样的，换了个名字和叫法而已，换汤不换药。</p>
+<h1 id="Django模型组织"><a href="#Django模型组织" class="headerlink" title="Django模型组织"></a>Django模型组织</h1><p><img src="http://images2015.cnblogs.com/blog/948404/201609/948404-20160903111840215-2065765780.jpg" alt="Django模型组织"></p>
+<h2 id="我们学Django学的是什么？"><a href="#我们学Django学的是什么？" class="headerlink" title="我们学Django学的是什么？"></a>我们学Django学的是什么？</h2><ol>
+<li><p>目录结构规范</p>
+</li>
+<li><p>urls路由方式</p>
+</li>
+<li><p>settings配置</p>
+</li>
+<li><p>ORM操作</p>
+</li>
+<li><p>模板渲染</p>
+</li>
+<li><p>其它</p>
+</li>
+</ol>
+<h1 id="Django项目目录结构"><a href="#Django项目目录结构" class="headerlink" title="Django项目目录结构"></a>Django项目目录结构</h1><p><img src="./xiaogu_django项目结构.png" alt="xiaogu_django项目结构.png"><br><img src="http://images2015.cnblogs.com/blog/948404/201608/948404-20160830222155746-982749621.png" alt="目录结构"><br><strong>所有的APP共享项目资源</strong><br>在每个django项目中可以包含多个APP，相当于一个大型项目中的分系统、子模块、功能部件等等，相互之间比较独立，但也有联系。<br><strong>编写路由</strong><br>路由都在urls.py文件里，它将浏览器输入的url映射到相应的业务处理逻辑</p>
+<blockquote>
+<p>此处尚未理解透彻</p>
+</blockquote>
+<p><strong>业务处理逻辑</strong><br>业务处理逻辑都在views.py文件里。通过上面两个步骤，我们将urls.py中的index这个url指向了views.py里的index（）函数，它接收用户请求request，并返回一个“hello world”字符串。实际上这肯定不行，通常我们都是将html文件返回给用户。</p>
+<p><strong>返回HTML文件</strong><br>写这么一个index.html文件,再修改一下views文件。为了让django知道我们的html文件在哪里，需要修改settings.py文件的相应内容。但默认情况下，它正好适用，你无需修改。</p>
+<blockquote>
+<p>注：这里有个小技巧，在多次频繁重启服务时，由于端口未释放的原因，容易启动不了服务，修改一下端口就OK了。</p>
+</blockquote>
+<p><strong>使用静态文件</strong><br>我们已经可以将html文件返还给用户了，但是还不够，前端三大块，html、css、js还有各种插件，它们齐全才是一个完整的页面。<br>在django中，一般将静态文件放在static目录中。你的CSS,JS和各种插件都可以放置在这个目录里。为了让django找到这个目录，依然需要对settings进行配置。<br>同样，在index.html文件中，可以引入js文件了。</p>
+<p><strong>接收用户发送的数据</strong><br>我们将一个要素齐全的html文件返还给了用户浏览器。但这还不够，因为web服务器和用户之间没有动态交互。</p>
+<p>下面我们设计一个表单，让用户输入用户名和密码，提交给index这个url，服务器将接收到这些数据。<br><strong>注意：跨站保护机制</strong><br>django有一个csrf跨站请求保护机制，我们暂时在settings文件中将它关闭，或者在form表单里添加一个标签。</p>
+<p><strong>返回动态页面</strong><br>我们收到了用户的数据，但返回给用户的依然是个静态页面，通常我们会根据用户的数据，进行处理后在返回给用户。</p>
+<p>这时候，django采用自己的模板语言，类似jinja2，根据提供的数据，替换掉html中的相应部分，详细语法入门后再深入学习</p>
+<p><strong>使用数据库</strong><br>流程走到这里，django的MTV框架基本已经浮出水面了，只剩下最后的数据库部分了。<br>django通过自带的ORM框架操作数据库，并且自带轻量级的sqlite3数据库。</p>
+<ol>
+<li>在settings.py里注册你的app(不注册它，你的数据库就不知道该给哪个app创建表)</li>
+<li>然后我们在settings中，配置数据库相关的参数，如果使用自带的sqlite，不需要修改。</li>
+<li>再编辑models.py文件，也就是MTV中的M。</li>
+<li><p>接下来要在pycharm的teminal中通过命令创建数据库的表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py makemigrations</div><div class="line">python manage.py migrate</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改views.py中的业务逻辑</p>
+</li>
+<li>重启web服务后，刷新浏览器页面，之后和用户交互的数据都能保存到数据库中。任何时候都可以从数据库中读取数据，展示到页面上。</li>
+</ol>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>关于学习方法的建议：学习任何东西，不要直接扎入细节，应该先了解它的外围知识，看看它的整体架构，再学习它的基本内容，然后才是深入学习，打磨技巧！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近需要学习Django框架。笔记备忘。其实学习一个框架，莫过于自己动手从零开始搭建。亲身去体会这个框架。这样学习才能事半功倍。神奇的发现hexo的文件里不可以有那个跨站点的token标签= =&lt;/p&gt;
+&lt;h1 id=&quot;引用链接&quot;&gt;&lt;a href=&quot;#引用链接&quot; class=&quot;headerlink&quot; title=&quot;引用链接&quot;&gt;&lt;/a&gt;引用链接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/feixuelove1009/p/5823135.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.cnblogs.com/feixuelove1009/p/5823135.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.runoob.com/django/django-first-app.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.runoob.com/django/django-first-app.html&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Django" scheme="http://www.cvblogs.cn/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习框架</title>
+    <link href="http://www.cvblogs.cn/2017/12/05/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.cvblogs.cn/2017/12/05/理论学习/深度学习框架/</id>
+    <published>2017-12-05T02:57:10.000Z</published>
+    <updated>2017-12-10T12:55:52.794Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h1><p><code>PyTorch</code>准备数据有很多灵活的方式，在最后能够将数据转为<code>Numpy</code>数组即可，通过<code>Numpy</code>数据可以转化为<code>PyTorch</code>所需的<code>Tensor</code>。</p>
+<ul>
+<li>对于图像数据，可以直接通过opencv，Pillow等做处理；</li>
+<li>语音数据可以通过scipy和librosa来处理成numpy；</li>
+<li>文本数据可以通过CNTK之类的自然语言处理库处理成numpy数组。<a id="more"></a>
+<h1 id="SKImage"><a href="#SKImage" class="headerlink" title="SKImage"></a>SKImage</h1>| 子模块名称        | 主要实现功能                           |<br>| ———— | ——————————– |<br>| io           | 读取、保存和显示图片或视频                    |<br>| data         | 提供一些测试图片和样本数据                    |<br>| color        | 颜色空间变换                           |<br>| filters      | 图像增强、边缘检测、排序滤波器、自动阈值等            |<br>| draw         | 操作于numpy数组上的基本图形绘制，包括线条、矩形、圆和文本等 |<br>| transform    | 几何变换或其它变换，如旋转、拉伸和拉东变换等           |<br>| morphology   | 形态学操作，如开闭运算、骨架提取等                |<br>| exposure     | 图片强度调整，如亮度调整、直方图均衡等              |<br>| feature      | 特征检测与提取等                         |<br>| measure      | 图像属性的测量，如相似性或等高线等                |<br>| segmentation | 图像分割                             |<br>| restoration  | 图像恢复                             |<br>| util         | 通用函数                             |</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;PyTorch&quot;&gt;&lt;a href=&quot;#PyTorch&quot; class=&quot;headerlink&quot; title=&quot;PyTorch&quot;&gt;&lt;/a&gt;PyTorch&lt;/h1&gt;&lt;p&gt;&lt;code&gt;PyTorch&lt;/code&gt;准备数据有很多灵活的方式，在最后能够将数据转为&lt;code&gt;Numpy&lt;/code&gt;数组即可，通过&lt;code&gt;Numpy&lt;/code&gt;数据可以转化为&lt;code&gt;PyTorch&lt;/code&gt;所需的&lt;code&gt;Tensor&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于图像数据，可以直接通过opencv，Pillow等做处理；&lt;/li&gt;
+&lt;li&gt;语音数据可以通过scipy和librosa来处理成numpy；&lt;/li&gt;
+&lt;li&gt;文本数据可以通过CNTK之类的自然语言处理库处理成numpy数组。
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://www.cvblogs.cn/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础概念" scheme="http://www.cvblogs.cn/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算架构之CPU与GPU</title>
+    <link href="http://www.cvblogs.cn/2017/11/29/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9E%B6%E6%9E%84%E4%B9%8BCPU%E4%B8%8EGPU/"/>
+    <id>http://www.cvblogs.cn/2017/11/29/理论学习/计算架构之CPU与GPU/</id>
+    <published>2017-11-29T09:38:10.000Z</published>
+    <updated>2017-12-10T13:12:50.244Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>日益复杂的3D图形图像时就会常常出现显卡等待CPU数据的情况</p>
+<a id="more"></a>
+<h1 id="CUDA介绍"><a href="#CUDA介绍" class="headerlink" title="CUDA介绍"></a>CUDA介绍</h1><p>CUDA是计算统一设备构架（Compute Unified Device Architecture）的缩写。<br>CUDA和GPU之间的关系十分重要。<br>CUDA在编程基础上实现GPU的性能。<br>CUDA：软件<br>GPU：硬件</p>
+<h1 id="发展历程"><a href="#发展历程" class="headerlink" title="发展历程"></a>发展历程</h1><p>GPGPU-&gt;CUDA-&gt;GPU</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>CUDA只是一种并行计算架构，相关的概念还有OpenCL、OpenMP等</p>
+<h1 id="SSL-Semi-Supervised-Learning"><a href="#SSL-Semi-Supervised-Learning" class="headerlink" title="SSL:Semi-Supervised Learning"></a>SSL:Semi-Supervised Learning</h1><ol>
+<li>期望最大算法(Expectation Maximum，EM)</li>
+<li>高斯混合模型(Gaussian Mixture Model，GMM)</li>
+<li>最小割法(Mincut):首次将图论应用于解决SSL问题</li>
+<li>调和函数法(Harmonic Function)将预测函数从离散形式扩展到连续形式</li>
+<li>流形正则化法(Manifold Regularization)将流形学习的思想用于SSL场景</li>
+<li>用于聚类的半监督距离度量学习方法，学习一种距离度量。</li>
+<li>将EM和朴素贝叶斯结合，通过引入加权系数动态调整无类标签的样例的影响提高了分类准确度，建立每类中具有多个混合部分的模型，使贝叶斯偏差减小。</li>
+<li>协同训练改进算法，不需要充分冗余的视图，而利用两个不同类型的分类器来完成学习</li>
+<li>同时解决有类标签样本稀疏和具有附加无类标签样例成对约束的问题</li>
+</ol>
+<h1 id="三个常用基本假设"><a href="#三个常用基本假设" class="headerlink" title="三个常用基本假设"></a>三个常用基本假设</h1><p>基于一个事实：未标记样本虽未直接包含标记信息，但若它们与有标记信息样本是从同样的数据源独立同分布采样而来，则它们所包含的关于数据分布的信息对建立模型是有帮助的。<br>利用好未标记样本来提升模型泛化能力，就是半监督学习研究的重点。<br>在半监督学习中有三个常用的基本假设来建立预测样例和学习目标之间的关系：<br>（1）平滑假设(Smoothness Assumption)：位于稠密数据区域的两个距离很近的样例的类标签相似，也就是说，当两个样例被稠密数据区域中的边连接时，它们在很大的概率下有相同的类标签；相反地，当两个样例被稀疏数据区域分开时，它们的类标签趋于不同。<br>（2）聚类假设(Cluster Assumption)：当两个样例位于同一聚类簇时，它们在很大的概率下有相同的类标签。这个假设的等价定义为低密度分离假设(Low Sensity Separation Assumption)，即分类决策边界应该穿过稀疏数据区域，而避免将稠密数据区域的样例分到决策边界两侧。<br>（3）流形假设(Manifold Assumption)：将高维数据嵌入到低维流形中，当两个样例位于低维流形中的一个小局部邻域内时，它们具有相似的类标签。</p>
+<h1 id="四大类学习场景"><a href="#四大类学习场景" class="headerlink" title="四大类学习场景"></a>四大类学习场景</h1><p>半监督学习可进一步划分为纯(pure)半监督学习和直推学习（transductive learning）：纯半监督学习假定训练数据中的未标记样本并非待预测数据；而直推学习假定学习过程中所考虑的未标记样本恰是待预测数据，学习的目的就是在未标记样本上获得最优泛化性能。<br>纯半监督学习是基于开放世界的假设，希望学得的模型能适用于训练过程中未观察到的数据；而直推学习是基于封闭世界假设，仅试图对学习过程中观察到的未标记数据进行预测。<br>从不同的学习场景看，SSL可分为四大类：</p>
+<h2 id="半监督分类"><a href="#半监督分类" class="headerlink" title="半监督分类"></a>半监督分类</h2><p>半监督分类(Semi-Supervised Classification)：是在无类标签的样例的帮助下训练有类标签的样本，获得比只用有类标签的样本训练得到的分类器性能更优的分类器，弥补有类标签的样本不足的缺陷，其中类标签yi取<strong>有限离散值</strong>。</p>
+<h2 id="半监督回归"><a href="#半监督回归" class="headerlink" title="半监督回归"></a>半监督回归</h2><p>半监督回归(Semi-Supervised Regression)：在无输出的输入的帮助下训练有输出的输入，获得比只用有输出的输入训练得到的回归器性能更好的回归器，其中输出yi取<strong>连续值</strong>；</p>
+<h2 id="半监督聚类"><a href="#半监督聚类" class="headerlink" title="半监督聚类"></a>半监督聚类</h2><p>半监督聚类(Semi-Supervised Clustering)：在有类标签的样本的信息帮助下获得比只用无类标签的样例得到的结果更好的簇，提高聚类方法的精度；</p>
+<h2 id="半监督降维"><a href="#半监督降维" class="headerlink" title="半监督降维"></a>半监督降维</h2><p>半监督降维(Semi-Supervised Dimensionality Reduction)：在有类标签的样本的信息帮助下找到高维输入数据的低维结构，同时保持原始高维数据和成对约束(Pair-Wise Constraints)的结构不变，即在高维空间中满足正约束(Must-Link Constraints)的样例在低维空间中相距很近，在高维空间中满足负约束(Cannot-Link Constraints)的样例在低维空间中距离很远。</p>
+<h1 id="未来的研究方向包括以下一些内容"><a href="#未来的研究方向包括以下一些内容" class="headerlink" title="未来的研究方向包括以下一些内容"></a>未来的研究方向包括以下一些内容</h1><h3 id="理论分析"><a href="#理论分析" class="headerlink" title="理论分析"></a>理论分析</h3><h3 id="抗干扰性与可靠性"><a href="#抗干扰性与可靠性" class="headerlink" title="抗干扰性与可靠性"></a>抗干扰性与可靠性</h3><h3 id="训练样例与参数的选取"><a href="#训练样例与参数的选取" class="headerlink" title="训练样例与参数的选取"></a>训练样例与参数的选取</h3><h3 id="优化求解"><a href="#优化求解" class="headerlink" title="优化求解"></a>优化求解</h3><p>从各种SSL算法的实现过程可以看出，SSL问题大多为非凸、非平滑问题，或整数规划和组合优化问题，存在多个局部最优解，例如求解SSL产生式方法目标函数的EM算法只能得到局部极大值目前主要采用各种放松方法把目标函数近似转化为凸或连续最优化问题，不易得到全局最优解，算法的时空复杂性很高，问题的求解依赖于最优化理论的突破，未来需要研究新的算法求解全局最优解。</p>
+<h3 id="研究拓展"><a href="#研究拓展" class="headerlink" title="研究拓展"></a>研究拓展</h3><p>SSL从产生以来，主要用于实验室中处理人工合成数据，未来的研究一方而需要讨论SSL可以显著提高哪些学习任务的性能，拓展SSL在现实领域的实际应用，另一方而需要制定出一个统一的令人信服的SSL方法的使用规程。此外，目前有许多的半监督分类方法，而对半监督回归问题的研究比较有限。未来有待继续研究半监督分类和半监督回归之间的关系，并提出其他半监督回归方法。</p>
+<h1 id="Active-Learning-主动学习"><a href="#Active-Learning-主动学习" class="headerlink" title="Active Learning:主动学习"></a>Active Learning:主动学习</h1><p>主动学习就是要引入专家知识，通过与外部交互来将部分未标记样本转变为有标记样本。如果不通过外部标记，还可以利用未标记样本，就是半监督学习的研发范围</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;日益复杂的3D图形图像时就会常常出现显卡等待CPU数据的情况&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://www.cvblogs.cn/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础概念" scheme="http://www.cvblogs.cn/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web开发之内存泄漏</title>
+    <link href="http://www.cvblogs.cn/2017/11/12/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/web%E5%BC%80%E5%8F%91_%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/"/>
+    <id>http://www.cvblogs.cn/2017/11/12/开发学习/web开发_内存泄漏/</id>
+    <published>2017-11-12T14:31:10.000Z</published>
+    <updated>2017-12-10T13:05:40.901Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下文章内容大都摘自<a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="external">阮一峰的网络博客JavaScript 内存泄漏教程篇</a>,仅作个人学习笔记备记。<br>本来不想记的，因为对于只是在本地写<code>hello world</code>的我来说，内存管理似乎从来不是一件必要的事情。<br>但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。<br>想象，要是一个需要7/24运行的web应用内存泄漏了：）<br><a id="more"></a></p>
+<h1 id="什么是内存泄漏"><a href="#什么是内存泄漏" class="headerlink" title="什么是内存泄漏"></a>什么是内存泄漏</h1><p>对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。<br>不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。<br>有些语言（比如 C 语言）必须手动释放内存，程序员负责内存管理。这很麻烦，所以大多数语言提供自动内存管理，减轻程序员的负担，这被称为”垃圾回收机制”（garbage collector）。</p>
+<h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><p>最常使用的方法叫做”引用计数”（<code>reference counting</code>）：语言引擎有一张”引用表”，保存了内存里面所有的资源（通常是各种值）的引用次数。如果一个值的引用次数是0，就表示这个值不再用到了，因此可以将这块内存释放。<br>但是，并不是说有了垃圾回收机制，程序员就轻松了。你还是需要关注内存占用：那些很占空间的值，一旦不再用到，你必须检查是否还存在对它们的引用。如果是的话，就必须手动解除引用。</p>
+<h1 id="内存泄漏的识别方法"><a href="#内存泄漏的识别方法" class="headerlink" title="内存泄漏的识别方法"></a>内存泄漏的识别方法</h1><p>经验法则是，如果连续<code>五次垃圾回收</code>之后，内存占用一次比一次大，就有内存泄漏。这就要求<code>实时查看内存占用</code>。</p>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>Chrome 浏览器查看内存占用，按照以下步骤操作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. 打开开发者工具，选择 Timeline 面板</div><div class="line">2. 在顶部的Capture字段里面勾选 Memory</div><div class="line">3. 点击左上角的录制按钮。</div><div class="line">4. 在页面上进行各种操作，模拟用户的使用情况。</div><div class="line">5. 一段时间后，点击对话框的 stop 按钮，面板上就会显示这段时间的内存占用情况。</div></pre></td></tr></table></figure></p>
+<p>如果内存占用基本平稳，接近水平，就说明不存在内存泄漏。<br>反之，就是内存泄漏了。</p>
+<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>命令行可以使用<code>Node</code> 提供的<code>process.memoryUsage</code>方法。<br><code>process.memoryUsage</code>返回一个<code>对象</code>，包含了 <code>Node</code>进程的内存占用信息。该对象包含<code>四个字段</code>，单位是<code>字节</code>。判断内存泄漏，以<code>heapUsed字段</code>为准。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">rss（resident set size）：所有内存占用，包括指令区和堆栈。</div><div class="line">heapTotal：&quot;堆&quot;占用的内存，包括用到的和没用到的。</div><div class="line">heapUsed：用到的堆的部分。</div><div class="line">external： V8 引擎内部的 C++ 对象占用的内存。</div></pre></td></tr></table></figure></p>
+<h1 id="WeakMap"><a href="#WeakMap" class="headerlink" title="WeakMap"></a>WeakMap</h1><p>ES6 考虑到了这一点，推出了两种新的数据结构：<code>WeakSet</code> 和 <code>WeakMap</code>。它们对于值的引用都是不计入垃圾回收机制的，所以名字里面才会有一个”Weak”，表示这是弱引用。</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="external">JavaScript 内存泄漏教程</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;以下文章内容大都摘自&lt;a href=&quot;http://www.ruanyifeng.com/blog/2017/04/memory-leak.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阮一峰的网络博客JavaScript 内存泄漏教程篇&lt;/a&gt;,仅作个人学习笔记备记。&lt;br&gt;本来不想记的，因为对于只是在本地写&lt;code&gt;hello world&lt;/code&gt;的我来说，内存管理似乎从来不是一件必要的事情。&lt;br&gt;但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。&lt;br&gt;想象，要是一个需要7/24运行的web应用内存泄漏了：）&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Node.js" scheme="http://www.cvblogs.cn/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web开发之LiveServer使用</title>
+    <link href="http://www.cvblogs.cn/2017/11/12/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/web%E5%BC%80%E5%8F%91_LiveServer%E4%BD%BF%E7%94%A8/"/>
+    <id>http://www.cvblogs.cn/2017/11/12/开发学习/web开发_LiveServer使用/</id>
+    <published>2017-11-12T14:15:10.000Z</published>
+    <updated>2017-12-10T13:11:05.104Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="live-server模块的作用"><a href="#live-server模块的作用" class="headerlink" title="live-server模块的作用"></a>live-server模块的作用</h1><ol>
+<li>实现热插拔<code>hot socketing</code>(修改文件之后，浏览器能够自动刷新)</li>
+<li>当服务启动时，自动打开所在的项目。(实现<code>opener</code>的功能)</li>
+<li>快速搭建临时的web服务。（实现<code>http-server</code>的功能）<a id="more"></a>
+我们主要使用1与2，3用express或者其他web框架。<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1>可以直接使用全局安装的方法<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g live-server</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在<code>package.json</code>的<code>script</code>下添加一个<code>server</code>字段的<code>npm 脚本</code>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"server"</span>: <span class="string">"live-server ./ --port=9090"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>使用<code>npm run server</code>执行。等待一会之后，浏览器会自动打开。<br>这样当你修改本地任何文件，浏览器都会自动立即同步（在内存层面，如果你想要发布代码，还是需要再次编译，否则修改之后的一些代码不会被改变！）。</p>
+<h1 id="继续学习"><a href="#继续学习" class="headerlink" title="继续学习"></a>继续学习</h1><p><a href="https://www.npmjs.com/package/live-server" target="_blank" rel="external">官方链接https://www.npmjs.com/package/live-server</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;live-server模块的作用&quot;&gt;&lt;a href=&quot;#live-server模块的作用&quot; class=&quot;headerlink&quot; title=&quot;live-server模块的作用&quot;&gt;&lt;/a&gt;live-server模块的作用&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;实现热插拔&lt;code&gt;hot socketing&lt;/code&gt;(修改文件之后，浏览器能够自动刷新)&lt;/li&gt;
+&lt;li&gt;当服务启动时，自动打开所在的项目。(实现&lt;code&gt;opener&lt;/code&gt;的功能)&lt;/li&gt;
+&lt;li&gt;快速搭建临时的web服务。（实现&lt;code&gt;http-server&lt;/code&gt;的功能）
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Node.js" scheme="http://www.cvblogs.cn/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web开发之性能分析火焰图</title>
+    <link href="http://www.cvblogs.cn/2017/11/12/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/web%E5%BC%80%E5%8F%91_%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E7%81%AB%E7%84%B0%E5%9B%BE/"/>
+    <id>http://www.cvblogs.cn/2017/11/12/开发学习/web开发_性能分析火焰图/</id>
+    <published>2017-11-12T14:05:10.000Z</published>
+    <updated>2017-12-10T13:06:41.132Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下内容基本摘自<a href="http://www.ruanyifeng.com/blog/2017/09/flame-graph.html" target="_blank" rel="external">阮一峰的网络博客-如何读懂火焰图篇</a>，只做个人学习笔记用。<br><a id="more"></a></p>
+<h1 id="perf命令"><a href="#perf命令" class="headerlink" title="perf命令"></a><code>perf</code>命令</h1><p>Linux 系统原生提供的性能分析工具，会返回 CPU 正在执行的函数名以及调用栈（stack）。<br>通常，它的执行频率是 99Hz（每秒99次），如果99次都返回同一个函数名，那就说明 CPU 这一秒钟都在执行同一个函数，可能存在性能问题。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo perf record -F 99 -p 13204 -g -- sleep 30</div></pre></td></tr></table></figure></p>
+<p>上面的代码中，<code>perf record</code>表示记录，<code>-F 99</code>表示每秒99次，<code>-p 13204</code>是进程号，即对哪个进程进行分析，<code>-g</code>表示记录调用栈，<code>sleep 30</code>则是持续30秒。<br>运行后会产生一个庞大的文本文件。如果一台服务器有16个 CPU，每秒抽样99次，持续30秒，就得到 47,520 个调用栈，长达几十万甚至上百万行。<br>为了便于阅读，<code>perf record</code>命令可以统计每个调用栈出现的百分比，然后从高到低排列。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo perf report -n --stdio</div></pre></td></tr></table></figure></p>
+<p>由于是文本文件极其不易阅读所以才有了火焰图。</p>
+<h1 id="火焰图"><a href="#火焰图" class="headerlink" title="火焰图"></a>火焰图</h1><p>火焰图是基于 <code>perf</code> 结果产生的 SVG 图片，用来展示 CPU 的调用栈。<br><code>y 轴</code>表示调用栈，每一层都是一个函数。调用栈越深，火焰就越高，顶部就是正在执行的函数，下方都是它的父函数。<br><code>x 轴</code>表示抽样数，如果一个函数在 x 轴占据的宽度越宽，就表示它被抽到的次数多，即执行的时间长。<br><strong>注意，x 轴不代表时间，而是所有的调用栈合并后，按字母顺序排列的。</strong></p>
+<p><strong>火焰图就是看顶层的哪个函数占据的宽度最大。只要有”平顶”（plateaus），就表示该函数可能存在性能问题。</strong></p>
+<h1 id="Node-应用的火焰图"><a href="#Node-应用的火焰图" class="headerlink" title="Node 应用的火焰图"></a><code>Node 应用</code>的火焰图</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">perf record -F 99 -p `pgrep -n node` -g -- sleep 30</div></pre></td></tr></table></figure>
+<p><a href="http://www.brendangregg.com/blog/2014-09-17/node-flame-graphs-on-linux.html" target="_blank" rel="external">具体的操作过程参考此教程</a></p>
+<h1 id="浏览器的火焰图"><a href="#浏览器的火焰图" class="headerlink" title="浏览器的火焰图"></a>浏览器的火焰图</h1><p>Chrome 浏览器可以生成页面脚本的火焰图，用来进行 CPU 分析。<br>打开开发者工具，切换到 <code>Performance 面板</code>。然后，点击<code>&quot;录制&quot;按钮</code>，开始记录数据。这时，可以在页面进行各种操作，然后<code>停止&quot;录制&quot;</code>。<br>浏览器的火焰图与标准火焰图有两点差异：</p>
+<ol>
+<li>它是倒置的（即调用栈最顶端的函数在最下方）；</li>
+<li>x 轴是时间轴，而不是抽样次数。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;以下内容基本摘自&lt;a href=&quot;http://www.ruanyifeng.com/blog/2017/09/flame-graph.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阮一峰的网络博客-如何读懂火焰图篇&lt;/a&gt;，只做个人学习笔记用。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Node.js" scheme="http://www.cvblogs.cn/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>错误修改profile文件引起的重复登录问题解决方法</title>
+    <link href="http://www.cvblogs.cn/2017/11/10/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/%E9%94%99%E8%AF%AF%E4%BF%AE%E6%94%B9profile%E6%96%87%E4%BB%B6%E5%BC%95%E8%B5%B7%E7%9A%84%E9%87%8D%E5%A4%8D%E7%99%BB%E5%BD%95%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://www.cvblogs.cn/2017/11/10/开发学习/错误修改profile文件引起的重复登录问题解决方法/</id>
+    <published>2017-11-10T14:15:26.000Z</published>
+    <updated>2017-12-10T12:23:53.116Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天为了安装<code>go</code>错误修改了<code>/etc/profile</code>文件，导致<code>reboot</code>的时候一直循环登录。最终通过搜索解决了问题。这里记录一下。<br><a id="more"></a></p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>整个问题的关键是利用超级管理员权限进行修改前面被我修改错的的<code>etc/profile</code>文件。但是我的用户是普通用户根本就切换不了。<code>su</code>命令是报一堆错误。正确的做法如下：</p>
+<ol>
+<li><code>alt+ctl+shft+f1-6</code>进入<code>tty</code>界面</li>
+<li>用普通用户账号登录(我的是普通用户，如果是<code>root</code>账号则直接进入步骤4)</li>
+<li>执行<code>export PATH=/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</code></li>
+<li>正常用<code>vim</code>修改<code>/etc/profile</code>，完整命令如下：<code>sudo vim /etc/profile</code></li>
+<li>使之起效<code>source /etc/profile</code></li>
+<li>最后用<code>alt+ctl+shft+f7</code>命令回到图形化界面，正常登录。</li>
+</ol>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>操作系统真有趣：）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;今天为了安装&lt;code&gt;go&lt;/code&gt;错误修改了&lt;code&gt;/etc/profile&lt;/code&gt;文件，导致&lt;code&gt;reboot&lt;/code&gt;的时候一直循环登录。最终通过搜索解决了问题。这里记录一下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Linux" scheme="http://www.cvblogs.cn/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Mackeeper流氓软件引起的Chrome广告弹窗</title>
+    <link href="http://www.cvblogs.cn/2017/11/10/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/%E8%A7%A3%E5%86%B3Mackeeper%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6%E5%BC%95%E8%B5%B7%E7%9A%84Chrome%E5%B9%BF%E5%91%8A%E5%BC%B9%E7%AA%97/"/>
+    <id>http://www.cvblogs.cn/2017/11/10/开发学习/解决Mackeeper流氓软件引起的Chrome广告弹窗/</id>
+    <published>2017-11-10T09:27:26.000Z</published>
+    <updated>2017-12-10T12:13:35.604Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了<code>YouTube</code>一个推荐高效率<code>App</code>的视频中的软件之后，<code>Chrome</code>总是在我使用过程中弹窗<code>MacKeeper</code>的病毒广告。（主要下载了视频中推荐的几个软件：<code>Hidden Me</code>以及另外一个忘记了叫什么的管理<code>Display</code>的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，于是乎。就上网查了一下。发现果然是中了套路，貌似还有点深。于是乎，就将自己解决的过程记录一下。并且调整了我解决问题的过程。我认为最关键的步骤被提前了。我始终认为是那几个步骤奏效的。<br><a id="more"></a></p>
+<h2 id="更新方法"><a href="#更新方法" class="headerlink" title="更新方法"></a>更新方法</h2><p>发现下面的内容并不能根本解决问题，最后禁用了几个插件才解决了。以及删除了<code>/Library/</code>下的一些内容。</p>
+<h2 id="删除最近下载的软件"><a href="#删除最近下载的软件" class="headerlink" title="删除最近下载的软件"></a>删除最近下载的软件</h2><p>不管问题是不是它引起的。反正我已经不打算用了。猎奇心理害死人啊。也有说是<code>Lantern</code>的问题。反正我也关了….</p>
+<h2 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h2><p>命令行打开启动项所在的两个目录：<code>open /Library/LaunchDaemons</code>以及<code>open /Library/LaunchAgents</code>删除掉近期的项目。我记得我主要是删除了一个<code>com.pandasmite.plist</code>的文件。起初用文本编辑器打开时，觉得还挺正常的。记得用一个字段是设置了一个<code>3600</code>。现在怀疑是脚本开启的间隔…（我也不想复现了…）。<br>我是在执行了这些之后才不再弹窗的。<br>顺便，你还可以删除其他一些你不想看到的开机自启动项目。比在<code>用户和群组</code>中管理自启动项目要方便一些。有的时候一些自启动项目并不在那里！</p>
+<h2 id="应用商店下载EasyFind"><a href="#应用商店下载EasyFind" class="headerlink" title="应用商店下载EasyFind"></a>应用商店下载EasyFind</h2><p>这是知乎上推荐的一个全盘搜索的软件，搜<code>MacKeeper</code>，不用区分大小写。果然找到两个，删除掉。顺便清空垃圾箱。</p>
+<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><p>感觉解决这个问题，我电脑重启了四五次。感觉把这么久以来所有的重启次数都用完了！中间以为自己成功却没有的感觉真的是让人崩溃：）流氓软件真的可怕。</p>
+<h2 id="结束语：一些思考"><a href="#结束语：一些思考" class="headerlink" title="结束语：一些思考"></a>结束语：一些思考</h2><p>有说其利用的是<code>DNS劫持</code>。比较同意这个观点。它发起的第一个请求的网址似乎是一个<code>app.yyys.com</code>之类的，然后会定向到另一个网站，最后再定向到广告页面。<br>其实说是<code>lantern</code>搞得鬼，我觉得也有可能。但是我之前用似乎都是好好的。反正现在已经不用烦恼了。<br>话说，<code>Mac</code>系统不需要担心病毒却要担心流氓软件。好多人都是安装<code>XPlayer</code>的时候中招。幸亏我当时是安装的<code>Moivst</code>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了&lt;code&gt;YouTube&lt;/code&gt;一个推荐高效率&lt;code&gt;App&lt;/code&gt;的视频中的软件之后，&lt;code&gt;Chrome&lt;/code&gt;总是在我使用过程中弹窗&lt;code&gt;MacKeeper&lt;/code&gt;的病毒广告。（主要下载了视频中推荐的几个软件：&lt;code&gt;Hidden Me&lt;/code&gt;以及另外一个忘记了叫什么的管理&lt;code&gt;Display&lt;/code&gt;的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，于是乎。就上网查了一下。发现果然是中了套路，貌似还有点深。于是乎，就将自己解决的过程记录一下。并且调整了我解决问题的过程。我认为最关键的步骤被提前了。我始终认为是那几个步骤奏效的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="测试" scheme="http://www.cvblogs.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux之环境变量</title>
+    <link href="http://www.cvblogs.cn/2017/11/10/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/linux%E4%B9%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    <id>http://www.cvblogs.cn/2017/11/10/开发学习/linux之环境变量/</id>
+    <published>2017-11-10T09:27:26.000Z</published>
+    <updated>2017-12-10T12:31:13.267Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h1><p>环境变量是指系统环境变量，对所有用户起作用，而用户环境变量只对当前用户起作用</p>
+<p>由于一般情况下，我们的电脑只有一个主用户，所以在其中任何一个配置即可，当然以防万一你也可以只在系统环境变量下配置。 </p>
+<p>用户变量和系统变量的区别在于权限和实例。</p>
+<p>系统变量则不同，任何时候都只有一套，不会随用户登录状况发生变化。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;环境变量&quot;&gt;&lt;a href=&quot;#环境变量&quot; class=&quot;headerlink&quot; title=&quot;环境变量&quot;&gt;&lt;/a&gt;环境变量&lt;/h1&gt;&lt;p&gt;环境变量是指系统环境变量，对所有用户起作用，而用户环境变量只对当前用户起作用&lt;/p&gt;
+&lt;p&gt;由于一般情况下，我们的电脑只有一
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Linux" scheme="http://www.cvblogs.cn/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux之curl添加Https</title>
+    <link href="http://www.cvblogs.cn/2017/11/09/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/linux_curl%E6%B7%BB%E5%8A%A0Https/"/>
+    <id>http://www.cvblogs.cn/2017/11/09/开发学习/linux_curl添加Https/</id>
+    <published>2017-11-09T14:55:11.000Z</published>
+    <updated>2017-12-10T12:40:17.068Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>系统时Ubuntu 16.04 今天有需要使用<code>curl</code>命令<code>down</code>一些<code>https</code>的内容。提示<code>Protocol https not supported or disabled in libcurl</code>。用<code>curl -V</code>一看发现支持的协议果然缺了<code>https</code>…上网查了一些资料，历经坎坷。总算最后解决了问题。整理备忘一下。<br><a id="more"></a></p>
+<h2 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h2><p>可以用<code>openssl version -a</code>确认一下<code>openssl</code>是否已经安装，如果没有则需要下载安装。因为如果<code>curl</code>要支持<code>https</code>，就必须先安装<code>openssl</code>。</p>
+<h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>可以有两种方法进行安装。我用了第二种方法。</p>
+<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install openssl </div><div class="line">sudo apt-get install libssl-dev</div></pre></td></tr></table></figure>
+<p>我试了并不好用。提示我安装<code>libssl-dev</code>安装的依赖包有版本冲突…遂放弃。</p>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>到<code>openssl</code>官网下载压缩包 <a href="http://www.openssl.org/source/" target="_blank" rel="external">http://www.openssl.org/source/</a> 我这里下载的是<code>openssl-1.0.1em.tar.gz</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">tar zxvf openssl-1.0.1q </div><div class="line">./config shared <span class="comment">#（安装的默认路径是/usr/local/ssl，如果你想更改目录，请加上–prefix=/yourpath）这一步对后面正常覆盖安装curl更新协议非常关键 </span></div><div class="line"></div><div class="line">make </div><div class="line">make <span class="built_in">test</span> </div><div class="line">sudo make install<span class="comment">#必须用root权限安装，因为之前不看log...导致，一直以为自己安装是正确的</span></div></pre></td></tr></table></figure></p>
+<p><code>vim /etc/ld.so.conf</code>在文件末尾加入 <code>/usr/local/ssl/lib</code>，刷新动态库配置<br>用<code>openssl version -a</code>测试，可以正常<code>log</code>出相关信息。</p>
+<h2 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h2><p>记住自己之前安装<code>openssl</code>的路径。可以使用<code>which openssl</code>查看，我的在<code>/etc/lib/openssl</code>?有点记不太清了..<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tar zxvf curl-7.30.0.tar.gz </div><div class="line"><span class="built_in">cd</span> curl-7.30.0/ </div><div class="line">./configure –with-ssl=/etc/lib/openssl<span class="comment">#（我这里没有配置prefix选项，直接将curl安装到默认的目录/usr/local）</span></div></pre></td></tr></table></figure></p>
+<p><code>config</code>之后，会有以下信息打出，可以在<code>Protocols</code>一行确认一下是否引入了协议。要是没有就得再仔细找找问题。<br>如果一切顺利，使用<code>make</code>之后再<code>sudo make install</code>。<br>最后使用<code>curl -V</code>进行验证。</p>
+<h2 id="引用链接"><a href="#引用链接" class="headerlink" title="引用链接"></a>引用链接</h2><ul>
+<li><a href="http://blog.csdn.net/Timsley/article/details/50782742" target="_blank" rel="external">curl 不支持 https</a></li>
+<li><a href="http://blog.csdn.net/Timsley/article/details/50776615" target="_blank" rel="external">ubuntu 14.04下安装openssl</a></li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>尽管距离解决完问题还没有一天但是还是有点忘记了具体的细节。因此备记一下还是有点必要的。另外，发现，本来想用<code>echo $?</code>来筛查错误命令返回码。但是发现有的命令不管错误还是正确总是返回0:）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;系统时Ubuntu 16.04 今天有需要使用&lt;code&gt;curl&lt;/code&gt;命令&lt;code&gt;down&lt;/code&gt;一些&lt;code&gt;https&lt;/code&gt;的内容。提示&lt;code&gt;Protocol https not supported or disabled in libcurl&lt;/code&gt;。用&lt;code&gt;curl -V&lt;/code&gt;一看发现支持的协议果然缺了&lt;code&gt;https&lt;/code&gt;…上网查了一些资料，历经坎坷。总算最后解决了问题。整理备忘一下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Linux" scheme="http://www.cvblogs.cn/tags/Linux/"/>
     
   </entry>
   

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>翻译：理解深度学习中的卷积操作 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="数学基础" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言此文为译文，目的是让自己更好的理解卷积操作。原文地址：Understanding Convolution in Deep Learning 非常fascinating的是作者关于卷积在卷积网络中的应用。之前从来没有想过，为啥卷积网络就卷积了呢？（不过似乎我一直也都是停留在对全连接网络的学习上= =）">
+<meta name="keywords" content="数学基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="翻译：理解深度学习中的卷积操作">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/12/10/理论学习/理解深度学习中的卷积操作/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言此文为译文，目的是让自己更好的理解卷积操作。原文地址：Understanding Convolution in Deep Learning 非常fascinating的是作者关于卷积在卷积网络中的应用。之前从来没有想过，为啥卷积网络就卷积了呢？（不过似乎我一直也都是停留在对全连接网络的学习上= =）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i1.wp.com/timdettmers.com/wp-content/uploads/2015/03/convolution.png">
+<meta property="og:image" content="https://i2.wp.com/timdettmers.com/wp-content/uploads/2015/03/aa-convolution-02.gif">
+<meta property="og:image" content="https://i1.wp.com/timdettmers.com/wp-content/uploads/2015/03/autoencoder_fashion_features_and_results.png">
+<meta property="og:updated_time" content="2017-12-10T12:48:24.408Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="翻译：理解深度学习中的卷积操作">
+<meta name="twitter:description" content="前言此文为译文，目的是让自己更好的理解卷积操作。原文地址：Understanding Convolution in Deep Learning 非常fascinating的是作者关于卷积在卷积网络中的应用。之前从来没有想过，为啥卷积网络就卷积了呢？（不过似乎我一直也都是停留在对全连接网络的学习上= =）">
+<meta name="twitter:image" content="https://i1.wp.com/timdettmers.com/wp-content/uploads/2015/03/convolution.png">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-理论学习/理解深度学习中的卷积操作" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      翻译：理解深度学习中的卷积操作
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/10/理论学习/理解深度学习中的卷积操作/" class="article-date">
+	  <time datetime="2017-12-09T17:18:18.000Z" itemprop="datePublished">2017-12-10</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/深度学习/">深度学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学基础/">数学基础</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>此文为译文，目的是让自己更好的理解卷积操作。原文地址：<a href="http://timdettmers.com/2015/03/26/convolution-deep-learning/" target="_blank" rel="external">Understanding Convolution in Deep Learning</a></p>
+<p>非常fascinating的是作者关于卷积在卷积网络中的应用。之前从来没有想过，为啥卷积网络就卷积了呢？（不过似乎我一直也都是停留在对全连接网络的学习上= =）</p>
+<a id="more"></a>
+<h1 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h1><p>如今，卷积可能是深度学习中最重要的一个概念。卷积操作及卷积网络使深度学习在机器学习任务中表现靠前。但是，什么使得卷积操作如此强大呢？在这篇文章中我会解释卷积操作以及关联它的相关概念帮助你更完全的理解卷积。</p>
+<p>虽然已有大量介绍卷积相关的深度学习的博文，但是我发现他们大都因为介绍了过多的不必要的数学细节反而导致令人费解。这篇博文虽然也会介绍一些数学细节，但是我会通过图片的形式展现关键的数学表达式，使其更直观易懂。第一部分是介绍一些通泛的卷积概念以及卷积网络。第二部分则是为深度学习研究人员和专家能够加强理解而准备的一些更高级的概念。</p>
+<h1 id="什么是卷积？"><a href="#什么是卷积？" class="headerlink" title="什么是卷积？"></a>什么是卷积？</h1><p>整篇文章都是建立在去解答这个问题上，因此首先了解大致的方向是很有帮助的。那么，单纯的卷积说的是什么呢？</p>
+<p>你可以想象卷积是混淆信息的方式。想象两个装满信息的桶被按照某种指定的规则被倒入一个桶里进行混合。每一个桶里的内容，都有它自己的关于如何混合其他桶中信息的指导方式。因此，卷积是一个按照指定步骤执行的混合信息的操作。</p>
+<p>事实上，卷积和其他数学运算一样也可以被数学定义。尽管卷积操作本身十分的复杂，但是对于复杂的等式，它又可以简化表示。因此，为了简化表达，卷积操作被大量用在了物理学以及工程学上。在第二部分，经过一小段数学证明后。我们会关联和整合科学和深度学习的创意，得到更深层次的关于卷积的理解。但是，我们现在先暂时关注卷积在实际中的应用。</p>
+<h1 id="我们如何对图片做卷积操作？"><a href="#我们如何对图片做卷积操作？" class="headerlink" title="我们如何对图片做卷积操作？"></a>我们如何对图片做卷积操作？</h1><p>当我们对图片做卷积时，我们是对两个维度做了卷积（即图片的宽和高方向）。我们混合两个桶中的内容：第一个桶是输入的图片（可以看作是三个像素矩阵组成，因为图像是由RGB三通道组成的；每个像素矩阵中元素的值：0～255）。第二个桶中是卷积核，一个独立的由浮点数组成的矩阵。（可以将它的大小以及模式看作是一个如何混合两个桶中信息的指导方式）。输出的结果在深度学习中被叫做特征图像(feature map)。每个通道都会产生一个特征图像。<br><img src="https://i1.wp.com/timdettmers.com/wp-content/uploads/2015/03/convolution.png" alt="用一个边缘算子与图像做卷积操作的过程"></p>
+<p>现在，我们演示卷积是如何混合两份信息。一种方法是利用输入图像采样一个小块做卷积操作–我们用100X100的图像，以及3X3的核。因此，我们可以同时采样3X3个像素点（和核做点乘）。最终得到的是一个中心值。当采样完一个地方（3X3）就向一个方向移动一个像素点。循环往复。当所有的像素都被计算后操作才停止。下面的动图展示了卷积操作的一个过程。<br><img src="https://i2.wp.com/timdettmers.com/wp-content/uploads/2015/03/aa-convolution-02.gif" alt="目标图片一个像素点的计算过程"><br>如你所见，为了保证与原图像有同样的密度一致性，这里通常还有一个正则化的过程。</p>
+<h1 id="为什么作用在图片的卷积操作在机器学习中如此有效？"><a href="#为什么作用在图片的卷积操作在机器学习中如此有效？" class="headerlink" title="为什么作用在图片的卷积操作在机器学习中如此有效？"></a>为什么作用在图片的卷积操作在机器学习中如此有效？</h1><p>在一张图像中有大量的我们不需要的冗余信息。一个很好的例子就是<code>Burda Bootcamp</code>（这是原文作者一个在快速原型生成的马拉松式的学生实验项目中的项目=  =）在一个项目，作者想要搭建一个用于时尚图片搜索深度自编码器：你上传一张关于时尚单品的照片，自编码器会找出与图中的单品包含的相关风格的图片。</p>
+<p>现在，如果你想鉴别不同风格的衣服，衣服的颜色不会有什么帮助，类似的还有衣服的商标等。关键的要素是衣服的形状。通常，女士衬衫的形状是异于短袖，夹克或毛衣的。因此，我们需要过滤图像中不必要的信息。通过卷积操作我们可以很容易完成这个需求。</p>
+<p>作者的同事Jannek Thomas用Sobel算子（它的定义与前面的那个那个边缘算子差不多）预处理了数据，得到了重要的边缘信息。这也是为什么卷积操作也叫做滤波。边缘信息的提取对于形状信息的获得非常有帮助。<br><img src="https://i1.wp.com/timdettmers.com/wp-content/uploads/2015/03/autoencoder_fashion_features_and_results.png" alt="上面是提取完边缘信息后的图像"></p>
+<p>更深入的：很多的核产生很多的特征图像（map）。例如：锐化图像的，模糊图像的。</p>
+<p>通过这个过程–输入图像，转化输入，得到转化后的图像将其引入算法中。被成为特征提取工程。特征工程非常困难，拥有的学习资料也非常有限。因此，很少有人能够熟练运用它。有效的特征提取在不同的任务中区别很大。因此，不存在通用的特征。同时，对于时间序列数据，特征几乎收效甚微。识别特征的有效性需要大量的经验。</p>
+<p>因此，特征工程非常困难，你必须从零开始一点点去试探。但是，当我们关注图像本身，有什么方法可以自动的找到特征提取的核的吗？</p>
+<h1 id="引入卷积网络"><a href="#引入卷积网络" class="headerlink" title="引入卷积网络"></a>引入卷积网络</h1><p>卷积网络就是干这个的。较于固定我们的核，我们指定一组参数然后让网络训练我们的核。当我们训练我们的卷积网络时，核会随着过程学习，过滤得到更有用的信息。这个过程是全自动的，也被叫做特征学习。特征学习自动得到一个任务的特征。我们所需要做的就是训练我们的网络，去找到一个与新的任务相关的filter。这就是为什么卷积网络如此强大的原因–不再为特征的提取而烦恼。</p>
+<blockquote>
+<p>数据编程的概念</p>
+</blockquote>
+<p>通常我们在一个卷积网络中，不会只学习一个核。我们同时学到一个组织（hierarchy）的多个核。例如：一个32X16X16的核应用在一张256X256的图像上会产生32个241X241的特征图像。（这是标准大小，实现的不同大小特跟着改变；image size - kernel size +1）。因此我们自动学习得到的32个新特征拥有与我们的任务相关的所有信息。这些特征又为接下来的核计算提供了输入。一旦我们学习完所有的核，我们就将其传入给一个全连接的网络（简单的网络，用作图像的分类。）。这就是卷积网络所有的应该知道的概念（池化的过程也很重要，但是它的内容也够写一篇博文了）。</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>放弃了，第二部分还是自己看吧= =翻译的效率实在太低了。</p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/08/开发学习/linux_ssh命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">linux之ssh命令</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#译文"><span class="nav-number">2.</span> <span class="nav-text">译文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是卷积？"><span class="nav-number">3.</span> <span class="nav-text">什么是卷积？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我们如何对图片做卷积操作？"><span class="nav-number">4.</span> <span class="nav-text">我们如何对图片做卷积操作？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么作用在图片的卷积操作在机器学习中如此有效？"><span class="nav-number">5.</span> <span class="nav-text">为什么作用在图片的卷积操作在机器学习中如此有效？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引入卷积网络"><span class="nav-number">6.</span> <span class="nav-text">引入卷积网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">7.</span> <span class="nav-text">结束语</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

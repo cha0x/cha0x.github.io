@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>计算架构之cpu与gpu | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="基础概念" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言日益复杂的3D图形图像时就会常常出现显卡等待CPU数据的情况">
+<meta name="keywords" content="基础概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算架构之CPU与GPU">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/11/29/理论学习/计算架构之CPU与GPU/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言日益复杂的3D图形图像时就会常常出现显卡等待CPU数据的情况">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-10T13:12:50.244Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算架构之CPU与GPU">
+<meta name="twitter:description" content="前言日益复杂的3D图形图像时就会常常出现显卡等待CPU数据的情况">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-理论学习/计算架构之CPU与GPU" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      计算架构之CPU与GPU
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/29/理论学习/计算架构之CPU与GPU/" class="article-date">
+	  <time datetime="2017-11-29T09:38:10.000Z" itemprop="datePublished">2017-11-29</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/深度学习/">深度学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础概念/">基础概念</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>日益复杂的3D图形图像时就会常常出现显卡等待CPU数据的情况</p>
+<a id="more"></a>
+<h1 id="CUDA介绍"><a href="#CUDA介绍" class="headerlink" title="CUDA介绍"></a>CUDA介绍</h1><p>CUDA是计算统一设备构架（Compute Unified Device Architecture）的缩写。<br>CUDA和GPU之间的关系十分重要。<br>CUDA在编程基础上实现GPU的性能。<br>CUDA：软件<br>GPU：硬件</p>
+<h1 id="发展历程"><a href="#发展历程" class="headerlink" title="发展历程"></a>发展历程</h1><p>GPGPU-&gt;CUDA-&gt;GPU</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>CUDA只是一种并行计算架构，相关的概念还有OpenCL、OpenMP等</p>
+<h1 id="SSL-Semi-Supervised-Learning"><a href="#SSL-Semi-Supervised-Learning" class="headerlink" title="SSL:Semi-Supervised Learning"></a>SSL:Semi-Supervised Learning</h1><ol>
+<li>期望最大算法(Expectation Maximum，EM)</li>
+<li>高斯混合模型(Gaussian Mixture Model，GMM)</li>
+<li>最小割法(Mincut):首次将图论应用于解决SSL问题</li>
+<li>调和函数法(Harmonic Function)将预测函数从离散形式扩展到连续形式</li>
+<li>流形正则化法(Manifold Regularization)将流形学习的思想用于SSL场景</li>
+<li>用于聚类的半监督距离度量学习方法，学习一种距离度量。</li>
+<li>将EM和朴素贝叶斯结合，通过引入加权系数动态调整无类标签的样例的影响提高了分类准确度，建立每类中具有多个混合部分的模型，使贝叶斯偏差减小。</li>
+<li>协同训练改进算法，不需要充分冗余的视图，而利用两个不同类型的分类器来完成学习</li>
+<li>同时解决有类标签样本稀疏和具有附加无类标签样例成对约束的问题</li>
+</ol>
+<h1 id="三个常用基本假设"><a href="#三个常用基本假设" class="headerlink" title="三个常用基本假设"></a>三个常用基本假设</h1><p>基于一个事实：未标记样本虽未直接包含标记信息，但若它们与有标记信息样本是从同样的数据源独立同分布采样而来，则它们所包含的关于数据分布的信息对建立模型是有帮助的。<br>利用好未标记样本来提升模型泛化能力，就是半监督学习研究的重点。<br>在半监督学习中有三个常用的基本假设来建立预测样例和学习目标之间的关系：<br>（1）平滑假设(Smoothness Assumption)：位于稠密数据区域的两个距离很近的样例的类标签相似，也就是说，当两个样例被稠密数据区域中的边连接时，它们在很大的概率下有相同的类标签；相反地，当两个样例被稀疏数据区域分开时，它们的类标签趋于不同。<br>（2）聚类假设(Cluster Assumption)：当两个样例位于同一聚类簇时，它们在很大的概率下有相同的类标签。这个假设的等价定义为低密度分离假设(Low Sensity Separation Assumption)，即分类决策边界应该穿过稀疏数据区域，而避免将稠密数据区域的样例分到决策边界两侧。<br>（3）流形假设(Manifold Assumption)：将高维数据嵌入到低维流形中，当两个样例位于低维流形中的一个小局部邻域内时，它们具有相似的类标签。</p>
+<h1 id="四大类学习场景"><a href="#四大类学习场景" class="headerlink" title="四大类学习场景"></a>四大类学习场景</h1><p>半监督学习可进一步划分为纯(pure)半监督学习和直推学习（transductive learning）：纯半监督学习假定训练数据中的未标记样本并非待预测数据；而直推学习假定学习过程中所考虑的未标记样本恰是待预测数据，学习的目的就是在未标记样本上获得最优泛化性能。<br>纯半监督学习是基于开放世界的假设，希望学得的模型能适用于训练过程中未观察到的数据；而直推学习是基于封闭世界假设，仅试图对学习过程中观察到的未标记数据进行预测。<br>从不同的学习场景看，SSL可分为四大类：</p>
+<h2 id="半监督分类"><a href="#半监督分类" class="headerlink" title="半监督分类"></a>半监督分类</h2><p>半监督分类(Semi-Supervised Classification)：是在无类标签的样例的帮助下训练有类标签的样本，获得比只用有类标签的样本训练得到的分类器性能更优的分类器，弥补有类标签的样本不足的缺陷，其中类标签yi取<strong>有限离散值</strong>。</p>
+<h2 id="半监督回归"><a href="#半监督回归" class="headerlink" title="半监督回归"></a>半监督回归</h2><p>半监督回归(Semi-Supervised Regression)：在无输出的输入的帮助下训练有输出的输入，获得比只用有输出的输入训练得到的回归器性能更好的回归器，其中输出yi取<strong>连续值</strong>；</p>
+<h2 id="半监督聚类"><a href="#半监督聚类" class="headerlink" title="半监督聚类"></a>半监督聚类</h2><p>半监督聚类(Semi-Supervised Clustering)：在有类标签的样本的信息帮助下获得比只用无类标签的样例得到的结果更好的簇，提高聚类方法的精度；</p>
+<h2 id="半监督降维"><a href="#半监督降维" class="headerlink" title="半监督降维"></a>半监督降维</h2><p>半监督降维(Semi-Supervised Dimensionality Reduction)：在有类标签的样本的信息帮助下找到高维输入数据的低维结构，同时保持原始高维数据和成对约束(Pair-Wise Constraints)的结构不变，即在高维空间中满足正约束(Must-Link Constraints)的样例在低维空间中相距很近，在高维空间中满足负约束(Cannot-Link Constraints)的样例在低维空间中距离很远。</p>
+<h1 id="未来的研究方向包括以下一些内容"><a href="#未来的研究方向包括以下一些内容" class="headerlink" title="未来的研究方向包括以下一些内容"></a>未来的研究方向包括以下一些内容</h1><h3 id="理论分析"><a href="#理论分析" class="headerlink" title="理论分析"></a>理论分析</h3><h3 id="抗干扰性与可靠性"><a href="#抗干扰性与可靠性" class="headerlink" title="抗干扰性与可靠性"></a>抗干扰性与可靠性</h3><h3 id="训练样例与参数的选取"><a href="#训练样例与参数的选取" class="headerlink" title="训练样例与参数的选取"></a>训练样例与参数的选取</h3><h3 id="优化求解"><a href="#优化求解" class="headerlink" title="优化求解"></a>优化求解</h3><p>从各种SSL算法的实现过程可以看出，SSL问题大多为非凸、非平滑问题，或整数规划和组合优化问题，存在多个局部最优解，例如求解SSL产生式方法目标函数的EM算法只能得到局部极大值目前主要采用各种放松方法把目标函数近似转化为凸或连续最优化问题，不易得到全局最优解，算法的时空复杂性很高，问题的求解依赖于最优化理论的突破，未来需要研究新的算法求解全局最优解。</p>
+<h3 id="研究拓展"><a href="#研究拓展" class="headerlink" title="研究拓展"></a>研究拓展</h3><p>SSL从产生以来，主要用于实验室中处理人工合成数据，未来的研究一方而需要讨论SSL可以显著提高哪些学习任务的性能，拓展SSL在现实领域的实际应用，另一方而需要制定出一个统一的令人信服的SSL方法的使用规程。此外，目前有许多的半监督分类方法，而对半监督回归问题的研究比较有限。未来有待继续研究半监督分类和半监督回归之间的关系，并提出其他半监督回归方法。</p>
+<h1 id="Active-Learning-主动学习"><a href="#Active-Learning-主动学习" class="headerlink" title="Active Learning:主动学习"></a>Active Learning:主动学习</h1><p>主动学习就是要引入专家知识，通过与外部交互来将部分未标记样本转变为有标记样本。如果不通过外部标记，还可以利用未标记样本，就是半监督学习的研发范围</p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/05/理论学习/深度学习框架/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          深度学习框架
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/12/开发学习/web开发_内存泄漏/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">web开发之内存泄漏</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CUDA介绍"><span class="nav-number">2.</span> <span class="nav-text">CUDA介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发展历程"><span class="nav-number">3.</span> <span class="nav-text">发展历程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">4.</span> <span class="nav-text">结束语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL-Semi-Supervised-Learning"><span class="nav-number">5.</span> <span class="nav-text">SSL:Semi-Supervised Learning</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三个常用基本假设"><span class="nav-number">6.</span> <span class="nav-text">三个常用基本假设</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四大类学习场景"><span class="nav-number">7.</span> <span class="nav-text">四大类学习场景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#半监督分类"><span class="nav-number">7.1.</span> <span class="nav-text">半监督分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半监督回归"><span class="nav-number">7.2.</span> <span class="nav-text">半监督回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半监督聚类"><span class="nav-number">7.3.</span> <span class="nav-text">半监督聚类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半监督降维"><span class="nav-number">7.4.</span> <span class="nav-text">半监督降维</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未来的研究方向包括以下一些内容"><span class="nav-number">8.</span> <span class="nav-text">未来的研究方向包括以下一些内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理论分析"><span class="nav-number">8.0.1.</span> <span class="nav-text">理论分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抗干扰性与可靠性"><span class="nav-number">8.0.2.</span> <span class="nav-text">抗干扰性与可靠性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练样例与参数的选取"><span class="nav-number">8.0.3.</span> <span class="nav-text">训练样例与参数的选取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化求解"><span class="nav-number">8.0.4.</span> <span class="nav-text">优化求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#研究拓展"><span class="nav-number">8.0.5.</span> <span class="nav-text">研究拓展</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Active-Learning-主动学习"><span class="nav-number">9.</span> <span class="nav-text">Active Learning:主动学习</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

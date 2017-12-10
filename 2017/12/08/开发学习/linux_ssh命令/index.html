@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>linux之ssh命令 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Linux" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言今天需要使用ssh的时候发现居然不好使了，原来是自己在电脑上用了lantern之后，ip被改了，不在一个局域网内，无法访问非公网ip。（主要是根本ping不同目的主机= =）于是打算借着机会好好的梳理一下ssh命令。 参考链接ssh用法及命令">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux之ssh命令">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/12/08/开发学习/linux_ssh命令/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言今天需要使用ssh的时候发现居然不好使了，原来是自己在电脑上用了lantern之后，ip被改了，不在一个局域网内，无法访问非公网ip。（主要是根本ping不同目的主机= =）于是打算借着机会好好的梳理一下ssh命令。 参考链接ssh用法及命令">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-10T12:46:47.343Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux之ssh命令">
+<meta name="twitter:description" content="前言今天需要使用ssh的时候发现居然不好使了，原来是自己在电脑上用了lantern之后，ip被改了，不在一个局域网内，无法访问非公网ip。（主要是根本ping不同目的主机= =）于是打算借着机会好好的梳理一下ssh命令。 参考链接ssh用法及命令">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-开发学习/linux_ssh命令" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      linux之ssh命令
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/开发学习/linux_ssh命令/" class="article-date">
+	  <time datetime="2017-12-08T12:12:12.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天需要使用ssh的时候发现居然不好使了，原来是自己在电脑上用了lantern之后，ip被改了，不在一个局域网内，无法访问非公网ip。（主要是根本ping不同目的主机= =）<br>于是打算借着机会好好的梳理一下ssh命令。</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/pipisorry/article/details/52269785" target="_blank" rel="external">ssh用法及命令</a><br><a id="more"></a></p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>为什么这篇文章的结束语这么靠前，是因为，我在看完大段的内容之后依旧无法弄清楚。如果我要将远端的8000端口映射到本地的8888端口我该用什么命令。感觉这样子陈列知识点真的很糟糕。还是应该以具体的应用来说比较好。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh -L 8888:localhost:8000 remote<span class="comment">#remote是远端主机名</span></div><div class="line">ssh -p 8888 localhost<span class="comment">#此时ssh登陆本机8888端口就相当于登陆了remote了，稍后可以一试：）</span></div></pre></td></tr></table></figure></p>
+<h1 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH"></a>什么是SSH</h1><p>首先，需要明确的是：SSH是一种网络协议，用于计算机之间的加密登录。目前已经成为Linux系统的标准配置。</p>
+<p>SSH只是一种协议，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。这里只讨论SSH在Linux Shell中的用法。如果要在Windows系统中使用SSH，会用到另一种软件PuTTY。</p>
+<blockquote>
+<p>注解：SSH只是一种协议，而我们所用的SSH命令则是基于该工具封装的一种命令行工具（linux shell）。<br>PuTTY是一个实现这些协议的图形化工具（它支持的协议不止有SSH）</p>
+</blockquote>
+<h1 id="SSH原理"><a href="#SSH原理" class="headerlink" title="SSH原理"></a>SSH原理</h1><p>SSH之所以能够保证安全，原因在于它采用了公钥加密。整个过程是这样的：<br>（1）远程主机收到用户的登录请求，把自己的公钥发给用户。<br>（2）用户使用这个公钥，将登录密码加密后，发送回来。<br>（3）远程主机用自己的私钥，解密登录密码，如果密码正确，就同意用户登录。</p>
+<blockquote>
+<p>不像https协议，SSH协议的公钥是没有证书中心（CA）公证的，也就是说，都是自己签发的。</p>
+</blockquote>
+<h2 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h2><p>可以设想，如果攻击者插在用户与远程主机之间（比如在公共的wifi区域），用伪造的公钥，获取用户的登录密码。再用这个密码登录远程主机，那么SSH的安全机制就荡然无存了。这种风险就是著名的”中间人攻击”（Man-in-the-middle attack）</p>
+<h1 id="SSH基本用法"><a href="#SSH基本用法" class="headerlink" title="SSH基本用法"></a>SSH基本用法</h1><h2 id="SSH远程登录"><a href="#SSH远程登录" class="headerlink" title="SSH远程登录"></a>SSH远程登录</h2><p>口令登录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#假定你要以用户名user，登录远程主机host，只要一条简单命令就可以了。</span></div><div class="line">$ ssh user@host  如：ssh pika@192.168.0.111</div><div class="line"><span class="comment">#如果本地用户名与远程用户名一致，登录时可以省略用户名。</span></div><div class="line">$ ssh host</div><div class="line"><span class="comment">#SSH的默认端口是22，也就是说，你的登录请求会送进远程主机的22端口。使用p参数，可以修改这个端口</span></div><div class="line">$ ssh -p 2222 user@host</div></pre></td></tr></table></figure></p>
+<h2 id="公钥登录"><a href="#公钥登录" class="headerlink" title="公钥登录"></a>公钥登录</h2><p>所谓”公钥登录”，原理很简单，就是用户将自己的公钥储存在远程主机上。登录的时候，远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录shell，不再要求密码。<br><strong>这种方法要求用户必须提供自己的公钥。如果没有现成的，可以直接用ssh-keygen生成一个</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen</div><div class="line"><span class="comment"># 运行结束以后，在$HOME/.ssh/目录下，会新生成两个文件：id_rsa.pub和id_rsa。前者是你的公钥，后者是你的私钥。</span></div><div class="line"></div><div class="line"><span class="comment"># 这时再输入下面的命令，将公钥传送到远程主机host上面：</span></div><div class="line">$ ssh-copy-id user@host</div></pre></td></tr></table></figure></p>
+<h2 id="使用ssh在远程后台不中断地跑程序"><a href="#使用ssh在远程后台不中断地跑程序" class="headerlink" title="使用ssh在远程后台不中断地跑程序"></a>使用ssh在远程后台不中断地跑程序</h2><p>使用nohup命令让程序在关闭窗口（切换SSH连接）的时候程序还能继续在后台运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nohup python3 a.py &amp;</div></pre></td></tr></table></figure></p>
+<h1 id="SSH远程操作"><a href="#SSH远程操作" class="headerlink" title="SSH远程操作"></a>SSH远程操作</h1><h2 id="SSH数据传输"><a href="#SSH数据传输" class="headerlink" title="SSH数据传输"></a>SSH数据传输</h2><p>SSH不仅可以用于远程主机登录，还可以直接在远程主机上执行操作。<br>SSH可以在用户和远程主机之间，建立命令和数据的传输通道，因此很多事情都可以通过SSH来完成。</p>
+<h2 id="scp-跨机远程拷贝"><a href="#scp-跨机远程拷贝" class="headerlink" title="scp 跨机远程拷贝"></a>scp 跨机远程拷贝</h2><p>scp是secure copy的简写，用于在Linux下进行远程拷贝文件的命令，和它类似的命令有cp，不过cp只是在本机进行拷贝不能跨服务器，而且scp传输是加密的。可能会稍微影响一下速度。<br><strong>两台主机之间复制文件必需得同时有两台主机的复制执行帐号和操作权限</strong>。</p>
+<blockquote>
+<p>注解：建议使用scp进行远程copy</p>
+</blockquote>
+<h2 id="绑定本地端口"><a href="#绑定本地端口" class="headerlink" title="绑定本地端口"></a>绑定本地端口</h2><p>可以让那些不加密的网络连接，全部改走SSH连接，从而提高安全性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#假定我们要让8080端口的数据，都通过SSH传向远程主机，命令就这样写：</span></div><div class="line">$ ssh -D 8080 user@host</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>SSH会建立一个socket，去监听本地的8080端口。一旦有数据传向那个端口，就自动把它转移到SSH连接上面，发往远程主机。<br>可以想象，如果8080端口原来是一个不加密端口，现在将变成一个加密端口。</p>
+</blockquote>
+<h2 id="本地端口转发"><a href="#本地端口转发" class="headerlink" title="本地端口转发"></a>本地端口转发</h2><p>有时，绑定本地端口还不够，还必须指定数据传送的目标主机，从而形成<strong>点对点的”端口转发”</strong>。<br>为了区别后文的”远程端口转发”，我们把这种情况称为”本地端口转发”（Local forwarding）</p>
+<h2 id="远程端口转发"><a href="#远程端口转发" class="headerlink" title="远程端口转发"></a>远程端口转发</h2><p>既然”本地端口转发”是指绑定本地端口的转发，那么”远程端口转发”（remote forwarding）当然是指绑定远程端口的转发。</p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/10/理论学习/理解深度学习中的卷积操作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          翻译：理解深度学习中的卷积操作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/08/理论学习/metadata元数据/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">metadata元数据</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">2.</span> <span class="nav-text">参考链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">3.</span> <span class="nav-text">结束语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是SSH"><span class="nav-number">4.</span> <span class="nav-text">什么是SSH</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH原理"><span class="nav-number">5.</span> <span class="nav-text">SSH原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#中间人攻击"><span class="nav-number">5.1.</span> <span class="nav-text">中间人攻击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH基本用法"><span class="nav-number">6.</span> <span class="nav-text">SSH基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH远程登录"><span class="nav-number">6.1.</span> <span class="nav-text">SSH远程登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公钥登录"><span class="nav-number">6.2.</span> <span class="nav-text">公钥登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用ssh在远程后台不中断地跑程序"><span class="nav-number">6.3.</span> <span class="nav-text">使用ssh在远程后台不中断地跑程序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH远程操作"><span class="nav-number">7.</span> <span class="nav-text">SSH远程操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH数据传输"><span class="nav-number">7.1.</span> <span class="nav-text">SSH数据传输</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp-跨机远程拷贝"><span class="nav-number">7.2.</span> <span class="nav-text">scp 跨机远程拷贝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定本地端口"><span class="nav-number">7.3.</span> <span class="nav-text">绑定本地端口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地端口转发"><span class="nav-number">7.4.</span> <span class="nav-text">本地端口转发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程端口转发"><span class="nav-number">7.5.</span> <span class="nav-text">远程端口转发</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

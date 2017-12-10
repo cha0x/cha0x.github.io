@@ -1,3 +1,3 @@
-http://www.cvblogs.cn/2017/11/07/XMind-Pro-8-Update5-下载破解安装指南-以Mac为例/
-http://www.cvblogs.cn/2017/10/31/media-image-intro/
-http://www.cvblogs.cn/2017/09/26/deep-learning-ian-goodfellow-chap6-bp/
+http://www.cvblogs.cn/2017/12/10/理论学习/理解深度学习中的卷积操作/
+http://www.cvblogs.cn/2017/12/08/开发学习/linux_ssh命令/
+http://www.cvblogs.cn/2017/12/08/理论学习/metadata元数据/
