@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>mxnet之简单线性回归源码解读 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="MXNet" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言此篇博文相关：线性回归 — 使用Gluon中源码的解读。">
+<meta name="keywords" content="MXNet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mxnet之简单线性回归源码解读">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/12/12/开发学习/mxnet-简单线性回归源码解读/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言此篇博文相关：线性回归 — 使用Gluon中源码的解读。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-12T04:36:49.789Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mxnet之简单线性回归源码解读">
+<meta name="twitter:description" content="前言此篇博文相关：线性回归 — 使用Gluon中源码的解读。">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-开发学习/mxnet-简单线性回归源码解读" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      mxnet之简单线性回归源码解读
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/12/开发学习/mxnet-简单线性回归源码解读/" class="article-date">
+	  <time datetime="2017-12-12T02:40:21.000Z" itemprop="datePublished">2017-12-12</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MXNet/">MXNet</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>此篇博文相关：<a href="http://zh.gluon.ai/chapter_supervised-learning/linear-regression-gluon.html" target="_blank" rel="external">线性回归 — 使用Gluon</a>中源码的解读。<br><a id="more"></a></p>
+<h1 id="源码及注释解析"><a href="#源码及注释解析" class="headerlink" title="源码及注释解析"></a>源码及注释解析</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 设置迭代次数5次，每次迭代都完整取所有数据</span></div><div class="line">epochs = <span class="number">5</span></div><div class="line"><span class="comment"># 设置每次取数据的batch = 10，如例子中数据集是1000，则每次迭代都取100次数据，每次都取10个数据</span></div><div class="line">batch_size = <span class="number">10</span></div><div class="line"><span class="comment"># for循环迭代：共5次，range(epochs)模拟0，1，2，3，4</span></div><div class="line"><span class="keyword">for</span> e <span class="keyword">in</span> range(epochs):</div><div class="line">    <span class="comment">#每次迭代，初始的损失置为0</span></div><div class="line">    total_loss = <span class="number">0</span></div><div class="line">    <span class="comment"># 从data_iter迭代器中取数据，data_iter = gluon.data.Dataloader(dataset,batch_size,shuffle=True)</span></div><div class="line">    <span class="comment"># 上诉dataset = gluon.data.ArrayDataset(X,y)即由数据集X和其对应的标签y组成的数据集合</span></div><div class="line">    <span class="comment"># 因此，data_iter迭代器每次取出的data和label即batch_size个数据集对：X'和y'，直到取完所有数据，结束循环（1000/10=100次）</span></div><div class="line">    <span class="keyword">for</span> data, label <span class="keyword">in</span> data_iter:</div><div class="line">        <span class="comment"># 利用autograd.record()API自动记录梯度</span></div><div class="line">        <span class="keyword">with</span> autograd.record():</div><div class="line">            <span class="comment"># 输出等于将数据X传入你定义的模型net（可以这么理解：线性模型即是y'关于x的函数）</span></div><div class="line">            output = net(data)</div><div class="line">            <span class="comment"># 这里定义的损失函数是衡量真值label与有你的模型产生的预测值之间的误差。此处使用的是均方误差，你也可以换成你自己定义的其他损失函数</span></div><div class="line">            loss = square_loss(output, label)</div><div class="line">        <span class="comment"># 反向传播误差，这里可以将这个动作看作是一个信号，损失反向了，但是真正利用损失反向传播的却是接下来的trainer</span></div><div class="line">        loss.backward()</div><div class="line">        <span class="comment"># 传播了误差之后，我们还需要利用一些更新参数的方法对参数进行更新</span></div><div class="line">        <span class="comment"># 注意这里使用的是gluon提供的API:gluon.Trainer(net.collect_params,'使用的更新模型参数的方法名：如随机梯度下降',&#123;指定的学习率learning_rate:0.1是一个字典&#125;)</span></div><div class="line">        <span class="comment"># 如：trainer = gluon.Trainer(net.collect_params(),'sgd', &#123;'learning_rate': 0.1&#125;)</span></div><div class="line">        <span class="comment"># 最后利用trainer.step(batch_size)API反向更新模型参数w,b</span></div><div class="line">        trainer.step(batch_size)</div><div class="line">        <span class="comment"># 将每次训练的损失加入总损失（一共要加100次，直到迭代完成）。由于每次循环得到的是一个长度为batch_size的一维向量，但是总损失是标量。因此得利用asscalar()转化为标量进行操作</span></div><div class="line">        total_loss += nd.sum(loss).asscalar()</div><div class="line">    <span class="comment"># 打印出一次迭代的平均误差=总误差/样本数</span></div><div class="line">    print(<span class="string">"Epoch %d, average loss: %f"</span> % (e, total_loss/num_examples))</div></pre></td></tr></table></figure>
+<h1 id="一些易混淆的名词"><a href="#一些易混淆的名词" class="headerlink" title="一些易混淆的名词"></a>一些易混淆的名词</h1><h2 id="模型定义"><a href="#模型定义" class="headerlink" title="模型定义"></a>模型定义</h2><p>可以这么通俗的理解：模型即是你定义的一个由数据集生成预测值的函数。在训练过程中，我们往模型中传入训练数据集得到的是一个预测值。我们无法知道这个预测值到底是对是错是好是坏。它只是单纯的对预测值的一个刻画。</p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>那么我们如何描述我们的模型是好是坏呢？这里就必须引入损失这个概念。所谓损失，单纯来讲就是预测值与真实值之间的误差。理想情况下，我们希望我们的损失是0或者接近于0。</p>
+<h2 id="初始化模型参数"><a href="#初始化模型参数" class="headerlink" title="初始化模型参数"></a>初始化模型参数</h2><p>其实当我们在说模型的时候，我们通常不能很完整的说出：我们的模型具体是什么（我在想这可能是由于我们维度限制了我们的想象力= =）。也就是大部分模型无法解释清楚的。不像线性模型：我们可以这么定义：$y^’=wx+b$，然后我们可以这么解释：例如，w是斜率而b是截距。但是对于一些非线性的模型，里头的参数不再具有可解释性质。<br>因此，一般情况下，我们说我训练一个模型指的就是我训练了模型中的参数。例如：w和b就是我们通过训练线性模型得到的参数。<br>但是，想象一下，最初的时候，我们手上只有一些数据，以及数据对应的标签（真实值）。还是以线性模型为例子：我们定义了一个模型$y^’=wx+b$(目前，在不对w和b初始化的情况下，这两个也是变量)。因此，我们的模型就有了三个变量。但是我们只希望在给模型传入一个数据x的时候得到的是一个预测值$y^’$。<br>因此，我们就需要初始化我们的模型参数w和b。我们可以随机对其初始化，也可以指定一个参数（可能是从其他地方迁移学习过来的：其实就是按照数据集的关系的相似性，衡量照抄它的参数= =）。</p>
+<h2 id="模型参数更新策略（优化）"><a href="#模型参数更新策略（优化）" class="headerlink" title="模型参数更新策略（优化）"></a>模型参数更新策略（优化）</h2><p>现在，我们的模型中只剩下一个变量$y^’$，我们可以输入一个数据得到一个预测值。我们通过比较预测值和真实值得到损失。但是，我们要如何更新我们的参数使得我们的模型在每一次迭代完所有数据之后。根据损失，能够调整模型参数！实现利用<strong>数据编程</strong>！<br>这里就有了反向传播以及随机梯度下降等的概念。反向传播传播的是损失（也叫残差），随机梯度中就是利用损失的反向梯度，往回走batch_size个样本损失的距离，使得参数得到更新。<code>param[:] = param - lr * param.grad</code>。这里lr就是学习率。<br>这样在进行下一次循环（此时还是在一次迭代，100次循环里头）的时候，我们的参数能够有所改进，使模型更拟合真实数据。也就是说话我们共循环更新了5*1000/10=500次参数！</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>尽管不知道已经花了多少时间和精力取学习了多少机器学习相关的东西，但是感觉自己对于理论或者说这些专有名词，永远都不上心的样子。但是这样子真的是百害而无一利。直到我遇到了李沐老师团队的MXNet= =。决定一定要沉心静气学好理论并且动手实践！</p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/11/开发学习/python-高级语言特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">python之高级语言特性：切片</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码及注释解析"><span class="nav-number">2.</span> <span class="nav-text">源码及注释解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些易混淆的名词"><span class="nav-number">3.</span> <span class="nav-text">一些易混淆的名词</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模型定义"><span class="nav-number">3.1.</span> <span class="nav-text">模型定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#损失函数"><span class="nav-number">3.2.</span> <span class="nav-text">损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化模型参数"><span class="nav-number">3.3.</span> <span class="nav-text">初始化模型参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型参数更新策略（优化）"><span class="nav-number">3.4.</span> <span class="nav-text">模型参数更新策略（优化）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">4.</span> <span class="nav-text">结束语</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2017 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

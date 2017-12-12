@@ -37,7 +37,7 @@
 <meta property="og:site_name" content="CVBlogs">
 <meta property="og:description" content="前言以下内容基本摘自阮一峰的网络博客-如何读懂火焰图篇，只做个人学习笔记用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T13:06:41.132Z">
+<meta property="og:updated_time" content="2017-12-12T04:45:52.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发之性能分析火焰图">
 <meta name="twitter:description" content="前言以下内容基本摘自阮一峰的网络博客-如何读懂火焰图篇，只做个人学习笔记用。">
@@ -204,7 +204,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下内容基本摘自<a href="http://www.ruanyifeng.com/blog/2017/09/flame-graph.html" target="_blank" rel="external">阮一峰的网络博客-如何读懂火焰图篇</a>，只做个人学习笔记用。<br><a id="more"></a></p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下内容基本摘自<a href="http://www.ruanyifeng.com/blog/2017/09/flame-graph.html" target="_blank" rel="external">阮一峰的网络博客-如何读懂火焰图篇</a>，只做个人学习笔记用。</p>
+<a id="more"></a>
 <h1 id="perf命令"><a href="#perf命令" class="headerlink" title="perf命令"></a><code>perf</code>命令</h1><p>Linux 系统原生提供的性能分析工具，会返回 CPU 正在执行的函数名以及调用栈（stack）。<br>通常，它的执行频率是 99Hz（每秒99次），如果99次都返回同一个函数名，那就说明 CPU 这一秒钟都在执行同一个函数，可能存在性能问题。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo perf record -F 99 -p 13204 -g -- sleep 30</div></pre></td></tr></table></figure></p>
 <p>上面的代码中，<code>perf record</code>表示记录，<code>-F 99</code>表示每秒99次，<code>-p 13204</code>是进程号，即对哪个进程进行分析，<code>-g</code>表示记录调用栈，<code>sleep 30</code>则是持续30秒。<br>运行后会产生一个庞大的文本文件。如果一台服务器有16个 CPU，每秒抽样99次，持续30秒，就得到 47,520 个调用栈，长达几十万甚至上百万行。<br>为了便于阅读，<code>perf record</code>命令可以统计每个调用栈出现的百分比，然后从高到低排列。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo perf report -n --stdio</div></pre></td></tr></table></figure></p>
 <p>由于是文本文件极其不易阅读所以才有了火焰图。</p>

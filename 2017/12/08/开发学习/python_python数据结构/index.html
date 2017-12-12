@@ -29,18 +29,18 @@
     <meta name="baidu-site-verification" content="N7RDvFcI1s" />
   
   
-  <meta name="description" content="Python 列表(List) 可以这么说是，用[与]将元素圈起来- -  序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。Python有6个序列的内置类型，但最常见的是列表和元组。序列都可以进行的操作包括索引，切片，加，乘，检查成员。Python已经内置确定序列的长度以及确定最大和最小的元素的方法。 列表是最常用的Python数据类型，它可以作为一">
+  <meta name="description" content="前言本章是关于python中基本数据结构知识的一些梳理。">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python之数据结构">
 <meta property="og:url" content="http://www.cvblogs.cn/2017/12/08/开发学习/python_python数据结构/index.html">
 <meta property="og:site_name" content="CVBlogs">
-<meta property="og:description" content="Python 列表(List) 可以这么说是，用[与]将元素圈起来- -  序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。Python有6个序列的内置类型，但最常见的是列表和元组。序列都可以进行的操作包括索引，切片，加，乘，检查成员。Python已经内置确定序列的长度以及确定最大和最小的元素的方法。 列表是最常用的Python数据类型，它可以作为一">
+<meta property="og:description" content="前言本章是关于python中基本数据结构知识的一些梳理。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T12:54:14.756Z">
+<meta property="og:updated_time" content="2017-12-12T04:41:50.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python之数据结构">
-<meta name="twitter:description" content="Python 列表(List) 可以这么说是，用[与]将元素圈起来- -  序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。Python有6个序列的内置类型，但最常见的是列表和元组。序列都可以进行的操作包括索引，切片，加，乘，检查成员。Python已经内置确定序列的长度以及确定最大和最小的元素的方法。 列表是最常用的Python数据类型，它可以作为一">
+<meta name="twitter:description" content="前言本章是关于python中基本数据结构知识的一些梳理。">
   
     <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
   
@@ -204,11 +204,13 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Python-列表-List"><a href="#Python-列表-List" class="headerlink" title="Python 列表(List)"></a>Python 列表(List)</h1><blockquote>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本章是关于python中基本数据结构知识的一些梳理。</p>
+<a id="more"></a>
+<h1 id="Python-列表-List"><a href="#Python-列表-List" class="headerlink" title="Python 列表(List)"></a>Python 列表(List)</h1><blockquote>
 <p>可以这么说是，用<code>[</code>与<code>]</code>将元素圈起来- -</p>
 </blockquote>
 <p>序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。<br>Python有6个序列的内置类型，但最常见的是列表和元组。<br>序列都可以进行的操作包括索引，切片，<strong>加</strong>，<strong>乘</strong>，<strong>检查成员</strong>。<br>Python已经内置确定序列的长度以及确定最大和最小的元素的方法。</p>
-<p>列表是最常用的Python数据类型，它可以作为<strong>一个方括号内的逗号分隔值出现</strong>。<br><a id="more"></a><br>创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。与字符串的索引一样，列表索引从0开始。列表可以进行截取、组合等。</p>
+<p>列表是最常用的Python数据类型，它可以作为<strong>一个方括号内的逗号分隔值出现</strong>。<br>创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。与字符串的索引一样，列表索引从0开始。列表可以进行截取、组合等。</p>
 <h2 id="删除列表元素"><a href="#删除列表元素" class="headerlink" title="删除列表元素"></a>删除列表元素</h2><p><code>del</code>语句来删除列表的的元素。</p>
 <h2 id="Python列表脚本操作符"><a href="#Python列表脚本操作符" class="headerlink" title="Python列表脚本操作符"></a>Python列表脚本操作符</h2><p>列表对 + 和 <em> 的操作符与字符串相似。+ 号用于组合列表，</em> 号用于重复列表。</p>
 <h1 id="Python-元祖-Tuple"><a href="#Python-元祖-Tuple" class="headerlink" title="Python 元祖(Tuple)"></a>Python 元祖(Tuple)</h1><p><strong>元组与列表类似，不同之处在于元组的元素不能修改。</strong><br><strong>元组使用小括号，列表使用方括号。</strong><br>元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。<br><strong>元组中只包含一个元素时，需要在元素后面添加逗号</strong><br>元组与字符串类似，下标索引从0开始，可以进行截取，组合等。<br>将列表转换为元组:<strong>tuple(seq)</strong></p>
@@ -290,7 +292,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-列表-List"><span class="nav-number">1.</span> <span class="nav-text">Python 列表(List)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除列表元素"><span class="nav-number">1.1.</span> <span class="nav-text">删除列表元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python列表脚本操作符"><span class="nav-number">1.2.</span> <span class="nav-text">Python列表脚本操作符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-元祖-Tuple"><span class="nav-number">2.</span> <span class="nav-text">Python 元祖(Tuple)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-字典-Dictionary"><span class="nav-number">3.</span> <span class="nav-text">Python 字典(Dictionary)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除字典元素"><span class="nav-number">3.1.</span> <span class="nav-text">删除字典元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典键的特性"><span class="nav-number">3.2.</span> <span class="nav-text">字典键的特性</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-列表-List"><span class="nav-number">2.</span> <span class="nav-text">Python 列表(List)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除列表元素"><span class="nav-number">2.1.</span> <span class="nav-text">删除列表元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python列表脚本操作符"><span class="nav-number">2.2.</span> <span class="nav-text">Python列表脚本操作符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-元祖-Tuple"><span class="nav-number">3.</span> <span class="nav-text">Python 元祖(Tuple)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-字典-Dictionary"><span class="nav-number">4.</span> <span class="nav-text">Python 字典(Dictionary)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除字典元素"><span class="nav-number">4.1.</span> <span class="nav-text">删除字典元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典键的特性"><span class="nav-number">4.2.</span> <span class="nav-text">字典键的特性</span></a></li></ol></li></ol>
     
     </div>
   </aside>

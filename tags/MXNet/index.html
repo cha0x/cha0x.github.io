@@ -17,10 +17,8 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <title>python之编码规范笔记 | CVBlogs</title>
+  <title>tag: mxnet | CVBlogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="keywords" content="Python" />
   
   
     <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
@@ -29,18 +27,16 @@
     <meta name="baidu-site-verification" content="N7RDvFcI1s" />
   
   
-  <meta name="description" content="前言主要是python中基础结构及对应容易被我忘记的编码建议的笔记梳理。">
-<meta name="keywords" content="Python">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python之编码规范笔记">
-<meta property="og:url" content="http://www.cvblogs.cn/2017/12/08/开发学习/python_编码规范/index.html">
+  <meta name="description" content="developing..">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CVBlogs">
+<meta property="og:url" content="http://www.cvblogs.cn/tags/MXNet/index.html">
 <meta property="og:site_name" content="CVBlogs">
-<meta property="og:description" content="前言主要是python中基础结构及对应容易被我忘记的编码建议的笔记梳理。">
+<meta property="og:description" content="developing..">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-12T04:43:44.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python之编码规范笔记">
-<meta name="twitter:description" content="前言主要是python中基础结构及对应容易被我忘记的编码建议的笔记梳理。">
+<meta name="twitter:title" content="CVBlogs">
+<meta name="twitter:description" content="developing..">
   
     <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
   
@@ -86,7 +82,7 @@ var themeMenus = {};
 </script>
 
 
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
+  <body>
 
 
   <header id="allheader" class="site-header" role="banner">
@@ -164,137 +160,45 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-开发学习/python_编码规范" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+          <section id="main" style="float:none;">
+  
+  
+  
     
     
-      <header class="article-header">
-        
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+
+      <a href="/2017/12/12/开发学习/mxnet-简单线性回归源码解读/" class="archive-article-date">
+		  <time datetime="2017-12-12T02:40:21.000Z" itemprop="datePublished">12月 12, 2017</time>
+	  </a>
+      
 
   
-    <h1 class="thumb" class="article-title" itemprop="name">
-      python之编码规范笔记
+    <h1 class="thumb" itemprop="name">
+      <a class="archive-article-title" href="/2017/12/12/开发学习/mxnet-简单线性回归源码解读/">mxnet之简单线性回归源码解读</a>
     </h1>
   
 
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/12/08/开发学习/python_编码规范/" class="article-date">
-	  <time datetime="2017-12-08T05:21:01.000Z" itemprop="datePublished">2017-12-08</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-      
-	<a class="article-views">
-	<span id="busuanzi_container_page_pv">
-	  阅读量<span id="busuanzi_value_page_pv"></span>
-	</span>
-	</a>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要是python中基础结构及对应容易被我忘记的编码建议的笔记梳理。</p>
-<a id="more"></a>
-<h1 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h1><ol>
-<li>模块：小写、可以有下划线</li>
-<li>包：小写、无下划线</li>
-<li>类：<code>CapWords</code>(驼峰式命名)</li>
-<li>函数命名：小写，可以有下划线</li>
-<li>常量命名：大写，可以有下划线</li>
-<li>类的属性：小写，前缀下划线</li>
-<li>类的方法第一个参数必须是<code>self</code>，静态方法第一个参数必须是<code>cls</code></li>
-</ol>
-<h1 id="编码建议"><a href="#编码建议" class="headerlink" title="编码建议"></a>编码建议</h1><ol>
-<li>尽可能使用<code>‘is’</code>,<code>‘is not’</code>取代<code>‘==’</code>，比如<code>if x is not None</code> 要优于<code>if x</code>。</li>
-<li>使用<code>isinstance()</code>比较对象的类型</li>
-<li>使用<code>startswith()</code> and <code>endswith()</code>代替切片进行序列前缀或后缀的检查</li>
-</ol>
-
-      
-    </div>
-    
-    <footer class="entry-meta entry-footer">
-
-      
-
-      
-        
-	<div id="comment">
-		<!-- 来必力City版安装代码 -->
-		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
-		<script type="text/javascript">
-		   (function(d, s) {
-		       var j, e = d.getElementsByTagName(s)[0];
-
-		       if (typeof LivereTower === 'function') { return; }
-
-		       j = d.createElement(s);
-		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-		       j.async = true;
-
-		       e.parentNode.insertBefore(j, e);
-		   })(document, 'script');
-		</script>
-		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-		</div>
-		<!-- City版安装代码已完成 -->
-	</div>
-
-
-      
-    </footer>
-
+    </header>
   </div>
-
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/12/08/开发学习/linux_软链接与硬链接/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          linux之软链接与硬链接
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/12/08/开发学习/git的https无法push解决方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">git利用https无法push解决方法</div>
-    </a>
-  
-</nav>
-
-  
-
 </article>
+  
+  
+    </div></section>
+  
 
 
-
-
-<!-- Table of Contents -->
-
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
-      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本结构"><span class="nav-number">2.</span> <span class="nav-text">基本结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编码建议"><span class="nav-number">3.</span> <span class="nav-text">编码建议</span></a></li></ol>
-    
-    </div>
-  </aside>
 </section>
         
       </div>

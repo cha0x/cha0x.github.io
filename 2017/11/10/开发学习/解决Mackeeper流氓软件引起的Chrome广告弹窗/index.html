@@ -37,7 +37,7 @@
 <meta property="og:site_name" content="CVBlogs">
 <meta property="og:description" content="前言昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了YouTube一个推荐高效率App的视频中的软件之后，Chrome总是在我使用过程中弹窗MacKeeper的病毒广告。（主要下载了视频中推荐的几个软件：Hidden Me以及另外一个忘记了叫什么的管理Display的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T12:13:35.604Z">
+<meta property="og:updated_time" content="2017-12-12T04:46:12.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决Mackeeper流氓软件引起的Chrome广告弹窗">
 <meta name="twitter:description" content="前言昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了YouTube一个推荐高效率App的视频中的软件之后，Chrome总是在我使用过程中弹窗MacKeeper的病毒广告。（主要下载了视频中推荐的几个软件：Hidden Me以及另外一个忘记了叫什么的管理Display的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，">
@@ -204,7 +204,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了<code>YouTube</code>一个推荐高效率<code>App</code>的视频中的软件之后，<code>Chrome</code>总是在我使用过程中弹窗<code>MacKeeper</code>的病毒广告。（主要下载了视频中推荐的几个软件：<code>Hidden Me</code>以及另外一个忘记了叫什么的管理<code>Display</code>的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，于是乎。就上网查了一下。发现果然是中了套路，貌似还有点深。于是乎，就将自己解决的过程记录一下。并且调整了我解决问题的过程。我认为最关键的步骤被提前了。我始终认为是那几个步骤奏效的。<br><a id="more"></a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了<code>YouTube</code>一个推荐高效率<code>App</code>的视频中的软件之后，<code>Chrome</code>总是在我使用过程中弹窗<code>MacKeeper</code>的病毒广告。（主要下载了视频中推荐的几个软件：<code>Hidden Me</code>以及另外一个忘记了叫什么的管理<code>Display</code>的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，于是乎。就上网查了一下。发现果然是中了套路，貌似还有点深。于是乎，就将自己解决的过程记录一下。并且调整了我解决问题的过程。我认为最关键的步骤被提前了。我始终认为是那几个步骤奏效的。</p>
+<a id="more"></a>
 <h2 id="更新方法"><a href="#更新方法" class="headerlink" title="更新方法"></a>更新方法</h2><p>发现下面的内容并不能根本解决问题，最后禁用了几个插件才解决了。以及删除了<code>/Library/</code>下的一些内容。</p>
 <h2 id="删除最近下载的软件"><a href="#删除最近下载的软件" class="headerlink" title="删除最近下载的软件"></a>删除最近下载的软件</h2><p>不管问题是不是它引起的。反正我已经不打算用了。猎奇心理害死人啊。也有说是<code>Lantern</code>的问题。反正我也关了….</p>
 <h2 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h2><p>命令行打开启动项所在的两个目录：<code>open /Library/LaunchDaemons</code>以及<code>open /Library/LaunchAgents</code>删除掉近期的项目。我记得我主要是删除了一个<code>com.pandasmite.plist</code>的文件。起初用文本编辑器打开时，觉得还挺正常的。记得用一个字段是设置了一个<code>3600</code>。现在怀疑是脚本开启的间隔…（我也不想复现了…）。<br>我是在执行了这些之后才不再弹窗的。<br>顺便，你还可以删除其他一些你不想看到的开机自启动项目。比在<code>用户和群组</code>中管理自启动项目要方便一些。有的时候一些自启动项目并不在那里！</p>

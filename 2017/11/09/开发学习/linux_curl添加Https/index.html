@@ -37,7 +37,7 @@
 <meta property="og:site_name" content="CVBlogs">
 <meta property="og:description" content="前言系统时Ubuntu 16.04 今天有需要使用curl命令down一些https的内容。提示Protocol https not supported or disabled in libcurl。用curl -V一看发现支持的协议果然缺了https…上网查了一些资料，历经坎坷。总算最后解决了问题。整理备忘一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T12:40:17.068Z">
+<meta property="og:updated_time" content="2017-12-12T04:46:31.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux之curl添加Https">
 <meta name="twitter:description" content="前言系统时Ubuntu 16.04 今天有需要使用curl命令down一些https的内容。提示Protocol https not supported or disabled in libcurl。用curl -V一看发现支持的协议果然缺了https…上网查了一些资料，历经坎坷。总算最后解决了问题。整理备忘一下。">
@@ -204,7 +204,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>系统时Ubuntu 16.04 今天有需要使用<code>curl</code>命令<code>down</code>一些<code>https</code>的内容。提示<code>Protocol https not supported or disabled in libcurl</code>。用<code>curl -V</code>一看发现支持的协议果然缺了<code>https</code>…上网查了一些资料，历经坎坷。总算最后解决了问题。整理备忘一下。<br><a id="more"></a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>系统时Ubuntu 16.04 今天有需要使用<code>curl</code>命令<code>down</code>一些<code>https</code>的内容。提示<code>Protocol https not supported or disabled in libcurl</code>。用<code>curl -V</code>一看发现支持的协议果然缺了<code>https</code>…上网查了一些资料，历经坎坷。总算最后解决了问题。整理备忘一下。</p>
+<a id="more"></a>
 <h2 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h2><p>可以用<code>openssl version -a</code>确认一下<code>openssl</code>是否已经安装，如果没有则需要下载安装。因为如果<code>curl</code>要支持<code>https</code>，就必须先安装<code>openssl</code>。</p>
 <h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>可以有两种方法进行安装。我用了第二种方法。</p>
 <h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install openssl </div><div class="line">sudo apt-get install libssl-dev</div></pre></td></tr></table></figure>

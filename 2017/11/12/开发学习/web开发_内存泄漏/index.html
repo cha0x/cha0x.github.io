@@ -29,18 +29,18 @@
     <meta name="baidu-site-verification" content="N7RDvFcI1s" />
   
   
-  <meta name="description" content="前言以下文章内容大都摘自阮一峰的网络博客JavaScript 内存泄漏教程篇,仅作个人学习笔记备记。本来不想记的，因为对于只是在本地写hello world的我来说，内存管理似乎从来不是一件必要的事情。但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。想象，要是一个需要7/24运行的web应用内存泄漏了：）">
+  <meta name="description" content="前言以下文章内容大都摘自阮一峰的网络博客JavaScript 内存泄漏教程篇,仅作个人学习笔记备记。本来不想记的，因为对于只是在本地写hello world的我来说，内存管理似乎从来不是一件必要的事情。但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。想象一下，要是一个需要7/24运行的web应用内存泄漏了：）简直就是一场灾难。服务器怠机则无法提供服务。">
 <meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web开发之内存泄漏">
 <meta property="og:url" content="http://www.cvblogs.cn/2017/11/12/开发学习/web开发_内存泄漏/index.html">
 <meta property="og:site_name" content="CVBlogs">
-<meta property="og:description" content="前言以下文章内容大都摘自阮一峰的网络博客JavaScript 内存泄漏教程篇,仅作个人学习笔记备记。本来不想记的，因为对于只是在本地写hello world的我来说，内存管理似乎从来不是一件必要的事情。但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。想象，要是一个需要7/24运行的web应用内存泄漏了：）">
+<meta property="og:description" content="前言以下文章内容大都摘自阮一峰的网络博客JavaScript 内存泄漏教程篇,仅作个人学习笔记备记。本来不想记的，因为对于只是在本地写hello world的我来说，内存管理似乎从来不是一件必要的事情。但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。想象一下，要是一个需要7/24运行的web应用内存泄漏了：）简直就是一场灾难。服务器怠机则无法提供服务。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T13:05:40.901Z">
+<meta property="og:updated_time" content="2017-12-12T04:45:36.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发之内存泄漏">
-<meta name="twitter:description" content="前言以下文章内容大都摘自阮一峰的网络博客JavaScript 内存泄漏教程篇,仅作个人学习笔记备记。本来不想记的，因为对于只是在本地写hello world的我来说，内存管理似乎从来不是一件必要的事情。但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。想象，要是一个需要7/24运行的web应用内存泄漏了：）">
+<meta name="twitter:description" content="前言以下文章内容大都摘自阮一峰的网络博客JavaScript 内存泄漏教程篇,仅作个人学习笔记备记。本来不想记的，因为对于只是在本地写hello world的我来说，内存管理似乎从来不是一件必要的事情。但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。想象一下，要是一个需要7/24运行的web应用内存泄漏了：）简直就是一场灾难。服务器怠机则无法提供服务。">
   
     <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
   
@@ -204,7 +204,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下文章内容大都摘自<a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="external">阮一峰的网络博客JavaScript 内存泄漏教程篇</a>,仅作个人学习笔记备记。<br>本来不想记的，因为对于只是在本地写<code>hello world</code>的我来说，内存管理似乎从来不是一件必要的事情。<br>但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。<br>想象，要是一个需要7/24运行的web应用内存泄漏了：）<br><a id="more"></a></p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下文章内容大都摘自<a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="external">阮一峰的网络博客JavaScript 内存泄漏教程篇</a>,仅作个人学习笔记备记。<br>本来不想记的，因为对于只是在本地写<code>hello world</code>的我来说，内存管理似乎从来不是一件必要的事情。<br>但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。<br>想象一下，要是一个需要7/24运行的web应用内存泄漏了：）简直就是一场灾难。服务器怠机则无法提供服务。</p>
+<a id="more"></a>
 <h1 id="什么是内存泄漏"><a href="#什么是内存泄漏" class="headerlink" title="什么是内存泄漏"></a>什么是内存泄漏</h1><p>对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。<br>不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。<br>有些语言（比如 C 语言）必须手动释放内存，程序员负责内存管理。这很麻烦，所以大多数语言提供自动内存管理，减轻程序员的负担，这被称为”垃圾回收机制”（garbage collector）。</p>
 <h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><p>最常使用的方法叫做”引用计数”（<code>reference counting</code>）：语言引擎有一张”引用表”，保存了内存里面所有的资源（通常是各种值）的引用次数。如果一个值的引用次数是0，就表示这个值不再用到了，因此可以将这块内存释放。<br>但是，并不是说有了垃圾回收机制，程序员就轻松了。你还是需要关注内存占用：那些很占空间的值，一旦不再用到，你必须检查是否还存在对它们的引用。如果是的话，就必须手动解除引用。</p>
 <h1 id="内存泄漏的识别方法"><a href="#内存泄漏的识别方法" class="headerlink" title="内存泄漏的识别方法"></a>内存泄漏的识别方法</h1><p>经验法则是，如果连续<code>五次垃圾回收</code>之后，内存占用一次比一次大，就有内存泄漏。这就要求<code>实时查看内存占用</code>。</p>

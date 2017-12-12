@@ -162,6 +162,158 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-开发学习/linux之环境变量"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/10/开发学习/linux之环境变量/">linux之环境变量</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/10/开发学习/linux之环境变量/" class="article-date">
+	  <time datetime="2017-11-10T09:27:26.000Z" itemprop="datePublished">2017-11-10</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+          
+          
+            
+            
+          
+            
+            
+          
+          
+            <p><h1 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h1><p>环境变量是指系统环境变量，对所有用户起作用，而用户环境变量只对当前用户起作用</p>
+<p>由于一般情况下，我们的电脑只有一个主用户，所以在其中任何一个配置即可，当然以防万一你也可以只在系统环境变量下配置。 </p>
+<p>
+          
+        
+        
+    </div>
+    
+    <div class="article-more-link">
+      <a href="/2017/11/10/开发学习/linux之环境变量/#more">查看更多</a>
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+    </footer>
+
+  </div>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-开发学习/linux_curl添加Https"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/09/开发学习/linux_curl添加Https/">linux之curl添加Https</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/09/开发学习/linux_curl添加Https/" class="article-date">
+	  <time datetime="2017-11-09T14:55:11.000Z" itemprop="datePublished">2017-11-09</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+          
+          
+            
+            
+          
+            
+            
+          
+          
+            <p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>系统时Ubuntu 16.04 今天有需要使用<code>curl</code>命令<code>down</code>一些<code>https</code>的内容。提示<code>Protocol https not supported or disabled in libcurl</code>。用<code>curl -V</code>一看发现支持的协议果然缺了<code>https</code>…上网查了一些资料，历经坎坷。总算最后解决了问题。整理备忘一下。</p>
+<a id="more"></a>
+<p>
+          
+        
+        
+    </div>
+    
+    <div class="article-more-link">
+      <a href="/2017/11/09/开发学习/linux_curl添加Https/#more">查看更多</a>
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+    </footer>
+
+  </div>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  
     <article id="post-开发学习/web开发_NPM学习笔记"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -283,8 +435,8 @@ var themeMenus = {};
             
           
           
-            <p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记得我们写程序时常常会<code>return</code>一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。<br>今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。<br><a id="more"></a><br>退出状态码是一个 0 ~ 255 之间的整数值，在命令结束运行时由命令传给shell。你可以捕捉这个值并在脚本中使用。</p>
-<h2 id="查看状态码"><a href="#查看状态码" class="headerlink" title="查看状态码"></a>查看状态码</h2><p>Linux 使用了<code>$?</code> 专属变量来保存上个执行的命令的退出状态码。你必须在要查看的命令之后马上查看或使用<code>$?</code>变量。它的值会变成shell中执行的最后一条命令的退出状态码。</p>
+            <p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记得我们写程序时常常会<code>return</code>一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。<br>今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。</p>
+<a id="more"></a>
 <p>
           
         
@@ -359,8 +511,8 @@ var themeMenus = {};
             
           
           
-            <p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近经常上油管下东西，用的在线的网站”Youtube Multi Downloader Online”解析下载，还是蛮好用的（需要翻墙）。<a href="https://youtubemultidownloader.com/playlist.html" target="_blank" rel="external">链接地址</a>。就是每次下载下来视频都会带上前缀序号。有点烦人（取消勾选Add prefix order number还是不管用）。就打算用脚本语言处理一下。选了Python，可惜学了个半桶水，这么简单的东西，却总是在要用的时候，忘记该怎么写…<br>索性整理出来备记一下。<br><a id="more"></a></p>
-<h2 id="涉及的知识"><a href="#涉及的知识" class="headerlink" title="涉及的知识"></a>涉及的知识</h2><ul>
+            <p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近经常上油管下东西，用的在线的网站”Youtube Multi Downloader Online”解析下载，还是蛮好用的（需要翻墙）。<a href="https://youtubemultidownloader.com/playlist.html" target="_blank" rel="external">链接地址</a>。就是每次下载下来视频都会带上前缀序号。有点烦人（取消勾选Add prefix order number还是不管用）。就打算用脚本语言处理一下。选了Python，可惜学了个半桶水，这么简单的东西，却总是在要用的时候，忘记该怎么写…<br>索性整理出来备记一下。</p>
+<a id="more"></a>
 <p>
           
         
@@ -770,163 +922,11 @@ var themeMenus = {};
 <!-- Table of Contents -->
 
   
-    <article id="post-理论学习/media-image-intro"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/31/理论学习/media-image-intro/">医学影像技术概述:X-ray、CT、MRI</a>
-    </h1>
-  
-
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/31/理论学习/media-image-intro/" class="article-date">
-	  <time datetime="2017-10-30T16:36:18.000Z" itemprop="datePublished">2017-10-31</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/医学影像计算/">医学影像计算</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/课程总结/">课程总结</a></li></ul>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-          
-          
-            
-            
-          
-            
-            
-          
-          
-            <p><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;近年来，医学影像分析(Medical Image Analysis)作为一个新兴的交叉学科，结合医学影像以及计算机视觉和机器学习技术在学术界和工业界都得到了广泛的关注。对于以后要从事该领域的研究来说，形成对医学影像的结构性认识是非常有必要的。本节内容结合<a href="https://www.bilibili.com/video/av12288227/" target="_blank" rel="external">2004年中国医科大学-医学影像网络课程</a>中前几讲关于目前常用的医学影像技术的原理等内容，做一个简单的梳理和介绍。</p>
-<a id="more"></a>
-<p>
-          
-        
-        
-    </div>
-    
-    <div class="article-more-link">
-      <a href="/2017/10/31/理论学习/media-image-intro/#more">查看更多</a>
-    </div>
-    
-    <footer class="entry-meta entry-footer">
-
-      
-
-      
-    </footer>
-
-  </div>
-
-  
-
-</article>
-
-
-
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-理论学习/deep-learning-ian-goodfellow-chap6-bp"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/09/26/理论学习/deep-learning-ian-goodfellow-chap6-bp/">读书笔记:Ian Goodfellow《深度学习》第六章</a>
-    </h1>
-  
-
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/09/26/理论学习/deep-learning-ian-goodfellow-chap6-bp/" class="article-date">
-	  <time datetime="2017-09-26T13:10:04.000Z" itemprop="datePublished">2017-09-26</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/深度学习/">深度学习</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习总结/">学习总结</a></li></ul>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-          
-          
-            
-            
-          
-            
-            
-          
-          
-            <p><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;今天看Ian Goodfellow的《深度学习》第六章，讲到神经网络的概念。其从前馈神经网络讲到基于微分的链式法则。然后讲到基于反向传播的神经网络的数学基础。老实说，看完之后，虽然笔记记了三、四页。但是还是很懵逼。在李飞飞的CS231n课程中也提到了关于反向神经网络是如何得出的。但是始终没能做到完全吸收理解。总觉得其理论支撑非常虚。<br>&emsp;&emsp;记得看Andrew采访Hilton的时候，也谈到了反向传播(Error <font color="red">B</font>ack <font color="red">P</font>ropagation)这个概念。这里暂时不追溯历史了。简单总结一下自己接下来学习到的关于反向传播的内容。可能有些地方理解不到位。后面也在慢慢修正自己的理解。</p>
-<a id="more"></a>
-<p>
-          
-        
-        
-    </div>
-    
-    <div class="article-more-link">
-      <a href="/2017/09/26/理论学习/deep-learning-ian-goodfellow-chap6-bp/#more">查看更多</a>
-    </div>
-    
-    <footer class="entry-meta entry-footer">
-
-      
-
-      
-    </footer>
-
-  </div>
-
-  
-
-</article>
-
-
-
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
   </nav>
 
 </section>
@@ -939,6 +939,30 @@ var themeMenus = {};
     </ul>
     <div class="widget">
       <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/12/12/开发学习/mxnet-简单线性回归源码解读/">mxnet之简单线性回归源码解读</a></h6>
+              <span>十二月 12, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/12/11/开发学习/python-高级语言特性/">python之高级语言特性：切片</a></h6>
+              <span>十二月 11, 2017</span>
+            </div>
+
+          </li>
         
           <li class="clearfix">
 
@@ -988,30 +1012,6 @@ var themeMenus = {};
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/12/08/开发学习/django之数据库/">Django之数据库</a></h6>
-              <span>十二月 8, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/12/08/开发学习/python_python数据结构/">python之数据结构</a></h6>
-              <span>十二月 8, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -1021,7 +1021,7 @@ var themeMenus = {};
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/医学影像计算/">医学影像计算</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图像处理/">图像处理</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习周报/">学习周报</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/深度学习/">深度学习</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网页开发/">网页开发</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机视觉/">计算机视觉</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/软件工程/">软件工程</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/医学影像计算/">医学影像计算</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图像处理/">图像处理</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习周报/">学习周报</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/深度学习/">深度学习</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网页开发/">网页开发</a><span class="category-list-count">26</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机视觉/">计算机视觉</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/软件工程/">软件工程</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -1031,7 +1031,7 @@ var themeMenus = {};
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础概念/">基础概念</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习总结/">学习总结</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实验报告/">实验报告</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学基础/">数学基础</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程总结/">课程总结</a><span class="tag-list-count">3</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MXNet/">MXNet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础概念/">基础概念</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习总结/">学习总结</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实验报告/">实验报告</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学基础/">数学基础</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程总结/">课程总结</a><span class="tag-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -1041,7 +1041,7 @@ var themeMenus = {};
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Django/" style="font-size: 12px;">Django</a> <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Node-js/" style="font-size: 16px;">Node.js</a> <a href="/tags/Python/" style="font-size: 14px;">Python</a> <a href="/tags/基础概念/" style="font-size: 14px;">基础概念</a> <a href="/tags/学习总结/" style="font-size: 10px;">学习总结</a> <a href="/tags/实验报告/" style="font-size: 10px;">实验报告</a> <a href="/tags/数学基础/" style="font-size: 14px;">数学基础</a> <a href="/tags/测试/" style="font-size: 20px;">测试</a> <a href="/tags/课程总结/" style="font-size: 12px;">课程总结</a>
+      <a href="/tags/Django/" style="font-size: 13.33px;">Django</a> <a href="/tags/Linux/" style="font-size: 18.33px;">Linux</a> <a href="/tags/MXNet/" style="font-size: 10px;">MXNet</a> <a href="/tags/Node-js/" style="font-size: 16.67px;">Node.js</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/基础概念/" style="font-size: 15px;">基础概念</a> <a href="/tags/学习总结/" style="font-size: 11.67px;">学习总结</a> <a href="/tags/实验报告/" style="font-size: 11.67px;">实验报告</a> <a href="/tags/数学基础/" style="font-size: 15px;">数学基础</a> <a href="/tags/测试/" style="font-size: 20px;">测试</a> <a href="/tags/课程总结/" style="font-size: 13.33px;">课程总结</a>
     </div>
   </div>
 
@@ -1051,7 +1051,7 @@ var themeMenus = {};
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 

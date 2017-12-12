@@ -37,7 +37,7 @@
 <meta property="og:site_name" content="CVBlogs">
 <meta property="og:description" content="前言记得我们写程序时常常会return一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T13:00:24.106Z">
+<meta property="og:updated_time" content="2017-12-12T04:46:44.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux之Shell命令的状态码">
 <meta name="twitter:description" content="前言记得我们写程序时常常会return一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。">
@@ -204,7 +204,9 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记得我们写程序时常常会<code>return</code>一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。<br>今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。<br><a id="more"></a><br>退出状态码是一个 0 ~ 255 之间的整数值，在命令结束运行时由命令传给shell。你可以捕捉这个值并在脚本中使用。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记得我们写程序时常常会<code>return</code>一个状态码(exit status/codes)。经常，我都是乱来的。最常见就是返回0。如果出错返回负数，正确操作但是根据状态码来确定之后操作的时候就是返回正数。<br>今天看到有说Shell也有返回状态码一说（并且十分严谨），想想也对，如果Shell的命令状态码不严谨。那不就乱套了吗..这篇文章就简单梳理一下。</p>
+<a id="more"></a>
+<p>退出状态码是一个 0 ~ 255 之间的整数值，在命令结束运行时由命令传给shell。你可以捕捉这个值并在脚本中使用。</p>
 <h2 id="查看状态码"><a href="#查看状态码" class="headerlink" title="查看状态码"></a>查看状态码</h2><p>Linux 使用了<code>$?</code> 专属变量来保存上个执行的命令的退出状态码。你必须在要查看的命令之后马上查看或使用<code>$?</code>变量。它的值会变成shell中执行的最后一条命令的退出状态码。</p>
 <ul>
 <li>注意：<code>$?</code>是变量。所以要在控制台打印它。不能直接输入：<code>$?</code>,而是应该要使用<code>echo</code>这样的命令打印到控制台。</li>

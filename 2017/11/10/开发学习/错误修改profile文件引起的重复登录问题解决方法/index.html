@@ -37,7 +37,7 @@
 <meta property="og:site_name" content="CVBlogs">
 <meta property="og:description" content="前言今天为了安装go错误修改了/etc/profile文件，导致reboot的时候一直循环登录。最终通过搜索解决了问题。这里记录一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T12:23:53.116Z">
+<meta property="og:updated_time" content="2017-12-12T04:46:01.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="错误修改profile文件引起的重复登录问题解决方法">
 <meta name="twitter:description" content="前言今天为了安装go错误修改了/etc/profile文件，导致reboot的时候一直循环登录。最终通过搜索解决了问题。这里记录一下。">
@@ -204,7 +204,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天为了安装<code>go</code>错误修改了<code>/etc/profile</code>文件，导致<code>reboot</code>的时候一直循环登录。最终通过搜索解决了问题。这里记录一下。<br><a id="more"></a></p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天为了安装<code>go</code>错误修改了<code>/etc/profile</code>文件，导致<code>reboot</code>的时候一直循环登录。最终通过搜索解决了问题。这里记录一下。</p>
+<a id="more"></a>
 <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>整个问题的关键是利用超级管理员权限进行修改前面被我修改错的的<code>etc/profile</code>文件。但是我的用户是普通用户根本就切换不了。<code>su</code>命令是报一堆错误。正确的做法如下：</p>
 <ol>
 <li><code>alt+ctl+shft+f1-6</code>进入<code>tty</code>界面</li>
