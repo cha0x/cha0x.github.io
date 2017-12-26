@@ -1,3 +1,3 @@
+http://www.cvblogs.cn/2017/12/26/开发学习/web开发_教程学习经验分享/
 http://www.cvblogs.cn/2017/12/12/开发学习/mxnet-简单线性回归源码解读/
 http://www.cvblogs.cn/2017/12/11/开发学习/python-高级语言特性/
-http://www.cvblogs.cn/2017/12/10/理论学习/理解深度学习中的卷积操作/

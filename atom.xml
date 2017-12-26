@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cvblogs.cn/"/>
-  <updated>2017-12-12T04:36:49.789Z</updated>
+  <updated>2017-12-26T10:47:39.759Z</updated>
   <id>http://www.cvblogs.cn/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端学习教程资源及经验分享</title>
+    <link href="http://www.cvblogs.cn/2017/12/26/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/web%E5%BC%80%E5%8F%91_%E6%95%99%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <id>http://www.cvblogs.cn/2017/12/26/开发学习/web开发_教程学习经验分享/</id>
+    <published>2017-12-25T18:09:04.000Z</published>
+    <updated>2017-12-26T10:47:39.759Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从八月心血来潮搭个人博客到从九月开始自己学习Web开发，老实说看了很多教程。从中学习到了很多。特别是通过一些项目得到了很大的锻炼。这里简单的对自己说学习过的教程资源做一个总结。</p>
+<a id="more"></a>
+<h1 id="学完"><a href="#学完" class="headerlink" title="学完"></a>学完</h1><h2 id="Wes-Bos大神的ES6-for-Everyone"><a href="#Wes-Bos大神的ES6-for-Everyone" class="headerlink" title="Wes Bos大神的ES6 for Everyone"></a>Wes Bos大神的ES6 for Everyone</h2><p><a href="https://www.bilibili.com/video/av8498402/" target="_blank" rel="external">Bilibili视频地址</a><br>推荐指数：非常推荐<br>之前一直对JavaScript并不是很上心，可能是和一开始的语言偏见有关。在学习和实践之后发现绕来绕去还是回到语法的学习。</p>
+<h2 id="Node-Authentication-Tutorial-with-Passport-js"><a href="#Node-Authentication-Tutorial-with-Passport-js" class="headerlink" title="Node Authentication Tutorial with Passport.js"></a>Node Authentication Tutorial with Passport.js</h2><p><a href="https://www.bilibili.com/video/av11730340/" target="_blank" rel="external">Bilibili视频地址</a><br>推荐指数：非常推荐<br>不建议一开始就学习这个。这个教程主要讲的是登陆验证。能让你明白Node中是如何组合Request、Response以及Session的运用。</p>
+<h2 id="Semantic-UI-In-60-Minutes"><a href="#Semantic-UI-In-60-Minutes" class="headerlink" title="Semantic UI In 60 Minutes"></a>Semantic UI In 60 Minutes</h2><p><a href="https://www.bilibili.com/video/av15347497/" target="_blank" rel="external">Bilibili视频地址</a><br>虽然看完了但是感觉还是啥都没学会，也许是因为文档是英文的（虽然也有中文的文档，但是体验不好）。总觉得自己是没有掌握前段样式框架的学习套路导致的学习转换率太低了。</p>
+<h2 id="前端工程师必备的PS技能——切图篇"><a href="#前端工程师必备的PS技能——切图篇" class="headerlink" title="前端工程师必备的PS技能——切图篇"></a>前端工程师必备的PS技能——切图篇</h2><p><a href="https://www.imooc.com/learn/506" target="_blank" rel="external">慕课教程地址</a><br>学习了一个很有用的工具！真的很有趣。不过作为偏后端编程的我们还是以后会少用= =</p>
+<h2 id="创业公司的Nodejs工程师"><a href="#创业公司的Nodejs工程师" class="headerlink" title="创业公司的Nodejs工程师"></a>创业公司的Nodejs工程师</h2><p><a href="https://www.imooc.com/learn/728" target="_blank" rel="external">慕课教程地址</a><br>真正学习Node之前，建议学习一下这个课程，喝完鸡汤好上路：）</p>
+<h2 id="进击Node-js基础（一）"><a href="#进击Node-js基础（一）" class="headerlink" title="进击Node.js基础（一）"></a>进击Node.js基础（一）</h2><p><a href="https://www.imooc.com/learn/348" target="_blank" rel="external">慕课教程地址</a><br>由于课程都较短，当时是一口气学完的，值得一学。</p>
+<h2 id="快乐的sublime编辑器"><a href="#快乐的sublime编辑器" class="headerlink" title="快乐的sublime编辑器"></a>快乐的sublime编辑器</h2><p><a href="https://www.imooc.com/learn/333" target="_blank" rel="external">慕课教程地址</a><br>在学习前端课程中，会发现Sublime的出现率真的很高！这个教程算是不错的。</p>
+<h2 id="IntelliJ-IDEA神器使用技巧"><a href="#IntelliJ-IDEA神器使用技巧" class="headerlink" title="IntelliJ IDEA神器使用技巧"></a>IntelliJ IDEA神器使用技巧</h2><p><a href="https://www.imooc.com/learn/924" target="_blank" rel="external">慕课教程地址</a><br>很值得学习的一门课，至少对于自己一直需要使用的IDE还是需要熟悉的。正所谓”工欲善其事必先利其器”。最关键的是教程是免费的。</p>
+<h2 id="Handlebars模板引擎"><a href="#Handlebars模板引擎" class="headerlink" title="Handlebars模板引擎"></a>Handlebars模板引擎</h2><p><a href="https://www.imooc.com/learn/859" target="_blank" rel="external">慕课教程地址</a><br>自己学习的第一个模版引擎，对于前后端分离的趋势。掌握一个模版引擎之后上手其他模版引擎真的非常快！</p>
+<h1 id="一半或更少"><a href="#一半或更少" class="headerlink" title="一半或更少"></a>一半或更少</h1><h2 id="传智播客Node-js"><a href="#传智播客Node-js" class="headerlink" title="传智播客Node.js"></a>传智播客Node.js</h2><p><a href="https://www.bilibili.com/video/av14169969/" target="_blank" rel="external">Bilibili视频地址</a><br>课程时长：5Days<br>老师讲的不错，讲的比较细致而全面，学完这个的话就能够掌握Node.js开发的核心所在了（如什么是异步编程以及模块的概念等）。特别重要的是如何Debug，之前有点不以为然，但是几天前，因为一直以来都没有debugger的习惯，导致使用<code>console.log()</code>异常痛苦实在是要了老血命了。但是当时也许是自己比较笨，或者是懒得学（教程实在是觉得很拖沓，总共有五天的教程量），大概就只是学了一点点。</p>
+<h2 id="传智播客AJAX"><a href="#传智播客AJAX" class="headerlink" title="传智播客AJAX"></a>传智播客AJAX</h2><p><a href="https://www.bilibili.com/video/av14332834/" target="_blank" rel="external">Bilibili视频地址</a><br>课程时长：4Days<br>同属于传智Web开发套餐，这个教程里学到了很重要的关于网络协议的一些理论知识。很形象。比起我校网络老师只会念PPT和讲自己的成年旧事不知道强到哪里去。但是因为实在是一些知识点讲的太细了，最终还是没能坚持下来。</p>
+<h2 id="传智播客JQuery"><a href="#传智播客JQuery" class="headerlink" title="传智播客JQuery"></a>传智播客JQuery</h2><p><a href="https://www.bilibili.com/video/av14216482/" target="_blank" rel="external">Bilibili视频地址</a><br>课程时长：4Days<br>基本上没怎么学，当时并不是很上心。不过看评价很不错。</p>
+<h2 id="Grunt-beginner前端自动化工具"><a href="#Grunt-beginner前端自动化工具" class="headerlink" title="Grunt-beginner前端自动化工具"></a>Grunt-beginner前端自动化工具</h2><p><a href="https://www.imooc.com/learn/30" target="_blank" rel="external">慕课教程地址</a><br>记得当时学习这个是因为要修改一个hexo主题，但是最终也没有学会。作为自动化工具。Grunt似乎已经被Gulp拍死在了沙滩上…</p>
+<h1 id="淘沙在学"><a href="#淘沙在学" class="headerlink" title="淘沙在学"></a>淘沙在学</h1><h2 id="Wes-Bos-React-For-Beginners"><a href="#Wes-Bos-React-For-Beginners" class="headerlink" title="Wes Bos - React For Beginners"></a>Wes Bos - React For Beginners</h2><p><a href="https://www.bilibili.com/video/av8567329/" target="_blank" rel="external">Bilibili视频地址</a><br>课程时长：2.5h/29Lessons<br>其实并不适合从零开始学习，还是需要从实践中找到自己去发现自己欠缺的地方，这样子回头再去学的话就能够有的放矢，学习效率也更高。</p>
+<h2 id="传智播客混合APP开发基础"><a href="#传智播客混合APP开发基础" class="headerlink" title="传智播客混合APP开发基础"></a>传智播客混合APP开发基础</h2><p><a href="https://www.bilibili.com/video/av14358701/" target="_blank" rel="external">Bilibili视频地址</a><br>课程时长：5Days<br>老实说我就看了第一天的内容。</p>
+<h2 id="Redux-React-Tutorial"><a href="#Redux-React-Tutorial" class="headerlink" title="Redux-React Tutorial"></a>Redux-React Tutorial</h2><p><a href="https://www.bilibili.com/video/av11530583/" target="_blank" rel="external">Bilibili视频地址</a><br>关于React、Redux还是不是很熟悉</p>
+<h1 id="一点心得与体会"><a href="#一点心得与体会" class="headerlink" title="一点心得与体会"></a>一点心得与体会</h1><p>初次接触Web开发（很惭愧，之前的大作业都是用的别人的代码，验收的时候，跑起来就OK，导致根本就没往心里去学。所以基本上可以说是从0开始的。<br>其实在接触Web开发之前，我对写网页（特别是前端开发）抱有很大的偏见。总觉得其不过尔尔，但是真要我自己真的动手去做却又做不出来。我觉得这可能也是一部分人的傲慢与偏见。<br>从一开始的HTML到CSS最后到最原始的JavaScript语法再到后来的Node.js以及React.js，学习过程中很多时候只是看视频里的人敲而已。真正自己写代码还是借着走项目的机会。从0开始自己一点点的实现内容。中间学习到了很多东西。有的时候还是挺有成就感的。但是当我的舍友让我向其展示我所做的内容我却感觉自己拿不出一个抓眼的东西。总觉得自己好像一直在coding，GitHub的主页颜色也好看。但是真正能够给别人看的项目却是少之又少。所以革命尚未成功，还需努力。<br>虽然目前也只是学习了一个皮毛，却是想要借着空闲将我目前学习的Web开发过程中的一些教程资源做一个简单的汇总整理。也希望自己重新从里头再找找看当时因为各种原因弃坑的那些教程中有没有可以再学习的！<br>因为老师们讲课一般较慢，建议学习的时候1.5X播放。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;从八月心血来潮搭个人博客到从九月开始自己学习Web开发，老实说看了很多教程。从中学习到了很多。特别是通过一些项目得到了很大的锻炼。这里简单的对自己说学习过的教程资源做一个总结。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="课程总结" scheme="http://www.cvblogs.cn/tags/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>mxnet之简单线性回归源码解读</title>
@@ -645,15 +686,16 @@
     <link href="http://www.cvblogs.cn/2017/11/12/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/web%E5%BC%80%E5%8F%91_LiveServer%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.cvblogs.cn/2017/11/12/开发学习/web开发_LiveServer使用/</id>
     <published>2017-11-12T14:15:10.000Z</published>
-    <updated>2017-12-10T13:11:05.104Z</updated>
+    <updated>2017-12-26T10:48:13.965Z</updated>
     
     <content type="html"><![CDATA[<h1 id="live-server模块的作用"><a href="#live-server模块的作用" class="headerlink" title="live-server模块的作用"></a>live-server模块的作用</h1><ol>
 <li>实现热插拔<code>hot socketing</code>(修改文件之后，浏览器能够自动刷新)</li>
 <li>当服务启动时，自动打开所在的项目。(实现<code>opener</code>的功能)</li>
-<li>快速搭建临时的web服务。（实现<code>http-server</code>的功能）<a id="more"></a>
-我们主要使用1与2，3用express或者其他web框架。<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1>可以直接使用全局安装的方法<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g live-server</div></pre></td></tr></table></figure>
-</li>
+<li>快速搭建临时的web服务。（实现<code>http-server</code>的功能）</li>
 </ol>
+<a id="more"></a>
+<p>我们主要使用1与2，3用express或者其他web框架。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>可以直接使用全局安装的方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g live-server</div></pre></td></tr></table></figure></p>
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在<code>package.json</code>的<code>script</code>下添加一个<code>server</code>字段的<code>npm 脚本</code>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"server"</span>: <span class="string">"live-server ./ --port=9090"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>使用<code>npm run server</code>执行。等待一会之后，浏览器会自动打开。<br>这样当你修改本地任何文件，浏览器都会自动立即同步（在内存层面，如果你想要发布代码，还是需要再次编译，否则修改之后的一些代码不会被改变！）。</p>
 <h1 id="继续学习"><a href="#继续学习" class="headerlink" title="继续学习"></a>继续学习</h1><p><a href="https://www.npmjs.com/package/live-server" target="_blank" rel="external">官方链接https://www.npmjs.com/package/live-server</a></p>
@@ -664,7 +706,8 @@
       &lt;h1 id=&quot;live-server模块的作用&quot;&gt;&lt;a href=&quot;#live-server模块的作用&quot; class=&quot;headerlink&quot; title=&quot;live-server模块的作用&quot;&gt;&lt;/a&gt;live-server模块的作用&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;实现热插拔&lt;code&gt;hot socketing&lt;/code&gt;(修改文件之后，浏览器能够自动刷新)&lt;/li&gt;
 &lt;li&gt;当服务启动时，自动打开所在的项目。(实现&lt;code&gt;opener&lt;/code&gt;的功能)&lt;/li&gt;
-&lt;li&gt;快速搭建临时的web服务。（实现&lt;code&gt;http-server&lt;/code&gt;的功能）
+&lt;li&gt;快速搭建临时的web服务。（实现&lt;code&gt;http-server&lt;/code&gt;的功能）&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -742,36 +785,6 @@
     
     
       <category term="Linux" scheme="http://www.cvblogs.cn/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决Mackeeper流氓软件引起的Chrome广告弹窗</title>
-    <link href="http://www.cvblogs.cn/2017/11/10/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/%E8%A7%A3%E5%86%B3Mackeeper%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6%E5%BC%95%E8%B5%B7%E7%9A%84Chrome%E5%B9%BF%E5%91%8A%E5%BC%B9%E7%AA%97/"/>
-    <id>http://www.cvblogs.cn/2017/11/10/开发学习/解决Mackeeper流氓软件引起的Chrome广告弹窗/</id>
-    <published>2017-11-10T09:27:26.000Z</published>
-    <updated>2017-12-12T04:46:12.836Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了<code>YouTube</code>一个推荐高效率<code>App</code>的视频中的软件之后，<code>Chrome</code>总是在我使用过程中弹窗<code>MacKeeper</code>的病毒广告。（主要下载了视频中推荐的几个软件：<code>Hidden Me</code>以及另外一个忘记了叫什么的管理<code>Display</code>的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，于是乎。就上网查了一下。发现果然是中了套路，貌似还有点深。于是乎，就将自己解决的过程记录一下。并且调整了我解决问题的过程。我认为最关键的步骤被提前了。我始终认为是那几个步骤奏效的。</p>
-<a id="more"></a>
-<h2 id="更新方法"><a href="#更新方法" class="headerlink" title="更新方法"></a>更新方法</h2><p>发现下面的内容并不能根本解决问题，最后禁用了几个插件才解决了。以及删除了<code>/Library/</code>下的一些内容。</p>
-<h2 id="删除最近下载的软件"><a href="#删除最近下载的软件" class="headerlink" title="删除最近下载的软件"></a>删除最近下载的软件</h2><p>不管问题是不是它引起的。反正我已经不打算用了。猎奇心理害死人啊。也有说是<code>Lantern</code>的问题。反正我也关了….</p>
-<h2 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h2><p>命令行打开启动项所在的两个目录：<code>open /Library/LaunchDaemons</code>以及<code>open /Library/LaunchAgents</code>删除掉近期的项目。我记得我主要是删除了一个<code>com.pandasmite.plist</code>的文件。起初用文本编辑器打开时，觉得还挺正常的。记得用一个字段是设置了一个<code>3600</code>。现在怀疑是脚本开启的间隔…（我也不想复现了…）。<br>我是在执行了这些之后才不再弹窗的。<br>顺便，你还可以删除其他一些你不想看到的开机自启动项目。比在<code>用户和群组</code>中管理自启动项目要方便一些。有的时候一些自启动项目并不在那里！</p>
-<h2 id="应用商店下载EasyFind"><a href="#应用商店下载EasyFind" class="headerlink" title="应用商店下载EasyFind"></a>应用商店下载EasyFind</h2><p>这是知乎上推荐的一个全盘搜索的软件，搜<code>MacKeeper</code>，不用区分大小写。果然找到两个，删除掉。顺便清空垃圾箱。</p>
-<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><p>感觉解决这个问题，我电脑重启了四五次。感觉把这么久以来所有的重启次数都用完了！中间以为自己成功却没有的感觉真的是让人崩溃：）流氓软件真的可怕。</p>
-<h2 id="结束语：一些思考"><a href="#结束语：一些思考" class="headerlink" title="结束语：一些思考"></a>结束语：一些思考</h2><p>有说其利用的是<code>DNS劫持</code>。比较同意这个观点。它发起的第一个请求的网址似乎是一个<code>app.yyys.com</code>之类的，然后会定向到另一个网站，最后再定向到广告页面。<br>其实说是<code>lantern</code>搞得鬼，我觉得也有可能。但是我之前用似乎都是好好的。反正现在已经不用烦恼了。<br>话说，<code>Mac</code>系统不需要担心病毒却要担心流氓软件。好多人都是安装<code>XPlayer</code>的时候中招。幸亏我当时是安装的<code>Moivst</code>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;昨天，准确说应该是今早一点多的时候。不知道是怎么了，在下了&lt;code&gt;YouTube&lt;/code&gt;一个推荐高效率&lt;code&gt;App&lt;/code&gt;的视频中的软件之后，&lt;code&gt;Chrome&lt;/code&gt;总是在我使用过程中弹窗&lt;code&gt;MacKeeper&lt;/code&gt;的病毒广告。（主要下载了视频中推荐的几个软件：&lt;code&gt;Hidden Me&lt;/code&gt;以及另外一个忘记了叫什么的管理&lt;code&gt;Display&lt;/code&gt;的…发现并不好用，尽管他说的多么的好。其实自己用脚本完全能写的出来。这里暂且不表：）。然后，今天在使用过程中实在是不能忍了，于是乎。就上网查了一下。发现果然是中了套路，貌似还有点深。于是乎，就将自己解决的过程记录一下。并且调整了我解决问题的过程。我认为最关键的步骤被提前了。我始终认为是那几个步骤奏效的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="测试" scheme="http://www.cvblogs.cn/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

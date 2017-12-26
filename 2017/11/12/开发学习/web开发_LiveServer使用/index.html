@@ -37,7 +37,7 @@
 <meta property="og:site_name" content="CVBlogs">
 <meta property="og:description" content="live-server模块的作用 实现热插拔hot socketing(修改文件之后，浏览器能够自动刷新) 当服务启动时，自动打开所在的项目。(实现opener的功能) 快速搭建临时的web服务。（实现http-server的功能）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-10T13:11:05.104Z">
+<meta property="og:updated_time" content="2017-12-26T10:48:13.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发之LiveServer使用">
 <meta name="twitter:description" content="live-server模块的作用 实现热插拔hot socketing(修改文件之后，浏览器能够自动刷新) 当服务启动时，自动打开所在的项目。(实现opener的功能) 快速搭建临时的web服务。（实现http-server的功能）">
@@ -207,10 +207,11 @@ var themeMenus = {};
         <h1 id="live-server模块的作用"><a href="#live-server模块的作用" class="headerlink" title="live-server模块的作用"></a>live-server模块的作用</h1><ol>
 <li>实现热插拔<code>hot socketing</code>(修改文件之后，浏览器能够自动刷新)</li>
 <li>当服务启动时，自动打开所在的项目。(实现<code>opener</code>的功能)</li>
-<li>快速搭建临时的web服务。（实现<code>http-server</code>的功能）<a id="more"></a>
-我们主要使用1与2，3用express或者其他web框架。<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1>可以直接使用全局安装的方法<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g live-server</div></pre></td></tr></table></figure>
-</li>
+<li>快速搭建临时的web服务。（实现<code>http-server</code>的功能）</li>
 </ol>
+<a id="more"></a>
+<p>我们主要使用1与2，3用express或者其他web框架。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>可以直接使用全局安装的方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g live-server</div></pre></td></tr></table></figure></p>
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在<code>package.json</code>的<code>script</code>下添加一个<code>server</code>字段的<code>npm 脚本</code>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"server"</span>: <span class="string">"live-server ./ --port=9090"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>使用<code>npm run server</code>执行。等待一会之后，浏览器会自动打开。<br>这样当你修改本地任何文件，浏览器都会自动立即同步（在内存层面，如果你想要发布代码，还是需要再次编译，否则修改之后的一些代码不会被改变！）。</p>
 <h1 id="继续学习"><a href="#继续学习" class="headerlink" title="继续学习"></a>继续学习</h1><p><a href="https://www.npmjs.com/package/live-server" target="_blank" rel="external">官方链接https://www.npmjs.com/package/live-server</a></p>
