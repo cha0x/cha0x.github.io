@@ -204,7 +204,7 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下文章内容大都摘自<a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="external">阮一峰的网络博客JavaScript 内存泄漏教程篇</a>,仅作个人学习笔记备记。<br>本来不想记的，因为对于只是在本地写<code>hello world</code>的我来说，内存管理似乎从来不是一件必要的事情。<br>但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。<br>想象一下，要是一个需要7/24运行的web应用内存泄漏了：）简直就是一场灾难。服务器怠机则无法提供服务。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下文章内容大都摘自<a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="noopener">阮一峰的网络博客JavaScript 内存泄漏教程篇</a>,仅作个人学习笔记备记。<br>本来不想记的，因为对于只是在本地写<code>hello world</code>的我来说，内存管理似乎从来不是一件必要的事情。<br>但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。<br>想象一下，要是一个需要7/24运行的web应用内存泄漏了：）简直就是一场灾难。服务器怠机则无法提供服务。</p>
 <a id="more"></a>
 <h1 id="什么是内存泄漏"><a href="#什么是内存泄漏" class="headerlink" title="什么是内存泄漏"></a>什么是内存泄漏</h1><p>对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。<br>不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。<br>有些语言（比如 C 语言）必须手动释放内存，程序员负责内存管理。这很麻烦，所以大多数语言提供自动内存管理，减轻程序员的负担，这被称为”垃圾回收机制”（garbage collector）。</p>
 <h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><p>最常使用的方法叫做”引用计数”（<code>reference counting</code>）：语言引擎有一张”引用表”，保存了内存里面所有的资源（通常是各种值）的引用次数。如果一个值的引用次数是0，就表示这个值不再用到了，因此可以将这块内存释放。<br>但是，并不是说有了垃圾回收机制，程序员就轻松了。你还是需要关注内存占用：那些很占空间的值，一旦不再用到，你必须检查是否还存在对它们的引用。如果是的话，就必须手动解除引用。</p>
@@ -213,7 +213,7 @@ var themeMenus = {};
 <p>如果内存占用基本平稳，接近水平，就说明不存在内存泄漏。<br>反之，就是内存泄漏了。</p>
 <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>命令行可以使用<code>Node</code> 提供的<code>process.memoryUsage</code>方法。<br><code>process.memoryUsage</code>返回一个<code>对象</code>，包含了 <code>Node</code>进程的内存占用信息。该对象包含<code>四个字段</code>，单位是<code>字节</code>。判断内存泄漏，以<code>heapUsed字段</code>为准。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">rss（resident set size）：所有内存占用，包括指令区和堆栈。</div><div class="line">heapTotal：&quot;堆&quot;占用的内存，包括用到的和没用到的。</div><div class="line">heapUsed：用到的堆的部分。</div><div class="line">external： V8 引擎内部的 C++ 对象占用的内存。</div></pre></td></tr></table></figure></p>
 <h1 id="WeakMap"><a href="#WeakMap" class="headerlink" title="WeakMap"></a>WeakMap</h1><p>ES6 考虑到了这一点，推出了两种新的数据结构：<code>WeakSet</code> 和 <code>WeakMap</code>。它们对于值的引用都是不计入垃圾回收机制的，所以名字里面才会有一个”Weak”，表示这是弱引用。</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="external">JavaScript 内存泄漏教程</a></p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="noopener">JavaScript 内存泄漏教程</a></p>
 
       
     </div>
@@ -297,7 +297,7 @@ var themeMenus = {};
 
   <div class="clearfix container">
       <div class="site-info" >
-	      &copy; 2017 CVBlogs All Rights Reserved.
+	      &copy; 2018 CVBlogs All Rights Reserved.
           <span>
               Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
           </span>

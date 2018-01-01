@@ -206,7 +206,7 @@ var themeMenus = {};
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天需要使用ssh的时候发现居然不好使了，原来是自己在电脑上用了lantern之后，ip被改了，不在一个局域网内，无法访问非公网ip。（主要是根本ping不同目的主机= =）<br>于是打算借着机会好好的梳理一下ssh命令。</p>
 <a id="more"></a>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/pipisorry/article/details/52269785" target="_blank" rel="external">ssh用法及命令</a></p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/pipisorry/article/details/52269785" target="_blank" rel="noopener">ssh用法及命令</a></p>
 <h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>为什么这篇文章的结束语这么靠前，是因为，我在看完大段的内容之后依旧无法弄清楚。如果我要将远端的8000端口映射到本地的8888端口我该用什么命令。感觉这样子陈列知识点真的很糟糕。还是应该以具体的应用来说比较好。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh -L 8888:localhost:8000 remote<span class="comment">#remote是远端主机名</span></div><div class="line">ssh -p 8888 localhost<span class="comment">#此时ssh登陆本机8888端口就相当于登陆了remote了，稍后可以一试：）</span></div></pre></td></tr></table></figure></p>
 <h1 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH"></a>什么是SSH</h1><p>首先，需要明确的是：SSH是一种网络协议，用于计算机之间的加密登录。目前已经成为Linux系统的标准配置。</p>
 <p>SSH只是一种协议，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。这里只讨论SSH在Linux Shell中的用法。如果要在Windows系统中使用SSH，会用到另一种软件PuTTY。</p>
@@ -315,7 +315,7 @@ var themeMenus = {};
 
   <div class="clearfix container">
       <div class="site-info" >
-	      &copy; 2017 CVBlogs All Rights Reserved.
+	      &copy; 2018 CVBlogs All Rights Reserved.
           <span>
               Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
           </span>

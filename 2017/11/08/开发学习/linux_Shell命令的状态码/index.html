@@ -214,9 +214,9 @@ var themeMenus = {};
 <h2 id="Linux-状态码的意义"><a href="#Linux-状态码的意义" class="headerlink" title="Linux 状态码的意义"></a>Linux 状态码的意义</h2><p>默认状态下，shell脚本会以脚本中的最后一个命令作为退出状态码。<br>所以一般情况下，在shell脚本中以 exit 命令的值来指定shell命令的退出状态码。但是退出状态码的范围是 0 ~ 255, 退出值超出这个范围将会执行取模运算。<br>例如通过exit 命令指定返回值为300，经过取模运算，那么退出状态码就为44.<br>| Code  |              Description              |<br>| :—: | :———————————–: |<br>|   0   |                命令成功结束                 |<br>|   1   |                通用未知错误                 |<br>|   2   |               误用shell命令               |<br>|  126  |                命令不可执行                 |<br>|  127  |                 没找到命令                 |<br>|  128  |                无效退出参数                 |<br>| 128+x |            Linux 信号x的严重错误             |<br>|  130  | Linux 信号2 的严重错误，即命令通过SIGINT（Ctrl＋Ｃ）终止 |<br>|  255  |                退出状态码越界                |</p>
 <h2 id="用法说明"><a href="#用法说明" class="headerlink" title="用法说明"></a>用法说明</h2><p>exit命令用于退出当前shell，在shell脚本中可以终止当前脚本执行。<br>常用参数<br>格式：exit n<br>退出。设置退出码为n。（Cause the shell to exit with a status of n.）<br>格式：exit<br>退出。退出码不变，即为最后一个命令的退出码。（If n is omitted, the exit status is that of the  last  command executed. ）</p>
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
-<li><a href="http://blog.csdn.net/wlovh1989/article/details/51113488" target="_blank" rel="external">Shell中的特殊变量$?-查看上一条Shell命令的退出状态码（exit status）</a></li>
-<li><a href="http://jackwxh.blog.51cto.com/2850597/827600" target="_blank" rel="external">shell 程序 返回码 退出码</a></li>
-<li><a href="http://www.cnblogs.com/qianzhilan/p/4391210.html" target="_blank" rel="external">Linux Shell 编程常见规则及退出状态码</a></li>
+<li><a href="http://blog.csdn.net/wlovh1989/article/details/51113488" target="_blank" rel="noopener">Shell中的特殊变量$?-查看上一条Shell命令的退出状态码（exit status）</a></li>
+<li><a href="http://jackwxh.blog.51cto.com/2850597/827600" target="_blank" rel="noopener">shell 程序 返回码 退出码</a></li>
+<li><a href="http://www.cnblogs.com/qianzhilan/p/4391210.html" target="_blank" rel="noopener">Linux Shell 编程常见规则及退出状态码</a></li>
 </ul>
 
       
@@ -301,7 +301,7 @@ var themeMenus = {};
 
   <div class="clearfix container">
       <div class="site-info" >
-	      &copy; 2017 CVBlogs All Rights Reserved.
+	      &copy; 2018 CVBlogs All Rights Reserved.
           <span>
               Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
           </span>

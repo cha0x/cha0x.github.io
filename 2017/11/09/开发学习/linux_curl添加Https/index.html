@@ -210,13 +210,13 @@ var themeMenus = {};
 <h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>可以有两种方法进行安装。我用了第二种方法。</p>
 <h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install openssl </div><div class="line">sudo apt-get install libssl-dev</div></pre></td></tr></table></figure>
 <p>我试了并不好用。提示我安装<code>libssl-dev</code>安装的依赖包有版本冲突…遂放弃。</p>
-<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>到<code>openssl</code>官网下载压缩包 <a href="http://www.openssl.org/source/" target="_blank" rel="external">http://www.openssl.org/source/</a> 我这里下载的是<code>openssl-1.0.1em.tar.gz</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">tar zxvf openssl-1.0.1q </div><div class="line">./config shared <span class="comment">#（安装的默认路径是/usr/local/ssl，如果你想更改目录，请加上–prefix=/yourpath）这一步对后面正常覆盖安装curl更新协议非常关键 </span></div><div class="line"></div><div class="line">make </div><div class="line">make <span class="built_in">test</span> </div><div class="line">sudo make install<span class="comment">#必须用root权限安装，因为之前不看log...导致，一直以为自己安装是正确的</span></div></pre></td></tr></table></figure></p>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>到<code>openssl</code>官网下载压缩包 <a href="http://www.openssl.org/source/" target="_blank" rel="noopener">http://www.openssl.org/source/</a> 我这里下载的是<code>openssl-1.0.1em.tar.gz</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">tar zxvf openssl-1.0.1q </div><div class="line">./config shared <span class="comment">#（安装的默认路径是/usr/local/ssl，如果你想更改目录，请加上–prefix=/yourpath）这一步对后面正常覆盖安装curl更新协议非常关键 </span></div><div class="line"></div><div class="line">make </div><div class="line">make <span class="built_in">test</span> </div><div class="line">sudo make install<span class="comment">#必须用root权限安装，因为之前不看log...导致，一直以为自己安装是正确的</span></div></pre></td></tr></table></figure></p>
 <p><code>vim /etc/ld.so.conf</code>在文件末尾加入 <code>/usr/local/ssl/lib</code>，刷新动态库配置<br>用<code>openssl version -a</code>测试，可以正常<code>log</code>出相关信息。</p>
 <h2 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h2><p>记住自己之前安装<code>openssl</code>的路径。可以使用<code>which openssl</code>查看，我的在<code>/etc/lib/openssl</code>?有点记不太清了..<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tar zxvf curl-7.30.0.tar.gz </div><div class="line"><span class="built_in">cd</span> curl-7.30.0/ </div><div class="line">./configure –with-ssl=/etc/lib/openssl<span class="comment">#（我这里没有配置prefix选项，直接将curl安装到默认的目录/usr/local）</span></div></pre></td></tr></table></figure></p>
 <p><code>config</code>之后，会有以下信息打出，可以在<code>Protocols</code>一行确认一下是否引入了协议。要是没有就得再仔细找找问题。<br>如果一切顺利，使用<code>make</code>之后再<code>sudo make install</code>。<br>最后使用<code>curl -V</code>进行验证。</p>
 <h2 id="引用链接"><a href="#引用链接" class="headerlink" title="引用链接"></a>引用链接</h2><ul>
-<li><a href="http://blog.csdn.net/Timsley/article/details/50782742" target="_blank" rel="external">curl 不支持 https</a></li>
-<li><a href="http://blog.csdn.net/Timsley/article/details/50776615" target="_blank" rel="external">ubuntu 14.04下安装openssl</a></li>
+<li><a href="http://blog.csdn.net/Timsley/article/details/50782742" target="_blank" rel="noopener">curl 不支持 https</a></li>
+<li><a href="http://blog.csdn.net/Timsley/article/details/50776615" target="_blank" rel="noopener">ubuntu 14.04下安装openssl</a></li>
 </ul>
 <h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>尽管距离解决完问题还没有一天但是还是有点忘记了具体的细节。因此备记一下还是有点必要的。另外，发现，本来想用<code>echo $?</code>来筛查错误命令返回码。但是发现有的命令不管错误还是正确总是返回0:）</p>
 
@@ -260,11 +260,11 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
-    <a href="/2017/11/10/开发学习/解决Mackeeper流氓软件引起的Chrome广告弹窗/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/10/开发学习/linux之环境变量/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          解决Mackeeper流氓软件引起的Chrome广告弹窗
+          linux之环境变量
         
       </div>
     </a>
@@ -302,7 +302,7 @@ var themeMenus = {};
 
   <div class="clearfix container">
       <div class="site-info" >
-	      &copy; 2017 CVBlogs All Rights Reserved.
+	      &copy; 2018 CVBlogs All Rights Reserved.
           <span>
               Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
           </span>

@@ -17,10 +17,10 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <title>python之批处理命名文件 | CVBlogs</title>
+  <title>机器学习基础概念再梳理 | CVBlogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="Python" />
+  <meta name="keywords" content="基础概念" />
   
   
     <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
@@ -29,18 +29,18 @@
     <meta name="baidu-site-verification" content="N7RDvFcI1s" />
   
   
-  <meta name="description" content="前言最近经常上油管下东西，用的在线的网站”Youtube Multi Downloader Online”解析下载，还是蛮好用的（需要翻墙）。链接地址。就是每次下载下来视频都会带上前缀序号。有点烦人（取消勾选Add prefix order number还是不管用）。就打算用脚本语言处理一下。选了Python，可惜学了个半桶水，这么简单的东西，却总是在要用的时候，忘记该怎么写…索性整理出来备记一下">
-<meta name="keywords" content="Python">
+  <meta name="description" content="前言最近真的是被毕设的东西搞疯了。一直以为自己遇到毕设的问题应该是非常容易的。没想到最终却是崩溃了…发现很多知识都不会，或者说根本就不理解。直到我找到了这篇文章，感觉自己瞬间被打通了任督二脉。不过还是推荐有一点经验的同学自己去看原文原文地址。接下来的内容只是我摘录的一些原文以及穿插个人的笔记。">
+<meta name="keywords" content="基础概念">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python之批处理命名文件">
-<meta property="og:url" content="http://www.cvblogs.cn/2017/11/07/开发学习/python_Python 批处理命名文件/index.html">
+<meta property="og:title" content="机器学习基础概念再梳理">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/12/28/理论学习/机器学习基础概念再梳理/index.html">
 <meta property="og:site_name" content="CVBlogs">
-<meta property="og:description" content="前言最近经常上油管下东西，用的在线的网站”Youtube Multi Downloader Online”解析下载，还是蛮好用的（需要翻墙）。链接地址。就是每次下载下来视频都会带上前缀序号。有点烦人（取消勾选Add prefix order number还是不管用）。就打算用脚本语言处理一下。选了Python，可惜学了个半桶水，这么简单的东西，却总是在要用的时候，忘记该怎么写…索性整理出来备记一下">
+<meta property="og:description" content="前言最近真的是被毕设的东西搞疯了。一直以为自己遇到毕设的问题应该是非常容易的。没想到最终却是崩溃了…发现很多知识都不会，或者说根本就不理解。直到我找到了这篇文章，感觉自己瞬间被打通了任督二脉。不过还是推荐有一点经验的同学自己去看原文原文地址。接下来的内容只是我摘录的一些原文以及穿插个人的笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-12T04:46:55.705Z">
+<meta property="og:updated_time" content="2017-12-28T16:32:03.282Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python之批处理命名文件">
-<meta name="twitter:description" content="前言最近经常上油管下东西，用的在线的网站”Youtube Multi Downloader Online”解析下载，还是蛮好用的（需要翻墙）。链接地址。就是每次下载下来视频都会带上前缀序号。有点烦人（取消勾选Add prefix order number还是不管用）。就打算用脚本语言处理一下。选了Python，可惜学了个半桶水，这么简单的东西，却总是在要用的时候，忘记该怎么写…索性整理出来备记一下">
+<meta name="twitter:title" content="机器学习基础概念再梳理">
+<meta name="twitter:description" content="前言最近真的是被毕设的东西搞疯了。一直以为自己遇到毕设的问题应该是非常容易的。没想到最终却是崩溃了…发现很多知识都不会，或者说根本就不理解。直到我找到了这篇文章，感觉自己瞬间被打通了任督二脉。不过还是推荐有一点经验的同学自己去看原文原文地址。接下来的内容只是我摘录的一些原文以及穿插个人的笔记。">
   
     <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
   
@@ -164,7 +164,7 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-开发学习/python_Python 批处理命名文件" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-理论学习/机器学习基础概念再梳理" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -173,7 +173,7 @@ var themeMenus = {};
 
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      python之批处理命名文件
+      机器学习基础概念再梳理
     </h1>
   
 
@@ -182,17 +182,17 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	<a href="/2017/11/07/开发学习/python_Python 批处理命名文件/" class="article-date">
-	  <time datetime="2017-11-07T05:53:10.000Z" itemprop="datePublished">2017-11-07</time>
+	<a href="/2017/12/28/理论学习/机器学习基础概念再梳理/" class="article-date">
+	  <time datetime="2017-12-28T15:35:45.000Z" itemprop="datePublished">2017-12-28</time>
 	</a>
 
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a>
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础概念/">基础概念</a></li></ul>
 
       
 	<a class="article-views">
@@ -204,23 +204,98 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近经常上油管下东西，用的在线的网站”Youtube Multi Downloader Online”解析下载，还是蛮好用的（需要翻墙）。<a href="https://youtubemultidownloader.com/playlist.html" target="_blank" rel="noopener">链接地址</a>。就是每次下载下来视频都会带上前缀序号。有点烦人（取消勾选Add prefix order number还是不管用）。就打算用脚本语言处理一下。选了Python，可惜学了个半桶水，这么简单的东西，却总是在要用的时候，忘记该怎么写…<br>索性整理出来备记一下。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近真的是被毕设的东西搞疯了。一直以为自己遇到毕设的问题应该是非常容易的。没想到最终却是崩溃了…发现很多知识都不会，或者说根本就不理解。<br>直到我找到了这篇文章，感觉自己瞬间被打通了任督二脉。不过还是推荐有一点经验的同学自己去看原文<a href="http://www.360doc.com/content/13/1020/18/7673502_322833764.shtml" target="_blank" rel="noopener">原文地址</a>。<br>接下来的内容只是我摘录的一些原文以及穿插个人的笔记。</p>
 <a id="more"></a>
-<h2 id="涉及的知识"><a href="#涉及的知识" class="headerlink" title="涉及的知识"></a>涉及的知识</h2><ul>
-<li>字符串处理：<ol>
-<li>字符串查找</li>
-<li>字符串切片</li>
-<li>字符串拼接</li>
-</ol>
-</li>
-<li>基本的文件操作：<ol>
-<li>找出当前目录下的文件 </li>
-<li>重命名文件<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding=utf-8</span></div><div class="line"><span class="keyword">import</span> os</div><div class="line">dirf = <span class="string">"/Users/Zoking/Downloads/graffle"</span><span class="comment">#文件所在目录</span></div><div class="line">indwx = <span class="string">"0"</span>								<span class="comment">#删除的内容标志，需要区别</span></div><div class="line"><span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(dirf):			<span class="comment">#列出dirf目录下的所有文件</span></div><div class="line">    <span class="keyword">if</span> file.find(indwx) == <span class="number">0</span>:			<span class="comment">#找到需要删除的位置</span></div><div class="line">        nfile = file[<span class="number">3</span>:len(file)]		<span class="comment">#切片</span></div><div class="line">        os.rename(os.path.join(dirf,file),os.path.join(dirf,nfile))<span class="comment">#重命名文件rename(旧，新)</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>感觉自己真的是心贪术不专，需要好好梳理一下！</p>
+<h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h1><p>何谓学习？<br><strong>学习=表示+评价+优化</strong></p>
+<table>
+<thead>
+<tr>
+<th>表示</th>
+<th>评价</th>
+<th>优化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基于实例的方法</td>
+<td>准确/错误比率</td>
+<td>组合优化</td>
+</tr>
+<tr>
+<td>近邻方法</td>
+<td>精确率和召回率</td>
+<td>贪心搜索</td>
+</tr>
+<tr>
+<td>支持向量机</td>
+<td>平方误差</td>
+<td>柱搜索</td>
+</tr>
+<tr>
+<td>超平面方法</td>
+<td>似然(likelihood)</td>
+<td>分支限界法</td>
+</tr>
+<tr>
+<td>朴素贝叶斯</td>
+<td>后验概率</td>
+<td>连续优化</td>
+</tr>
+<tr>
+<td>逻辑斯蒂回归</td>
+<td>信息增益</td>
+<td>无约束</td>
+</tr>
+<tr>
+<td>决策树方法</td>
+<td>K-L距离</td>
+<td>梯度下降</td>
+</tr>
+<tr>
+<td>规则集的方法</td>
+<td>成本/效用</td>
+<td>共轭梯度</td>
+</tr>
+<tr>
+<td>命题规则</td>
+<td>利润</td>
+<td>拟牛顿法</td>
+</tr>
+<tr>
+<td>逻辑程序</td>
+<td></td>
+<td>有约束</td>
+</tr>
+<tr>
+<td>神经网络</td>
+<td></td>
+<td>线性规划</td>
+</tr>
+<tr>
+<td>图模型</td>
+<td></td>
+<td>二次规划</td>
+</tr>
+<tr>
+<td>贝叶斯网络</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>条件随机场</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="泛化-Generalization"><a href="#泛化-Generalization" class="headerlink" title="泛化(Generalization)"></a>泛化(Generalization)</h1><p>基本目标是对训练集合中样例的泛化。机器学习初学者最常犯的错误就是在训练数据上做测试，从而产生胜利的错觉。<br><strong>交叉验证（Cross Validation）</strong>将训练数据随机地等分为若干份，其中的每一份均可用做测试，而剩下的数据用作训练，然后将每个学习的分类器在它没见过的样例上进行测试，将测试结果取平均后，就可用来评价不同参数设置的性能。</p>
+<h1 id="过拟合（Overfitting）"><a href="#过拟合（Overfitting）" class="headerlink" title="过拟合（Overfitting）"></a>过拟合（Overfitting）</h1><p>当你的分类器在训练数据上准确率为100%，而在测试数据上仅有50%的时候，说明这个分类器发生过拟合。<br>常见误解是认为其由噪音造成的。<br>一种理解过拟合的方式是将泛化误差分解为偏置（bias）和方差（variance）。<strong>偏置</strong>度量了学习器倾向于一直学习相同错误的程度。<strong>方差</strong>则度量了学习器倾向于忽略真实信号、学习随机食物的程度。</p>
+<h2 id="避免过拟合的方法"><a href="#避免过拟合的方法" class="headerlink" title="避免过拟合的方法"></a>避免过拟合的方法</h2><p>交叉验证是一种方法。然而最常用的方法是对评价函数增加一个正则项（regularization term）。另外还有卡方测试等统计显著性检测。</p>
+<h2 id="欠拟合（Underfitting）"><a href="#欠拟合（Underfitting）" class="headerlink" title="欠拟合（Underfitting）"></a>欠拟合（Underfitting）</h2><p>为了避免过拟合（方差）时很容易陷入欠拟合（偏置）问题中。</p>
+<h1 id="维度灾难"><a href="#维度灾难" class="headerlink" title="维度灾难"></a>维度灾难</h1><p>“非均匀性的祝福”可以抵消维度灾难。</p>
+<h1 id="特征工程"><a href="#特征工程" class="headerlink" title="特征工程"></a>特征工程</h1><p>现在经常采用的一种方式是先自动产生大量的候选特征，然后根据它们与分类类别的信息增益等方法来选取最好的特征。</p>
+<h1 id="大数据带来的问题"><a href="#大数据带来的问题" class="headerlink" title="大数据带来的问题"></a>大数据带来的问题</h1><p><strong>可扩展性</strong><br>时间和内存的资源有限。<br>作为一条规则，首先应该在logistics回归之前尝试朴素贝叶斯，在支持向量机之前先尝试近邻。</p>
+<h1 id="模型集成"><a href="#模型集成" class="headerlink" title="模型集成"></a>模型集成</h1><p>最简单的集成技术是bagging。另外还有一个是boosting。</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>感觉自己对于学习时间的把控是自从十月答应和曹老师做医学影像以来就被浪费算起（感觉自己真的是疯了才会去学一些乱七八糟的：）。接着十一月去了公司实习，然后十二月的时候又执着于自己的一些事情。真的是感觉自己要炸了。留给毕设的时间真的是少的可怜。</p>
 
       
     </div>
@@ -262,19 +337,19 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
-    <a href="/2017/11/08/开发学习/linux_Shell命令的状态码/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/30/理论学习/为什么张口闭口贝叶斯和马尔可夫/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          linux之Shell命令的状态码
+          为什么张口闭口都先提贝叶斯和马尔可夫？
         
       </div>
     </a>
   
   
-    <a href="/2017/11/07/开发学习/XMind-Pro-8-Update5-下载破解安装指南-以Mac为例/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/12/26/开发学习/web开发_教程学习经验分享/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">XMind Pro 8 Update5 下载破解安装指南 - 以Mac为例</div>
+      <div class="article-nav-title">前端学习教程资源及经验分享</div>
     </a>
   
 </nav>
@@ -292,7 +367,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#涉及的知识"><span class="nav-number">2.</span> <span class="nav-text">涉及的知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码"><span class="nav-number">3.</span> <span class="nav-text">源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束语"><span class="nav-number">4.</span> <span class="nav-text">结束语</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习"><span class="nav-number">2.</span> <span class="nav-text">机器学习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛化-Generalization"><span class="nav-number">3.</span> <span class="nav-text">泛化(Generalization)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#过拟合（Overfitting）"><span class="nav-number">4.</span> <span class="nav-text">过拟合（Overfitting）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#避免过拟合的方法"><span class="nav-number">4.1.</span> <span class="nav-text">避免过拟合的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欠拟合（Underfitting）"><span class="nav-number">4.2.</span> <span class="nav-text">欠拟合（Underfitting）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#维度灾难"><span class="nav-number">5.</span> <span class="nav-text">维度灾难</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特征工程"><span class="nav-number">6.</span> <span class="nav-text">特征工程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大数据带来的问题"><span class="nav-number">7.</span> <span class="nav-text">大数据带来的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型集成"><span class="nav-number">8.</span> <span class="nav-text">模型集成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">9.</span> <span class="nav-text">结束语</span></a></li></ol>
     
     </div>
   </aside>
