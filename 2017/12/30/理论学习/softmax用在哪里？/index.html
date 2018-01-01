@@ -17,8 +17,10 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <title>归档: 2017/12 | CVBlogs</title>
+  <title>softmax用在哪里？ | CVBlogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="基础概念" />
   
   
     <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
@@ -27,16 +29,18 @@
     <meta name="baidu-site-verification" content="N7RDvFcI1s" />
   
   
-  <meta name="description" content="developing..">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CVBlogs">
-<meta property="og:url" content="http://www.cvblogs.cn/archives/2017/12/index.html">
+  <meta name="description" content="前言相信学习机器学习过程中，会接触到的一个名词就是激活函数。譬如Sigmoid、ReLu以及Softmax。今天看到自己TODOList有一个softmax，发现自己又忘了它是干什么的了。于是借着机会再学一遍= =以下是笔记。建议直接学习Siraj的视频！">
+<meta name="keywords" content="基础概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="softmax用在哪里？">
+<meta property="og:url" content="http://www.cvblogs.cn/2017/12/30/理论学习/softmax用在哪里？/index.html">
 <meta property="og:site_name" content="CVBlogs">
-<meta property="og:description" content="developing..">
+<meta property="og:description" content="前言相信学习机器学习过程中，会接触到的一个名词就是激活函数。譬如Sigmoid、ReLu以及Softmax。今天看到自己TODOList有一个softmax，发现自己又忘了它是干什么的了。于是借着机会再学一遍= =以下是笔记。建议直接学习Siraj的视频！">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-01T15:23:14.784Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CVBlogs">
-<meta name="twitter:description" content="developing..">
+<meta name="twitter:title" content="softmax用在哪里？">
+<meta name="twitter:description" content="前言相信学习机器学习过程中，会接触到的一个名词就是激活函数。譬如Sigmoid、ReLu以及Softmax。今天看到自己TODOList有一个softmax，发现自己又忘了它是干什么的了。于是借着机会再学一遍= =以下是笔记。建议直接学习Siraj的视频！">
   
     <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
   
@@ -82,7 +86,7 @@ var themeMenus = {};
 </script>
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   <header id="allheader" class="site-header" role="banner">
@@ -160,257 +164,118 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;">
-  <div class="archives-tags-wrap"><blockquote><span>嗯，目前共计46篇文章</span></blockquote>
-
-
-
-
-	<!-- 分页显示 -->
-	
-	
-		
-		
-		  
-		  
-		  <section class="archives-wrap">
-		    <div class="archive-year-wrap">
-		      <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
-		    </div>
-		    <div class="archives">
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/30/理论学习/softmax用在哪里？/" class="archive-article-date">
-		  <time datetime="2017-12-30T15:23:10.000Z" itemprop="datePublished">12月 30, 2017</time>
-	  </a>
-      
+          <section id="main" style="float:none;"><article id="post-理论学习/softmax用在哪里？" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
 
   
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/30/理论学习/softmax用在哪里？/">softmax用在哪里？</a>
+    <h1 class="thumb" class="article-title" itemprop="name">
+      softmax用在哪里？
     </h1>
   
 
 
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/30/理论学习/softmax用在哪里？/" class="article-date">
+	  <time datetime="2017-12-30T15:23:10.000Z" itemprop="datePublished">2017-12-30</time>
+	</a>
 
-      <a href="/2017/12/30/理论学习/为什么张口闭口贝叶斯和马尔可夫/" class="archive-article-date">
-		  <time datetime="2017-12-30T12:51:45.000Z" itemprop="datePublished">12月 30, 2017</time>
-	  </a>
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/深度学习/">深度学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础概念/">基础概念</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>相信学习机器学习过程中，会接触到的一个名词就是激活函数。譬如Sigmoid、ReLu以及Softmax。<br>今天看到自己TODOList有一个softmax，发现自己又忘了它是干什么的了。<br>于是借着机会再学一遍= =以下是笔记。<br>建议直接学习Siraj的视频！</p>
+<a id="more"></a>
+<h1 id="引用链接"><a href="#引用链接" class="headerlink" title="引用链接"></a>引用链接</h1><p><a href="http://blog.csdn.net/leo_xu06/article/details/53708647" target="_blank" rel="noopener">深度学习常用激活函数之— Sigmoid &amp; ReLU &amp; Softmax</a><br><a href="https://weibo.com/tv/v/F52uUDZlF?fid=1034:f52462e17a913be82dc3de16b8b73811" target="_blank" rel="noopener">Siraj Raval激活函数讲解</a></p>
+<h1 id="softmax作用"><a href="#softmax作用" class="headerlink" title="softmax作用"></a>softmax作用</h1><p>它保证所以的输出神经元之和为1.0，所以一般输出的是小于1的概率值，可以很直观地比较各输出值。只用于多于一个输出的神经元。</p>
+<h1 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h1><p>学习了Siraj Raval关于激活函数的讲解之后对其有了更深的印象。<br>激活函数是深度学习中的东西，因为构建一个网络要求它是非线性的（这样它才能表达更多的信息。）</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>有一种学了很多，想动手实践一下的冲动！但是又担心自己做不好= =</p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
       
 
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/30/理论学习/为什么张口闭口贝叶斯和马尔可夫/">为什么张口闭口都先提贝叶斯和马尔可夫？</a>
-    </h1>
-  
-
-
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/28/理论学习/机器学习基础概念再梳理/" class="archive-article-date">
-		  <time datetime="2017-12-28T15:35:45.000Z" itemprop="datePublished">12月 28, 2017</time>
-	  </a>
       
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
 
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/28/理论学习/机器学习基础概念再梳理/">机器学习基础概念再梳理</a>
-    </h1>
-  
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
 
 
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/26/开发学习/web开发_教程学习经验分享/" class="archive-article-date">
-		  <time datetime="2017-12-25T18:09:04.000Z" itemprop="datePublished">12月 26, 2017</time>
-	  </a>
       
+    </footer>
 
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/26/开发学习/web开发_教程学习经验分享/">前端学习教程资源及经验分享</a>
-    </h1>
-  
-
-
-    </header>
   </div>
+
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/30/理论学习/为什么张口闭口贝叶斯和马尔可夫/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">为什么张口闭口都先提贝叶斯和马尔可夫？</div>
+    </a>
+  
+</nav>
+
+  
+
 </article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/12/开发学习/mxnet-简单线性回归源码解读/" class="archive-article-date">
-		  <time datetime="2017-12-12T02:40:21.000Z" itemprop="datePublished">12月 12, 2017</time>
-	  </a>
-      
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/12/开发学习/mxnet-简单线性回归源码解读/">mxnet之简单线性回归源码解读</a>
-    </h1>
-  
-
-
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/11/开发学习/python-高级语言特性/" class="archive-article-date">
-		  <time datetime="2017-12-11T15:19:34.000Z" itemprop="datePublished">12月 11, 2017</time>
-	  </a>
-      
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/11/开发学习/python-高级语言特性/">python之高级语言特性：切片</a>
-    </h1>
-  
-
-
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/10/理论学习/理解深度学习中的卷积操作/" class="archive-article-date">
-		  <time datetime="2017-12-09T17:18:18.000Z" itemprop="datePublished">12月 10, 2017</time>
-	  </a>
-      
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/10/理论学习/理解深度学习中的卷积操作/">翻译：理解深度学习中的卷积操作</a>
-    </h1>
-  
-
-
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/08/开发学习/linux_ssh命令/" class="archive-article-date">
-		  <time datetime="2017-12-08T12:12:12.000Z" itemprop="datePublished">12月 08, 2017</time>
-	  </a>
-      
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/08/开发学习/linux_ssh命令/">linux之ssh命令</a>
-    </h1>
-  
-
-
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/08/理论学习/metadata元数据/" class="archive-article-date">
-		  <time datetime="2017-12-08T11:00:26.000Z" itemprop="datePublished">12月 08, 2017</time>
-	  </a>
-      
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/08/理论学习/metadata元数据/">metadata元数据</a>
-    </h1>
-  
-
-
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2017/12/08/开发学习/django_表单/" class="archive-article-date">
-		  <time datetime="2017-12-08T10:15:18.000Z" itemprop="datePublished">12月 08, 2017</time>
-	  </a>
-      
-
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/12/08/开发学习/django_表单/">Django之表单</a>
-    </h1>
-  
-
-
-    </header>
-  </div>
-</article>
-	
-	
-		</div></section>
-	
-
-	<!-- 页数指示器 -->
-	
-	  <nav id="page-nav">
-	    
-	    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/12/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/12/page/2/">下一页</a>
-	  </nav>
-	
 
 
 
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用链接"><span class="nav-number">2.</span> <span class="nav-text">引用链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#softmax作用"><span class="nav-number">3.</span> <span class="nav-text">softmax作用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#激活函数"><span class="nav-number">4.</span> <span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">5.</span> <span class="nav-text">结束语</span></a></li></ol>
+    
+    </div>
+  </aside>
 </section>
         
       </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cvblogs.cn/"/>
-  <updated>2018-01-01T15:11:33.545Z</updated>
+  <updated>2018-01-01T15:23:14.784Z</updated>
   <id>http://www.cvblogs.cn/</id>
   
   <author>
@@ -17,17 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>softmax用在哪里？</title>
+    <link href="http://www.cvblogs.cn/2017/12/30/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/softmax%E7%94%A8%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F/"/>
+    <id>http://www.cvblogs.cn/2017/12/30/理论学习/softmax用在哪里？/</id>
+    <published>2017-12-30T15:23:10.000Z</published>
+    <updated>2018-01-01T15:23:14.784Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>相信学习机器学习过程中，会接触到的一个名词就是激活函数。譬如Sigmoid、ReLu以及Softmax。<br>今天看到自己TODOList有一个softmax，发现自己又忘了它是干什么的了。<br>于是借着机会再学一遍= =以下是笔记。<br>建议直接学习Siraj的视频！</p><a id="more"></a><h1 id="引用链接"><a href="#引用链接" class="headerlink" title="引用链接"></a>引用链接</h1><p><a href="http://blog.csdn.net/leo_xu06/article/details/53708647" target="_blank" rel="noopener">深度学习常用激活函数之— Sigmoid &amp; ReLU &amp; Softmax</a><br><a href="https://weibo.com/tv/v/F52uUDZlF?fid=1034:f52462e17a913be82dc3de16b8b73811" target="_blank" rel="noopener">Siraj Raval激活函数讲解</a></p><h1 id="softmax作用"><a href="#softmax作用" class="headerlink" title="softmax作用"></a>softmax作用</h1><p>它保证所以的输出神经元之和为1.0，所以一般输出的是小于1的概率值，可以很直观地比较各输出值。只用于多于一个输出的神经元。</p><h1 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h1><p>学习了Siraj Raval关于激活函数的讲解之后对其有了更深的印象。<br>激活函数是深度学习中的东西，因为构建一个网络要求它是非线性的（这样它才能表达更多的信息。）</p><h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>有一种学了很多，想动手实践一下的冲动！但是又担心自己做不好= =</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;相信学习机器学习过程中，会接触到的一个名词就是激活函数。譬如Sigmoid、ReLu以及Softmax。&lt;br&gt;今天看到自己TODOList有一个softmax，发现自己又忘了它是干什么的了。&lt;br&gt;于是借着机会再学一遍= =以下是笔记。&lt;br&gt;建议直接学习Siraj的视频！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://www.cvblogs.cn/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础概念" scheme="http://www.cvblogs.cn/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>为什么张口闭口都先提贝叶斯和马尔可夫？</title>
     <link href="http://www.cvblogs.cn/2017/12/30/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%A0%E5%8F%A3%E9%97%AD%E5%8F%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%92%8C%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB/"/>
     <id>http://www.cvblogs.cn/2017/12/30/理论学习/为什么张口闭口贝叶斯和马尔可夫/</id>
     <published>2017-12-30T12:51:45.000Z</published>
-    <updated>2018-01-01T15:11:33.545Z</updated>
+    <updated>2018-01-01T15:27:10.838Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个机器学习萌新，体系结构还未完善的建立起来。在与大牛的交谈过程中，经常他们讨论一个问题的解决方案时候，经常能听到是用”贝叶斯网络”和”马尔可夫链”？。起始时非常不解，就我本人而言，似乎机器学习 == 神经网络（= =，JS中的双等）。因此每当别人提到这两个名词的时候内心都非常的疑惑，为什么要提这两个而不具体的讲到底是用了什么方法呢？直到最近又重新看了一遍西瓜书之后才重新审视了自己的偏见，也借着梳理的机会分享一下（大部分还是摘录笔记）。强烈建议自己看看西瓜书第7章和第14章。</p><a id="more"></a><h1 id="机器学习模型分几类？"><a href="#机器学习模型分几类？" class="headerlink" title="机器学习模型分几类？"></a>机器学习模型分几类？</h1><p>也许你也像我一样，目前似乎已经懂了一些机器学习的相关概念。例如什么是样本（测试、训练）以及标签，什么是特征或维度即与它们相关的一些专有名词（特征提取、降维等），什么是模型表示，什么是目标函数评价，什么是优化= =。以及对应的经典的算法的专有名词表示（例如：SVM、NN、CNN、RNN；MSE；SGD）。（好吧，似乎目前我学的最多的就是NN相关的一些内容…）<br>忽略以上这些，一定要明白的大局观念就是：学习 = 表示 + 评价 + 优化<br>可以梳理成下面这个表格：</p><table><thead><tr><th>表示</th><th>评价</th><th>优化</th></tr></thead><tbody><tr><td>基于实例的方法</td><td>准确/错误比率</td><td>组合优化</td></tr><tr><td>近邻方法</td><td>精确率和召回率</td><td>贪心搜索</td></tr><tr><td>支持向量机</td><td>平方误差</td><td>柱搜索</td></tr><tr><td>超平面方法</td><td>似然(likelihood)</td><td>分支限界法</td></tr><tr><td>朴素贝叶斯</td><td>后验概率</td><td>连续优化</td></tr><tr><td>逻辑斯蒂回归</td><td>信息增益</td><td>无约束</td></tr><tr><td>决策树方法</td><td>K-L距离</td><td>梯度下降</td></tr><tr><td>规则集的方法</td><td>成本/效用</td><td>共轭梯度</td></tr><tr><td>命题规则</td><td>利润</td><td>拟牛顿法</td></tr><tr><td>逻辑程序</td><td></td><td>有约束</td></tr><tr><td>神经网络</td><td></td><td>线性规划</td></tr><tr><td>图模型</td><td></td><td>二次规划</td></tr><tr><td>贝叶斯网络</td><td></td><td></td></tr><tr><td>条件随机场</td><td></td></tr></tbody></table><p>另外还有必要再确认一下机器学习模型到底分几类？传统的分类方式是按照训练数据集是否有标签分成：有监督（数据集带标签）、无监督（数据集不带标签）、半监督（大部分数据集不带标签少部分带标签）<br>更具体的，却一般将其分成两种：生成式模型（Generative Model）与鉴别式模型（Discriminative Model），这两类也是贝叶斯和马尔可夫分别的代表，一个基于统计，一个基于概率。</p><h2 id="生成式模型"><a href="#生成式模型" class="headerlink" title="生成式模型"></a>生成式模型</h2><p>对于输入x，类别标签y，产生式模型估计它们的联合概率分布P(x,y)。产生式模型可以根据贝叶斯公式得到判别式模型，但反过来不行。</p><h3 id="产生式模型常见的主要有："><a href="#产生式模型常见的主要有：" class="headerlink" title="产生式模型常见的主要有："></a>产生式模型常见的主要有：</h3><ul><li>Gaussians</li><li>Naive Bayes</li><li>Mixtures of Multinomials</li><li>Mixtures of Gaussians</li><li>Mixtures of Experts</li><li>HMMs（隐马尔可夫模型）</li><li>Sigmoidal Belief Networks, Bayesian Networks</li><li>Markov Random Fields</li><li>Latent Dirichlet Allocation<h2 id="鉴别式模型"><a href="#鉴别式模型" class="headerlink" title="鉴别式模型"></a>鉴别式模型</h2>对于输入x，类别标签y，判别式模型估计条件概率分布P(y|x)<h3 id="判别式模型常见的主要有"><a href="#判别式模型常见的主要有" class="headerlink" title="判别式模型常见的主要有"></a>判别式模型常见的主要有</h3></li><li>Logistic Regression</li><li>SVM</li><li>Traditional Neural Networks</li><li>Nearest Neighbor</li><li>CRF</li><li>Linear Discriminant Analysis</li><li>Boosting</li><li>Linear Regression</li></ul><h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>当我们打开任何一个机器学习的网络视频时，不论是AndrewNg还是李宏毅老师的视频，总是从最简单的线性分类器讲起。接着会讲到如何衡量一个机器学习算法的好坏？接着就是巴拉巴拉一堆数学理论。以至于每次我看完都总觉得：哇，这都讲了啥啊= =，这也就导致了至今为止尚未完全的能够理解这个过程对应的编码过程。毕竟Linus大神有言”Talk is cheap，show me the code”。与计算机专业相关的任何内容的学习最终都离不开需要编程实现。于是我至今都不认为自己已经入门机器学习。但是一方面，我似乎又学习了很长时间的理论。大有种”我要这铁棒有何用”的无奈= =。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个机器学习萌新，体系结构还未完善的建立起来。<br>在与大牛的交谈过程中，经常他们讨论一个问题的解决方案时候，经常能听到是用”贝叶斯网络”和”马尔可夫链”。<br>起始时非常不解，就我本人而言，似乎机器学习 == 神经网络（= =，JS中的双等）。<br>因此每当别人提到这两个名词的时候内心都非常的疑惑，为什么要提这两个而不具体的讲到底是用了什么方法呢？<br>直到最近又重新看了一遍西瓜书之后才重新审视了自己的偏见，也借着梳理的机会分享一下（大部分还是摘录笔记）。<br><strong>强烈建议自己看看西瓜书第7章和第14章</strong>.</p><a id="more"></a><h1 id="机器学习模型分几类？"><a href="#机器学习模型分几类？" class="headerlink" title="机器学习模型分几类？"></a>机器学习模型分几类？</h1><p>也许你也像我一样，目前似乎已经懂了一些机器学习的相关概念。<br>例如什么是样本（测试、训练）以及标签，什么是特征或维度即与它们相关的一些专有名词（特征提取、降维等），什么是模型表示，什么是目标函数评价，什么是优化= =。<br>以及对应的经典的算法的专有名词表示（例如：SVM、NN、CNN、RNN；MSE；SGD）。（好吧，似乎目前我学的最多的就是NN相关的一些内容…）<br>忽略以上这些，一定要明白的大局观念就是：<strong>学习 = 表示 + 评价 + 优化</strong><br>可以梳理成下面这个表格：</p><table><thead><tr><th>表示</th><th>评价</th><th>优化</th></tr></thead><tbody><tr><td>基于实例的方法</td><td>准确/错误比率</td><td>组合优化</td></tr><tr><td>近邻方法</td><td>精确率和召回率</td><td>贪心搜索</td></tr><tr><td>支持向量机</td><td>平方误差</td><td>柱搜索</td></tr><tr><td>超平面方法</td><td>似然(likelihood)</td><td>分支限界法</td></tr><tr><td>朴素贝叶斯</td><td>后验概率</td><td>连续优化</td></tr><tr><td>逻辑斯蒂回归</td><td>信息增益</td><td>无约束</td></tr><tr><td>决策树方法</td><td>K-L距离</td><td>梯度下降</td></tr><tr><td>规则集的方法</td><td>成本/效用</td><td>共轭梯度</td></tr><tr><td>命题规则</td><td>利润</td><td>拟牛顿法</td></tr><tr><td>逻辑程序</td><td></td><td>有约束</td></tr><tr><td>神经网络</td><td></td><td>线性规划</td></tr><tr><td>图模型</td><td></td><td>二次规划</td></tr><tr><td>贝叶斯网络</td><td></td><td></td></tr><tr><td>条件随机场</td><td></td></tr></tbody></table><p>另外还有必要再确认一下机器学习模型到底分几类？传统的分类方式是按照训练数据集是否有标签分成：有监督（数据集带标签）、无监督（数据集不带标签）、半监督（大部分数据集不带标签少部分带标签）<br>更具体的，却一般将其分成两种：生成式模型（Generative Model）与鉴别式模型（Discriminative Model），这两类也是贝叶斯和马尔可夫分别的代表，一个基于统计，一个基于概率。</p><h2 id="生成式模型"><a href="#生成式模型" class="headerlink" title="生成式模型"></a>生成式模型</h2><p>对于输入x，类别标签y，产生式模型估计它们的联合概率分布P(x,y)。产生式模型可以根据贝叶斯公式得到判别式模型，但反过来不行。</p><h3 id="产生式模型常见的主要有："><a href="#产生式模型常见的主要有：" class="headerlink" title="产生式模型常见的主要有："></a>产生式模型常见的主要有：</h3><ul><li>Gaussians</li><li>Naive Bayes</li><li>Mixtures of Multinomials</li><li>Mixtures of Gaussians</li><li>Mixtures of Experts</li><li>HMMs（隐马尔可夫模型）</li><li>Sigmoidal Belief Networks, Bayesian Networks</li><li>Markov Random Fields</li><li>Latent Dirichlet Allocation<h2 id="鉴别式模型"><a href="#鉴别式模型" class="headerlink" title="鉴别式模型"></a>鉴别式模型</h2>对于输入x，类别标签y，判别式模型估计条件概率分布P(y|x)<h3 id="判别式模型常见的主要有"><a href="#判别式模型常见的主要有" class="headerlink" title="判别式模型常见的主要有"></a>判别式模型常见的主要有</h3></li><li>Logistic Regression</li><li>SVM</li><li>Traditional Neural Networks</li><li>Nearest Neighbor</li><li>CRF</li><li>Linear Discriminant Analysis</li><li>Boosting</li><li>Linear Regression</li></ul><h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>当我们打开任何一个机器学习的网络视频时，不论是AndrewNg还是李宏毅老师的视频，总是从最简单的线性分类器讲起。接着会讲到如何衡量一个机器学习算法的好坏？接着就是巴拉巴拉一堆数学理论。以至于每次我看完都总觉得：哇，这都讲了啥啊= =，这也就导致了至今为止尚未完全的能够理解这个过程对应的编码过程。毕竟Linus大神有言”Talk is cheap，show me the code”。与计算机专业相关的任何内容的学习最终都离不开需要编程实现。于是我至今都不认为自己已经入门机器学习。但是一方面，我似乎又学习了很长时间的理论。大有种”我要这铁棒有何用”的无奈= =。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;作为一个机器学习萌新，体系结构还未完善的建立起来。在与大牛的交谈过程中，经常他们讨论一个问题的解决方案时候，经常能听到是用”贝叶斯网络”和”马尔可夫链”？。起始时非常不解，就我本人而言，似乎机器学习 == 神经网络（= =，JS中的双等）。因此每当别人提到这两个名词的时候内心都非常的疑惑，为什么要提这两个而不具体的讲到底是用了什么方法呢？直到最近又重新看了一遍西瓜书之后才重新审视了自己的偏见，也借着梳理的机会分享一下（大部分还是摘录笔记）。强烈建议自己看看西瓜书第7章和第14章。&lt;/p&gt;
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;作为一个机器学习萌新，体系结构还未完善的建立起来。&lt;br&gt;在与大牛的交谈过程中，经常他们讨论一个问题的解决方案时候，经常能听到是用”贝叶斯网络”和”马尔可夫链”。&lt;br&gt;起始时非常不解，就我本人而言，似乎机器学习 == 神经网络（= =，JS中的双等）。&lt;br&gt;因此每当别人提到这两个名词的时候内心都非常的疑惑，为什么要提这两个而不具体的讲到底是用了什么方法呢？&lt;br&gt;直到最近又重新看了一遍西瓜书之后才重新审视了自己的偏见，也借着梳理的机会分享一下（大部分还是摘录笔记）。&lt;br&gt;&lt;strong&gt;强烈建议自己看看西瓜书第7章和第14章&lt;/strong&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -429,32 +451,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;以下文章内容大都摘自&lt;a href=&quot;http://www.ruanyifeng.com/blog/2017/04/memory-leak.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阮一峰的网络博客JavaScript 内存泄漏教程篇&lt;/a&gt;,仅作个人学习笔记备记。&lt;br&gt;本来不想记的，因为对于只是在本地写&lt;code&gt;hello world&lt;/code&gt;的我来说，内存管理似乎从来不是一件必要的事情。&lt;br&gt;但是，突然想到，内存的管理对于部署在服务器上的或者说生产环境中的应用是多么的重要。&lt;br&gt;想象一下，要是一个需要7/24运行的web应用内存泄漏了：）简直就是一场灾难。服务器怠机则无法提供服务。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="网页开发" scheme="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Node.js" scheme="http://www.cvblogs.cn/tags/Node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>web开发之LiveServer使用</title>
-    <link href="http://www.cvblogs.cn/2017/11/12/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/web%E5%BC%80%E5%8F%91_LiveServer%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.cvblogs.cn/2017/11/12/开发学习/web开发_LiveServer使用/</id>
-    <published>2017-11-12T14:15:10.000Z</published>
-    <updated>2017-12-26T10:48:13.965Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="live-server模块的作用"><a href="#live-server模块的作用" class="headerlink" title="live-server模块的作用"></a>live-server模块的作用</h1><ol><li>实现热插拔<code>hot socketing</code>(修改文件之后，浏览器能够自动刷新)</li><li>当服务启动时，自动打开所在的项目。(实现<code>opener</code>的功能)</li><li>快速搭建临时的web服务。（实现<code>http-server</code>的功能）</li></ol><a id="more"></a><p>我们主要使用1与2，3用express或者其他web框架。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>可以直接使用全局安装的方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g live-server</div></pre></td></tr></table></figure></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在<code>package.json</code>的<code>script</code>下添加一个<code>server</code>字段的<code>npm 脚本</code>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"server"</span>: <span class="string">"live-server ./ --port=9090"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>使用<code>npm run server</code>执行。等待一会之后，浏览器会自动打开。<br>这样当你修改本地任何文件，浏览器都会自动立即同步（在内存层面，如果你想要发布代码，还是需要再次编译，否则修改之后的一些代码不会被改变！）。</p><h1 id="继续学习"><a href="#继续学习" class="headerlink" title="继续学习"></a>继续学习</h1><p><a href="https://www.npmjs.com/package/live-server" target="_blank" rel="noopener">官方链接https://www.npmjs.com/package/live-server</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;live-server模块的作用&quot;&gt;&lt;a href=&quot;#live-server模块的作用&quot; class=&quot;headerlink&quot; title=&quot;live-server模块的作用&quot;&gt;&lt;/a&gt;live-server模块的作用&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;实现热插拔&lt;code&gt;hot socketing&lt;/code&gt;(修改文件之后，浏览器能够自动刷新)&lt;/li&gt;
-&lt;li&gt;当服务启动时，自动打开所在的项目。(实现&lt;code&gt;opener&lt;/code&gt;的功能)&lt;/li&gt;
-&lt;li&gt;快速搭建临时的web服务。（实现&lt;code&gt;http-server&lt;/code&gt;的功能）&lt;/li&gt;
-&lt;/ol&gt;
     
     </summary>
     
