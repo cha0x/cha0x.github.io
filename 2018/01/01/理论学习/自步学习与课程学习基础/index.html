@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <title>自步学习与课程学习基础概念 | CVBlogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="基础概念" />
+  
+  
+    <meta name="google-site-verification" content="google-site-verification: google2ade42c9eaad51d0.html" />
+  
+  
+    <meta name="baidu-site-verification" content="N7RDvFcI1s" />
+  
+  
+  <meta name="description" content="前言此篇文章是关于SPL（自步学习-Self-Paced Learning）的基础概念的梳理。个人笔记。">
+<meta name="keywords" content="基础概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自步学习与课程学习基础概念">
+<meta property="og:url" content="http://www.cvblogs.cn/2018/01/01/理论学习/自步学习与课程学习基础/index.html">
+<meta property="og:site_name" content="CVBlogs">
+<meta property="og:description" content="前言此篇文章是关于SPL（自步学习-Self-Paced Learning）的基础概念的梳理。个人笔记。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-01T16:10:19.277Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自步学习与课程学习基础概念">
+<meta name="twitter:description" content="前言此篇文章是关于SPL（自步学习-Self-Paced Learning）的基础概念的梳理。个人笔记。">
+  
+    <link rel="alternate" href="/atom.xml" title="CVBlogs" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+            </a>
+            <a class="nav-close">收起</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="site-search">
+          <div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="float:left;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field"  placeholder=" Welcome to CVBlogs,search here…" value="" name="s" title="Search for:">
+        </label>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-理论学习/自步学习与课程学习基础" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      自步学习与课程学习基础概念
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/01/01/理论学习/自步学习与课程学习基础/" class="article-date">
+	  <time datetime="2018-01-01T00:00:00.000Z" itemprop="datePublished">2018-01-01</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础概念/">基础概念</a></li></ul>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+	  阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>此篇文章是关于SPL（自步学习-Self-Paced Learning）的基础概念的梳理。个人笔记。</p>
+<a id="more"></a>
+<h1 id="课程学习与自步学习关系"><a href="#课程学习与自步学习关系" class="headerlink" title="课程学习与自步学习关系"></a>课程学习与自步学习关系</h1><p>现有机器学习方法都需要解决<strong>非凸优化问题</strong>。<br>课程学习和自步学习最开始就是作为解决非凸优化问题而提出的。<br>课程学习和自步学习的<strong>核心思想是通过模拟人的认知机理</strong>，首先学习简单的、普适性的知识结构，然后逐渐增加难度，过渡到学习更复杂、更专业化的知识。</p>
+<blockquote>
+<p>这里应该比较疑惑的就是该怎么定义难与易？后面有解释：定义的目标、定义的方法！</p>
+</blockquote>
+<p>课程学习是<strong>对于特定问题而言</strong>，根据先验知识或启示赋予样本不同的学习特性或学习先后顺序。如：根据先验知识对知识学习顺序的指定（instructor driven）。<br>相对于课程学习，自步学习则是对于<strong>已学习获得的模型</strong>而言，赋予样本不同的学习难易程度（easiness or confidance）。<br>从线性代数到高等数学的学习过程可以认为是自学习过程（student-driven），而线性代数在该过程被认为是简单样本，相对地，高等数学则被认为是复杂样本，<strong>每次刷题的过程对应为已学习获得的模型</strong>。<br>在机器学习研究中，我们也可以将学习对象(数据、特征、概念等)按其对学习目标的难易程度，<strong>从易到难开展学习</strong>，以这种方式让机器完成复杂的学习与推理任务。</p>
+<h1 id="自步学习的关键"><a href="#自步学习的关键" class="headerlink" title="自步学习的关键"></a>自步学习的关键</h1><p>自步学习研究的关键是<strong>假设样本的选择并不是随机的，或是在一次迭代中全部纳入训练过程中</strong>，而是<strong>通过一种由简到难的有意义的方式进行选择的</strong>。<br>自步学习中从简单到复杂的样本选择过程是指，简单样本可以理解为具有较小的损失（smaller loss）或较大似然函数值（likelihood）的样本，复杂的样本具有较大损失（larger loss）的样本。</p>
+<blockquote>
+<p>注：此处十分好理解。根据损失函数的定义。损失越小，则预测值与目标值越接近。因此，也就被认为是越简单。这里关于最小损失和最大似然只是概念上的说法。但是二者所指可以说都是这么一个意思。</p>
+</blockquote>
+<h1 id="相关自步学习应用"><a href="#相关自步学习应用" class="headerlink" title="相关自步学习应用"></a>相关自步学习应用</h1><ol>
+<li>SPMF算法对非凸矩阵分解问题</li>
+<li>SpaR方法用于解决多模态多媒体事件检测问题</li>
+<li>SP-MIL模型实现显著性检测</li>
+<li>SPLD方法并应用于视频动作识别中</li>
+<li>物体跟踪</li>
+<li>SPMoR模型将自步学习应用于混合模型的健壮估计中<blockquote>
+<p>此处将成为下一步的学习方向</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="自步学习优势"><a href="#自步学习优势" class="headerlink" title="自步学习优势"></a>自步学习优势</h1><p>SPL优势在于可以针对特定任务设计不同的<strong>自步正则项</strong>，用于表征和定义“简单”样本。<br>最基本的SPL正则项为标准的<strong>LASSO（norm）</strong>，用于从所有样本中选择稀疏的、有竞争力的样本，即样本具有很小的训练误差、高似然值或者高置信度。<br>SPLD和SP-MIL分别<strong>引用</strong>和<strong>范数</strong>作为自步学习正则项，这两种正则项都属于<strong>Group LASSO</strong>。<br>和不同子集间选择变量，促使保留稀疏的子集，因此在自步学习中，二者都起到鼓励在多个子集中选择样本的作用，并避免子集间的稀疏性。</p>
+<p>从健壮估计角度来看，自步学习理论本质上是一种健壮学习机制，自步学习定义的简单样本是指在学习过程的每次迭代中被选择的样本不会存在预测误差或代价超过一定阈值的样本，我们也称之为“置信度高”的样本。</p>
+<p>SPMoR避免自步学习在每次迭代过程中在各成分间选择样本数量的不均衡。</p>
+<h1 id="自步学习核心内容"><a href="#自步学习核心内容" class="headerlink" title="自步学习核心内容"></a>自步学习核心内容</h1><p>自步学习核心思想是在每次迭代过程中倾向于从所有样本中选择具有很小的训练误差、高似然值的样本，然后更新模型参数。<br>每次迭代选择样本的数量由权重参数确定，该参数通过逐次衰减实现引入更多的样本，当所有样本已被选择或者代价函数无法再降低则停止迭代。<br>自步学习在传统机器学习目标函数中引入二分变量（binary variable）$v_i$，用于表征每个样本是否被选择，或是否为简单样本。</p>
+<h2 id="双凸优化问题"><a href="#双凸优化问题" class="headerlink" title="双凸优化问题"></a>双凸优化问题</h2><p>最基本的SPL的优化过程很简单。当$f(x_i,y_i,w)≤1/K$时，$v_i=1$，当$f(x_i,y_i,w)&gt;1/K$时，$v_i=0$。特别地，当$f(⋅)$和$r(⋅)$均为凸函数时，上述自步学习的优化问题可以转化为双凸优化问题（biconvex optimization problem）。<br>双凸优化问题是指对于待优化参数集合$z$而言，参数集合可以被划分为互斥的两个集合$z1$和$z2$。<br>如果任意一个参数集合$zi$固定一组参数值时，另一组参数的优化问题可以看做是凸优化问题，那么该问题可以视为双凸优化问题。<br>例如，在上述表达式中存在两组参数$w$和$v$，我们可以<strong>交替固定</strong>$w$求得$v$的最优解，然后固定$v$求$w$的最优解，该优化方法可以称为<strong>alternative convex search (ACS)方法</strong>，可以保证求得函数的局部最优解。</p>
+<h1 id="其他机器学习算法"><a href="#其他机器学习算法" class="headerlink" title="其他机器学习算法"></a>其他机器学习算法</h1><p>机器学习方法中也存在相关方法<strong>用于选择样本</strong>，例如：主动学习（active learning）和协同训练（co-training）。<br>自步学习与二者的区别在于<strong>自步学习中所有样本的标签是完全存在的</strong>，在每次迭代过程中，我们可以通过计算预测值和标签的差别来选择置信度高的样本。<br>而主动学习和协同训练往往应用于半监督学习框架，其中主动学习倾向于选择当前模型下确定性或置信度低的样本，而协同训练则是从无标签数据中选择分类器认为置信度可能高的样本，选择的样本并没有标签，无法断定估计结果是否准确。<br>相比之下，自步学习则是选择预测值与真实值接近的、即分类器可以分辨的置信度真的高的样本。</p>
+<blockquote>
+<p>此处有待继续仔细的品味</p>
+</blockquote>
+<h1 id="参考引用链接"><a href="#参考引用链接" class="headerlink" title="参考引用链接"></a>参考引用链接</h1><p><a href="https://www.cnblogs.com/peaceWang/p/Markdown-tian-jia-Latex-shu-xue-gong-shi.html" target="_blank" rel="noopener">markdown latex语法</a><br><a href="http://www.hanlongfei.com/机器学习/2017/07/24/selfpaced/" target="_blank" rel="noopener">SPL入门介绍</a></p>
+
+      
+    </div>
+    
+    <footer class="entry-meta entry-footer">
+
+      
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4NS82NTUw">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/30/理论学习/softmax用在哪里？/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">softmax用在哪里？</div>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#课程学习与自步学习关系"><span class="nav-number">2.</span> <span class="nav-text">课程学习与自步学习关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自步学习的关键"><span class="nav-number">3.</span> <span class="nav-text">自步学习的关键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关自步学习应用"><span class="nav-number">4.</span> <span class="nav-text">相关自步学习应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自步学习优势"><span class="nav-number">5.</span> <span class="nav-text">自步学习优势</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自步学习核心内容"><span class="nav-number">6.</span> <span class="nav-text">自步学习核心内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#双凸优化问题"><span class="nav-number">6.1.</span> <span class="nav-text">双凸优化问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他机器学习算法"><span class="nav-number">7.</span> <span class="nav-text">其他机器学习算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考引用链接"><span class="nav-number">8.</span> <span class="nav-text">参考引用链接</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info" >
+	      &copy; 2018 CVBlogs All Rights Reserved.
+          <span>
+              Powered by <a href="https://hexo.io/" target="_blank">HEXO</a>
+          </span>
+      </div>
+
+      <div class="site-credit">
+          
+          <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263278368&web_id=1263278368" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

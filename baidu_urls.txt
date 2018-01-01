@@ -1,3 +1,3 @@
+http://www.cvblogs.cn/2018/01/01/理论学习/自步学习与课程学习基础/
 http://www.cvblogs.cn/2017/12/30/理论学习/softmax用在哪里？/
 http://www.cvblogs.cn/2017/12/30/理论学习/为什么张口闭口贝叶斯和马尔可夫/
-http://www.cvblogs.cn/2017/12/28/理论学习/机器学习基础概念再梳理/

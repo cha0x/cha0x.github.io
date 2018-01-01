@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.cvblogs.cn/2018/01/01/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/%E8%87%AA%E6%AD%A5%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-01-01T16:10:19.277Z</lastmod>
+    <data>
+        <display>
+        <title>自步学习与课程学习基础概念</title>
+        <pubTime>2018-01-01T00:00:00.000Z</pubTime>
+        
+        <tag>基础概念</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://www.cvblogs.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cvblogs.cn/2017/12/30/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%A0%E5%8F%A3%E9%97%AD%E5%8F%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%92%8C%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB/</loc>
     <lastmod>2018-01-01T15:27:10.838Z</lastmod>
     <data>
@@ -864,12 +884,12 @@
 
     
   <url>
-    <loc>http://www.cvblogs.cn/2017/09/01/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/UCF-CVClass-Summary/</loc>
+    <loc>http://www.cvblogs.cn/2017/09/04/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/UCF-CVClass-Summary1/</loc>
     <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     <data>
         <display>
-        <title>UCF-CV课程总结:概述、滤波及Matlab使用</title>
-        <pubTime>2017-09-01T09:20:40.000Z</pubTime>
+        <title>UCF-CV课程总结:边缘检测</title>
+        <pubTime>2017-09-04T11:50:56.000Z</pubTime>
         
         <tag>课程总结</tag>
          
@@ -884,12 +904,12 @@
 
     
   <url>
-    <loc>http://www.cvblogs.cn/2017/09/04/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/UCF-CVClass-Summary1/</loc>
+    <loc>http://www.cvblogs.cn/2017/09/01/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/UCF-CVClass-Summary/</loc>
     <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     <data>
         <display>
-        <title>UCF-CV课程总结:边缘检测</title>
-        <pubTime>2017-09-04T11:50:56.000Z</pubTime>
+        <title>UCF-CV课程总结:概述、滤波及Matlab使用</title>
+        <pubTime>2017-09-01T09:20:40.000Z</pubTime>
         
         <tag>课程总结</tag>
          
