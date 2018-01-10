@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.cvblogs.cn/2018/01/10/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/linux_vim%E7%9A%84snr37-mru%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2018-01-10T09:08:07.260Z</lastmod>
+    <data>
+        <display>
+        <title>vim的mru插件报错解决方案</title>
+        <pubTime>2018-01-10T08:55:24.000Z</pubTime>
+        
+        <tag>测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="网页开发" url="http://www.cvblogs.cn/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cvblogs.cn/2018/01/01/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/%E8%87%AA%E6%AD%A5%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2018-01-01T16:10:19.277Z</lastmod>
     <data>
@@ -864,26 +884,6 @@
 
     
   <url>
-    <loc>http://www.cvblogs.cn/2017/08/11/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/image-processing-operation1/</loc>
-    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>图像处理基础-滤波(filtering)</title>
-        <pubTime>2017-08-11T11:39:53.000Z</pubTime>
-        
-        <tag>数学基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="图像处理" url="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.cvblogs.cn/2017/09/04/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/UCF-CVClass-Summary1/</loc>
     <lastmod>2017-09-05T15:48:24.000Z</lastmod>
     <data>
@@ -897,6 +897,26 @@
            
              
               <breadCrumb title="计算机视觉" url="http://www.cvblogs.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cvblogs.cn/2017/08/11/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/image-processing-operation1/</loc>
+    <lastmod>2017-09-05T15:48:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>图像处理基础-滤波(filtering)</title>
+        <pubTime>2017-08-11T11:39:53.000Z</pubTime>
+        
+        <tag>数学基础</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://www.cvblogs.cn/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
           
         </display>
     </data>
